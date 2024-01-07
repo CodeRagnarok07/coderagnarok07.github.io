@@ -1,0 +1,11 @@
+
+- [ ] add 
+  - [x] Tailwind
+  - [ ] deploy github
+    - [ ] action on update[https://docs.astro.build/en/guides/server-side-rendering/]
+  - [ ] Notion GQ
+  - [ ] React [Si es necesario]
+- [ ] desarrollo de la interface
+  - [ ] movil
+  - [ ] desk
+- [ ] View transitions
