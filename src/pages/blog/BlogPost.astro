@@ -2,7 +2,6 @@
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../../layouts/BaseHead.astro";
 import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
 import FormattedDate from "../../util/FormattedDate.astro";
 
 type Props = CollectionEntry<"local_md">["data"];
@@ -90,6 +89,5 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				</div>
 			</article>
 		</main>
-		<Footer />
 	</body>
 </html>
