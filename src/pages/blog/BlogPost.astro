@@ -2,7 +2,6 @@
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../../layouts/BaseHead.astro";
 import Header from "../../components/Header.astro";
-import FormattedDate from "../../util/FormattedDate.astro";
 
 type Props = CollectionEntry<"local_md">["data"];
 
@@ -71,18 +70,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				</div>
 				<div class="prose">
 					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on{" "}
-										<FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
+						<div class="date"></div>
 						<hr />
 					</div>
 					<slot />
