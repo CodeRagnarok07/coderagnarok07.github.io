@@ -6,6 +6,8 @@
     "paths": {
       "@consts": ["src/consts.ts"],
       "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@util/*": ["src/util/*"],
       "@layouts/*": ["src/layouts/*"]
     }
   }

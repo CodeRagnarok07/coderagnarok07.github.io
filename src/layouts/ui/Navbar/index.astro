@@ -7,10 +7,10 @@ import SvgBgMovil from "./BgMovil.svg";
 ---
 
 <nav
-    class="fixed inset-x-0 bottom-0 flex justify-center sm:top-0 sm:bottom-auto"
+    class="fixed z-10 inset-x-0 bottom-0 flex justify-center sm:top-0 sm:bottom-auto"
 >
     <div
-        class="w-full min-h-min sm:h-auto sm:flex justify-between items-center sm:px-[2%] md:px-[10%] max-w-8xl"
+        class="w-full min-h-min sm:h-auto sm:flex justify-between items-center container"
     >
         <img
             src={SvgBgMovil.src}
@@ -18,7 +18,7 @@ import SvgBgMovil from "./BgMovil.svg";
             class="sm:hidden absolute w-full translate-y-[-20%] scale-[105%] z-[-1]"
         />
 
-        <h3 class="hidden sm:flex">CodeRagnarok</h3>
+        <h4 class="hidden sm:flex">CodeRagnarok</h4>
 
         <div class="flex items-center justify-around pt-10 pb-2 sm:py-2 gap-3">
             {
@@ -37,8 +37,8 @@ import SvgBgMovil from "./BgMovil.svg";
                         "
                     >
                         <img
-                            class="h-6 w-6 "
-                            src={`/assets/svg/nav/${v}.svg`}
+                            class="h-6 w-6 sm:h-4 sm:w-4"
+                            src={`../../assets/svg/nav/${v}.svg`}
                             alt={"#" + v}
                         />
                         {v}

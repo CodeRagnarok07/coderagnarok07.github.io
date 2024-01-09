@@ -1,0 +1,49 @@
+---
+interface Props {
+    text: string;
+    icon?: string;
+    iconSize?: "sm" | "md";
+
+    color?: "primary" | "secondary" | "danger" | "purple" | "blue";
+}
+
+const { text, icon, iconSize = "sm", color = "primary" } = Astro.props;
+
+const gettheme = (color: string) => {
+    switch (color) {
+        case "primary":
+            return "bg-primary border-box-primary";
+        case "secondary":
+            return "bg-secondary border-box-secondary";
+        case "danger":
+            return "bg-danger border-box-danger";
+        case "purple":
+            return "bg-purple border-box-purple";
+    }
+};
+
+const getSize = (iconSize: string) => {
+    switch (iconSize) {
+        case "md":
+            return "[&>i]:w-6 [&>i]:h-6 [&>p]text-xl";
+        default:
+            return "[&>i]:w-4 [&>i]:h-4 ";
+    }
+};
+---
+
+<div
+    class=`flex leading-none items-center border-l-2  h-min
+      ${gettheme(color)} ${getSize(iconSize)} bg-opacity-30 !border-x-0 !border-x-2
+    `
+>
+    <i
+        class=` block object-cover bg-center bg-no-repeat bg-[length:80%_80%] border-r-2 border-${color}`
+        style=`background-image: url(${icon});`></i>
+
+    <p class="bg-opacity-10 small h-max px-1 border-${color}">
+        {text}
+    </p>
+</div>
+
+<style></style>

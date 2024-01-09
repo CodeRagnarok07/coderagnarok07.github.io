@@ -6,9 +6,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 
 <!doctype html>
 <html lang="en">
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <body class="bg-black text-white py-12">
-        <main>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}>
+        <style is:global></style>
+    </BaseHead>
+    <body
+        class="bg-black text-white sm:pt-16 sm:pb-4 pb-28 pt-4 inline-flex flex-col aling-center w-full"
+    >
+        <main class="inline-flex flex-col aling-center">
             <slot />
         </main>
         <Navbar />

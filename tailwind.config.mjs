@@ -2,6 +2,15 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		container: {
+			padding: {
+			  DEFAULT: '2%',
+			  md: '10%',
+			//   xl: 'auto',
+			
+			},
+			
+		  },
 		screens: {
 			'xs': '320px', // => @media (min-width: 640px) { ... }
 			'sm': '575px', // => @media (min-width: 640px) { ... }
@@ -38,8 +47,8 @@ export default {
 			'danger': '#B7455A',
 			'danger-light': 'danger-800',
 			//pink
-			'pink': '#A259FF',
-			'pink-light': '#6E36E5',
+			'purple': '#A259FF',
+			'purple-light': '#6E36E5',
 
 			//blue
 			'blue': '#0090F9',

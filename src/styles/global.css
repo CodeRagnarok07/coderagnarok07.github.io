@@ -4,6 +4,8 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+/* /////////////////////////////////////////////////////////////// */
+/* /////// GENERAL /////// */
 
 body {
 	margin: 0;
@@ -47,7 +49,7 @@ small,
 .small {
 	font-family: 'Atkinson', sans-serif;
 	font-weight: 400;
-	line-height: auto;
+	line-height: 1;
 }
 
 h1,
@@ -56,7 +58,8 @@ h3,
 h4 {
 	font-family: 'Inter', 'Atkinson', sans-serif;
 	font-weight: 600;
-	line-height: auto;
+	line-height: 1;
+	margin-bottom: 2%;
 }
 
 
@@ -121,3 +124,22 @@ small,
 	}
 
 }
+
+
+/* /////////////////////////////////////////////////////////////// */
+/* /////// LAYOUT /////// */
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	/* @apply max-w-8xl; */
+}
+
+section {
+	width: 100%;
+	min-height: 92vh;
+	min-height: 92dvh;
+}
+
+
+/* /////////////////////////////////////////////////////////////// */
+/* /////// UI /////// */

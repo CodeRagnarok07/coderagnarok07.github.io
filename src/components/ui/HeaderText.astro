@@ -1,0 +1,50 @@
+---
+interface Props {
+    title: string;
+    description?: string;
+    aling?: "left" | "center" | "right";
+}
+
+const { title, description, aling } = Astro.props;
+---
+
+<style>
+    .center {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .left {
+        text-align: left;
+        justify-content: start;
+        align-items: start;
+    }
+    .right {
+        text-align: right;
+        justify-content: end;
+        align-items: end;
+    }
+</style>
+
+<header class={`inline-flex flex-col ${aling} overflow-hidden`}>
+    <div class="w-min">
+        <h2 class="w-max">
+            <!-- class="whitespace-nowrap" -->
+            {title}
+        </h2>
+
+        <svg
+            class="w-full scale-150"
+            height="1"
+            viewBox="0 0 790 2"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M395 0L673.954 0.292893L789.5 1L673.954 1.70711L395 2L116.046 1.70711L0.5 1L116.046 0.292893L395 0Z"
+                fill="#D3D3D3"></path>
+        </svg>
+    </div>
+
+    <p>{description}</p>
+</header>

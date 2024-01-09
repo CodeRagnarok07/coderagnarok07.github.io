@@ -35,7 +35,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      
+      - uses: pnpm/action-setup@v2 # https://github.com/pnpm/action-setup
         with:
           version: 8
       - name: Setup Node
