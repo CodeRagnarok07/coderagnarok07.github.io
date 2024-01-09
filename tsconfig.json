@@ -4,6 +4,7 @@
     "strictNullChecks": true,
     "baseUrl": "./",
     "paths": {
+      "@consts": ["src/consts.ts"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"]
     }

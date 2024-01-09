@@ -4,29 +4,8 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-:root {
-	--black: #060709;
-	--white: #CBCBCB;
-}
-
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
 
 body {
-	font-family: 'Atkinson', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -34,9 +13,103 @@ body {
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	font-size: 16px;
-	line-height: auto;
+}
 
-	background-color: var(--black);
-	color: var(--white);
+
+/* /////////////////////////////////////////////////////////////// */
+/* /////// FONTS /////// */
+
+@font-face {
+	font-family: 'Inter';
+	src: url('Inter-VariableFont_slnt,wght.ttf') format('ttf');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/Atkinson/regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/Atkinson/bold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+body,
+small,
+.small {
+	font-family: 'Atkinson', sans-serif;
+	font-weight: 400;
+	line-height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Inter', 'Atkinson', sans-serif;
+	font-weight: 600;
+	line-height: auto;
+}
+
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+body {
+	font-size: 14px;
+
+}
+
+small,
+.small {
+	font-size: 12px;
+}
+
+@media (min-width: 575px) {
+	body {
+		font-size: 16px;
+	}
+
+	small,
+	.small {
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 36px;
+	}
+
+	h3 {
+		font-size: 32px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
 }
