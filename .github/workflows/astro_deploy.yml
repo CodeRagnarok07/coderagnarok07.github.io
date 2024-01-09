@@ -35,17 +35,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-       steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
