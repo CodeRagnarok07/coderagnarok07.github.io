@@ -7,11 +7,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 <!doctype html>
 <html lang="en">
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}>
-        <style is:global></style>
+        <style is:global>
+            .container {
+                max-width: 1280px;
+                margin: 0 auto;
+                /* @apply max-w-8xl; */
+            }
+
+            section {
+                width: 100%;
+                min-height: 100vh;
+                min-height: 100dvh;
+                @apply pb-28 pt-4 sm:pb-4 sm:pt-16;
+            }
+        </style>
     </BaseHead>
-    <body
-        class="bg-black text-white sm:pt-16 sm:pb-4 pb-28 pt-4 inline-flex flex-col aling-center w-full"
-    >
+    <body class="bg-black text-white inline-flex flex-col aling-center w-full">
         <main class="inline-flex flex-col aling-center">
             <slot />
         </main>
