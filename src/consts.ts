@@ -12,3 +12,48 @@ export const pages = [
     "about",
     "contact",
 ]
+
+
+export const socialLinks = [
+    // {
+    //     name: "discord",
+    //     link: "#",
+    //     icon: "discord.svg"
+    // },
+    // {
+    //     name: "facebook",
+    //     link: "#",
+    //     icon: "facebook.svg"
+    // },
+    {
+        name: "ig",
+        link: "https://www.instagram.com/angelfeliperch/",
+        icon: "ig.svg"
+    },
+    // {
+    //     name: "tiktok",
+    //     link: "#",
+    //     icon: "tiktok.svg"
+    // },
+    // {
+    //     name: "twicht",
+    //     link: "#",
+    //     icon: "twicht.svg"
+    // },
+    {
+        name: "twitter",
+        link: "https://twitter.com/AngelFelipeRCH",
+        icon: "X.svg"
+    },
+    {
+        name: "git",
+        link: "https://github.com/CodeRagnarok07",
+        icon: "youtube.svg"
+
+    }
+    // {
+    //     name: "youtube",
+    //     link: "#",
+    //     icon: "youtube.svg"
+    // },
+]

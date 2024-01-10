@@ -1,0 +1,63 @@
+---
+let data = {
+    name: "",
+    description: "",
+};
+
+// const setData = (data: string) => {
+//     console.log(data);
+// };
+---
+
+<style>
+    textarea,
+    input {
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+<div class="w-full flex justify-center">
+    <form
+        class="w-[300px] border-box-primary border-sm p-6 rounded-lg gap-4 flex flex-col bg-black-dark"
+    >
+        <input
+            name={"name"}
+            placeholder="Tu nombre"
+            class="w-full btn border-box-primary border-sm h-min"
+            type="text"
+            id=""
+        />
+        <!-- <input
+            placeholder="Correo"
+            class="hidden md:flex w-full btn border-box-primary border-sm"
+            type="text"
+            id=""
+        /> -->
+
+        <!-- name={"description"} -->
+        <textarea
+            placeholder="Preguntas o sugerencias"
+            class="w-full h-full btn border-box-primary border-sm"
+            name="description"
+            id=""
+            rows="5"></textarea>
+
+        <div class="flex flex-col items-center justify-center">
+            <button
+                type="submit"
+                class="btn btn-secondary border-box-secondary mx-auto w-min"
+            >
+                Enviar
+            </button>
+            <!-- <a href={`Hola mi nombre es ${data.name} \n \n ${data.description}`}
+                    target="_blank"
+                    class="btn border-secondary">Enviar</a
+                > -->
+        </div>
+    </form>
+</div>
