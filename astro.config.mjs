@@ -12,8 +12,8 @@ export default defineConfig({
       title: 'home',
       sidebar: [
 				{
-					label: 'programacion',
-					autogenerate: { directory: 'blog/programacion/' },
+					label: 'python',
+					autogenerate: { directory: 'blog/python' },
         }]
     }),
     sitemap(), 
