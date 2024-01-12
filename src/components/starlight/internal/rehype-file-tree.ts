@@ -1,11 +1,10 @@
 import { fromHtml } from 'hast-util-from-html';
 import { toString } from 'hast-util-to-string';
 import { h, type Child } from 'hastscript';
-// import type { Element } from 'hast';
-import { rehype, Element } from 'rehype';
+import type { Element } from 'hast';
+import { rehype } from 'rehype';
 import { CONTINUE, SKIP, visit } from 'unist-util-visit';
 import { getIcon } from './file-tree-icons';
-// pnpm i hast-util-from-html hast-util-to-string hastscript hast rehype unist-util-visit
 
 /** Make a text node with the pass string as its contents. */
 const Text = (value = ''): { type: 'text'; value: string } => ({
@@ -26,7 +25,6 @@ const makeSVGIcon = (svgString: string) => {
 	};
 	return svg;
 };
-
 
 const FileIcon = (filename: string) => {
 	const { svg } = getIcon(filename);
