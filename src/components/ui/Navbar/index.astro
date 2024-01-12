@@ -20,21 +20,26 @@ import SvgBgMovil from "./BgMovil.svg";
 
         <h4 class="hidden sm:flex">CodeRagnarok</h4>
 
-        <div class="flex items-center justify-around pt-10 pb-2 sm:py-2 gap-3">
+        <div class="flex items-center justify-around pt-10 pb-2 sm:py-4">
             {
                 pages.map((v) => (
                     <a
                         href={v.link}
                         class="
-                        flex flex-col  items-center cursor-pointer min-w-[48px] 
+                        flex flex-col  items-center cursor-pointer 
                         p-1 rounded-lg gap-1
-                        px-2 
+                        
                         border-b-2 border-transparent
-                        bg-primary bg-opacity-40 hover:bg-opacity-100
+
+                        bg-primary bg-opacity-40  hover:bg-opacity-100
+
+                        
                         hover:border-white
                         transition-colors duration-700
+                    
                         sm:flex-row
                         sm:rounded-[4px]
+                        sm:bg-transparent
                         "
                     >
                         <img
@@ -42,7 +47,9 @@ import SvgBgMovil from "./BgMovil.svg";
                             src={`/assets/svg/nav/${v.icon}`}
                             alt={"#" + v}
                         />
-                        {v.name}
+                        <small class="hidden xs:inline px-1 sm:px-2 ">
+                            {v.name}
+                        </small>
                     </a>
                 ))
             }
