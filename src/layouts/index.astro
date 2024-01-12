@@ -9,29 +9,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 <html lang="en">
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}>
         <style is:global>
+            * {
+                scroll-behavior: smooth;
+            }
+
+            html,
             body {
-                overflow-x: hidden;
+                width: 100vw;
+                height: 100%;
             }
             .container {
                 max-width: 1280px;
                 margin: 0 auto;
-                /* @apply max-w-8xl; */
             }
 
             section {
+                display: inline-flex;
                 width: 100%;
-                /* min-height: 100vh;
-                min-height: 100dvh; */
+                overflow-x: hidden;
+                min-height: 100vh;
+                min-height: 100dvh;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
                 @apply pb-28 pt-4 sm:pb-4 sm:pt-16;
             }
         </style>
     </BaseHead>
-    <body class="bg-black-dark text-white flex-col aling-center w-full">
+    <body class="bg-black-dark text-white w-full">
         <Navbar />
 
-        <main class="flex-col aling-center">
+        <main class="inline-flex flex-col w-full">
             <slot />
         </main>
-        <!-- <Footer /> -->
+
+        <Footer />
     </body>
 </html>

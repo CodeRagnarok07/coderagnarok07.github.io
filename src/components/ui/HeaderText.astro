@@ -1,11 +1,9 @@
 ---
 interface Props {
-    title: string;
-    description?: string;
     aling?: "left" | "center" | "right";
 }
 
-const { title, description, aling } = Astro.props;
+const { aling } = Astro.props;
 ---
 
 <style>
@@ -27,11 +25,8 @@ const { title, description, aling } = Astro.props;
 </style>
 
 <header class={`inline-flex flex-col ${aling} overflow-hidden`}>
-    <div class="w-min inline-flex flex-col">
-        <h2 class="whitespace-nowrap">
-            <!--  -->
-            {title}
-        </h2>
+    <div class="whitespace-nowrap w-min inline-flex flex-col">
+        <slot name="title" />
 
         <svg
             class="w-full my-2 scale-125"
@@ -45,5 +40,5 @@ const { title, description, aling } = Astro.props;
         </svg>
     </div>
 
-    <p>{description}</p>
+    <slot name="description" />
 </header>

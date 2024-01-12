@@ -6,28 +6,23 @@ import { pages } from "@consts";
 import SvgBgMovil from "./BgMovil.svg";
 ---
 
-<nav
-    class="fixed inset-x-0 bottom-0 flex justify-center sm:top-0 sm:bottom-auto z-[1000]"
->
-    <div
-        class="w-full min-h-min sm:h-auto sm:flex justify-between items-center container"
-    >
-        <img
-            src={SvgBgMovil.src}
-            alt=""
-            class="sm:hidden absolute w-full translate-y-[-20%] scale-[105%] z-[-1]"
-        />
+<nav class="fixed inset-x-0 bottom-0 sm:bottom-auto sm:top-0 z-[1000]">
+    <img
+        src={SvgBgMovil.src}
+        alt=""
+        class="sm:hidden absolute w-full translate-y-[-20%] scale-[105%] z-[-1]"
+    />
+    <div class="flex justify-between pt-[10%] pb-2 sm:py-4 container">
+        <h4 class="hidden md:flex">CodeRagnarok</h4>
 
-        <h4 class="hidden sm:flex">CodeRagnarok</h4>
-
-        <div class="flex items-center justify-around pt-10 pb-2 sm:py-4">
+        <div class="flex w-full md:w-auto md:ml-auto justify-around">
             {
                 pages.map((v) => (
                     <a
                         href={v.link}
                         class="
                         flex flex-col  items-center cursor-pointer 
-                        p-1 rounded-lg gap-1
+                        p-1 rounded-lg gap-[2%]
                         
                         border-b-2 border-transparent
 
@@ -36,7 +31,8 @@ import SvgBgMovil from "./BgMovil.svg";
                         
                         hover:border-white
                         transition-colors duration-700
-                    
+                        
+                        sm:px-2
                         sm:flex-row
                         sm:rounded-[4px]
                         sm:bg-transparent
@@ -47,9 +43,7 @@ import SvgBgMovil from "./BgMovil.svg";
                             src={`/assets/svg/nav/${v.icon}`}
                             alt={"#" + v}
                         />
-                        <small class="hidden xs:inline px-1 sm:px-2 ">
-                            {v.name}
-                        </small>
+                        <small class="hidden xs:inline px-1   ">{v.name}</small>
                     </a>
                 ))
             }
