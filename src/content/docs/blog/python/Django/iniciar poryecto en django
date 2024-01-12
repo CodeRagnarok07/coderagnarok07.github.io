@@ -1,0 +1,5 @@
+4. Install Django and create project 
+  5. `python -m pip install django`
+  6. `django-admin startproject name`
+  7. `cd proyect-name`
+  8. `python manage.py startapp appName`

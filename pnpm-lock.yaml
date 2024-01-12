@@ -26,12 +26,30 @@ dependencies:
   astro:
     specifier: ^4.1.1
     version: 4.1.1(typescript@5.3.3)
+  hast:
+    specifier: ^1.0.0
+    version: 1.0.0
+  hast-util-from-html:
+    specifier: ^2.0.1
+    version: 2.0.1
+  hast-util-to-string:
+    specifier: ^3.0.0
+    version: 3.0.0
+  hastscript:
+    specifier: ^8.0.0
+    version: 8.0.0
+  rehype:
+    specifier: ^13.0.1
+    version: 13.0.1
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
+  unist-util-visit:
+    specifier: ^5.0.0
+    version: 5.0.0
 
 packages:
 
@@ -2473,6 +2491,11 @@ packages:
     resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==}
     dependencies:
       '@types/hast': 3.0.3
+    dev: false
+
+  /hast@1.0.0:
+    resolution: {integrity: sha512-vFUqlRV5C+xqP76Wwq2SrM0kipnmpxJm7OfvVXpB35Fp+Fn4MV+ozr+JZr5qFvyR1q/U+Foim2x+3P+x9S1PLA==}
+    deprecated: Renamed to rehype
     dev: false
 
   /hastscript@7.2.0:

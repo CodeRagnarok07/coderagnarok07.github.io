@@ -12,7 +12,7 @@ export default defineConfig({
       title: 'home',
       sidebar: [
 				{
-					label: 'python',
+					label: 'Python',
 					autogenerate: { directory: 'blog/python' },
         }]
     }),

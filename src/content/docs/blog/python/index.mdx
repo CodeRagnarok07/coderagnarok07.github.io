@@ -1,21 +1,145 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash
-# hero:
-#   tagline: Congrats on setting up a new Starlight project!
 
-#   actions:
-#     - text: Example Guide
-#       link: /wiki/programacion/element/
-#       icon: right-arrow
-#       variant: primary
-
+title: pip y entorno de desarrollo en python
 ---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+Una vez instalado Python, debemos entender que para aprovechar todo su potencial necesitamos hacer uso de paquetes de terceros. Este es uno de los principales beneficios de Python sobre otros lenguajes: su comunidad y el soporte a sus paquetes.
+Ya que si imaginas algo, probablemente ya alguien le ha dado solución a ese problema. Por ello, en lugar de reinventar la rueda, es mucho más efectivo encontrar el trabajo que otro nos ha dejado a nuestra disposición para ser usado.
+
+## pip 
+pip es un sistema de gestión de paquetes para Python. En términos simples, es una herramienta que te permite instalar y administrar paquetes de software de terceros en Python. Los paquetes son módulos de software que agregan funcionalidad adicional a Python
+
+### Instalacion de pip
+Normalmente, pip viene instalado por defecto una vez que instalas Python (en Windows). Pero, por si alguna razón estás en Linux y no lo tienes instalado, se puede instalar con el siguiente comando:
+
+```bash
+$ sudo apt update
+$ sudo apt install python3-pip
+$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py  # descarga paquetes iniciales
+$ python get-pip.py
+```
+
+Podrás darte cuenta de que para instalar módulos de Python no es tan necesario usar pip, pero la verdad es que sigue siendo sumamente recomendable.
+Además, pip te permite instalar paquetes de fuentes oficiales y no oficiales. Esto te da acceso a una gama más amplia de módulos.
+
+```bash title="instalacion de paquetes sin pip"
+$ sudo apt install python3-pip python3-virtualenv python3-venv 
+```
 
 
- <Card title="Moons" icon="moon"> 
-    Io, Europa, Ganymede
-  </Card>
+
+### actualizacion de pip
+una ves instalado es recomendable tener actualizado nuestro gestor de paquetes
+
+```bash title="actualizacion de pip"
+python3 -m pip install --upgrade pip
+```
+
+-   `python3` = elige tu version de python puede ser `python`, `python2`, `python3.10` etc
+-   `-m pip` = hace refecerencia a "modulo" es decir usa el siguiente modulo, en este caso pip
+-   `install --upgrade pip` = normalmente los comandos de modulo estan seguidos por una funcion y sus paramentros en enste caso "installa" pero como ya esta installado "actualizalo"
+
+
+ahora estamos listos para instalar paquetes es decir crear nuestro primer entorno de desarrollo
+
+
+
+
+
+## Entorno virtual
+el primer error cuando comenzamos a desarrollar con python es que comenzamos a instalar paquetes siguiendo tutoriales pero estos paquetes se instalan de manera global sea en la carpeta que sea
+esto genera un problema de compatibilidad ya que en difenrentes proyectos necesitaras diferentes paquetes y estos se actualizan muy frecuentemente, y generalmente los paquetes de un proyecto no seran compatibles con los de otro
+por ello debemos crear entornos virtuales por cada proyecto a desarrollar o "carpeta" 
+ejemplo
+
+
+<Tabs>
+    <TabItem label="projecto 1">
+        ```sh header="none"
+          version de python = 3.8
+          numpy 1.26.3
+        ```
+    </TabItem>
+       <TabItem label="projecto 2">
+        ```sh header="none"
+          version de python = 3.0
+          numpy1 0.0.1
+        ```
+    </TabItem>
+</Tabs>
+
+
+existen varios administradores o gestores de entornos virtuales en este caso me gusta mucho mas usar virtualen env
+
+### Virtualenv:
+
+#### instalacion de virtualenv
+```bash title="instalacion de virtualen"
+$ python -m pip install virtualenv
+```
+ 
+#### crea tu primer entorno virtual 
+ve a tu projecto `proyecto`
+```bash title=""
+$ cd proyecto
+$ python -m pip virtualenv env
+
+```
+{/* $ virtualenv project -p python3.9.0 */}
+
+
+import FileTree from '@components/starlight/file-tree.astro';
+
+<FileTree>
+- proyecto/
+  - **env**
+    - docs/
+  - archivos_de_proyecto/
+</FileTree>
+
+
+#### Activacion de el entorno virtual
+<Tabs>
+    <TabItem label="Windows">
+        ```sh 
+          $ \scripts\activate.bat
+
+          $ desactivate # para salir del entorno virtual
+        ```
+    </TabItem>
+       <TabItem label="Linux">
+        ```sh 
+          $ source venv/bin/activate
+          $ deactivate # para salir del entorno virtual
+        ```
+    </TabItem>
+</Tabs>
+
+
+{/* 
+#### Crear entorno virtual python3.9.10
+```text
+$ python3.9 -m pip install --upgrade pip
+$ python3.9 -m pip install virtualenv
+$ python3.9 -m virtualenv backend -p python3.9.10
+```
+     */}
+
+
+
+### requirements.txt
+una ves activado nuestro entorno virtual podemos administrar o ver que paquetes tenemos en dicho entorno con el archivo ``requirements.txt`
+
+```sh 
+pip list para saber los paquetes instalados
+pip freeze > requirements.txt  requirements.txt con todos los paquetes
+pip install -r requirements.txt
+python -m pip freeze 
+python -m pip uninstall freeze
+python -m pip install django==1.9.
+
+```
+
+
+  
