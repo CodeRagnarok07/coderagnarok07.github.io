@@ -24,7 +24,7 @@ import SvgBgMovil from "./BgMovil.svg";
             {
                 pages.map((v) => (
                     <a
-                        href={"#" + v}
+                        href={v.link}
                         class="
                         flex flex-col  items-center cursor-pointer min-w-[48px] 
                         p-1 rounded-lg gap-1
@@ -39,10 +39,10 @@ import SvgBgMovil from "./BgMovil.svg";
                     >
                         <img
                             class="h-6 w-6 sm:h-4 sm:w-4"
-                            src={`../../assets/svg/nav/${v}.svg`}
+                            src={`/assets/svg/nav/${v.icon}`}
                             alt={"#" + v}
                         />
-                        {v}
+                        {v.name}
                     </a>
                 ))
             }

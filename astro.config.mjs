@@ -9,17 +9,17 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'wiki CodeRagnarok',
+      title: 'home',
       sidebar: [
 				{
 					label: 'programacion',
-					autogenerate: { directory: 'wiki/programacion' },
+					autogenerate: { directory: 'blog/programacion/' },
         }]
     }),
     sitemap(), 
     tailwind(), 
    
   ],
-  site: 'https://coderagnarok07.github.io'
+  site: 'https://coderagnarok07.github.io/'
   // base: '/',
 });
