@@ -1,0 +1,61 @@
+.carrusel {
+    div {
+        height: 100%;
+        width: 100%;
+
+        &.main {
+            figure {
+
+                img {
+                    width: 1280px;
+                    height: 620px;
+                    border-radius: 8px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &.galery {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+
+            button {
+                svg {
+                    margin: 0px;
+                }
+            }
+
+            .menu {
+                display: flex;
+                @apply snap-x scroll-smooth h-full flex items-center justify-start;
+                overflow: hidden;
+                width: 844px;
+                gap: 24px;
+                div {
+                    @apply snap-start flex flex-shrink-0 w-auto;
+
+                    figure {
+                        img {
+                            width: 193px;
+                            height: 130px;
+                            border-radius: 8px;
+                            flex: none;
+                            order: 3;
+                            flex-grow: 0;
+                            object-fit: cover;
+                            cursor: pointer;
+
+                            &:hover{
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
