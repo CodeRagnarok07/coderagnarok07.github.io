@@ -13,7 +13,7 @@ export default defineConfig({
       sidebar: [
 				{
 					label: 'Python',
-					autogenerate: { directory: 'blog/python' },
+					autogenerate: { directory: 'blog/Python' },
         }]
     }),
     sitemap(), 

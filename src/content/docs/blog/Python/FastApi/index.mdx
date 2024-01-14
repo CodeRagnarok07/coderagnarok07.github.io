@@ -1,0 +1,110 @@
+---
+title: Guia De FastApi
+# template: splash
+# hero:
+#   tagline: Congrats on setting up a new Starlight project!
+#   actions:
+#     - text: Example Guide
+#       link: /wiki/programacion/element/
+#       icon: right-arrow
+#       variant: primary
+
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import FileTree from '@components/starlight/file-tree.astro';
+
+
+# Comenzar
+- https://fastapi.tiangolo.com/
+
+```sh
+$ pip install fastapi "uvicorn[standard]"
+```
+
+# Conectar Base de datos mysql
+- [sqlalchemy](https://www.sqlalchemy.org/) 
+- [pymysql](https://pypi.org/project/pymysql/ ) 
+
+```sh
+$ pip install pymysql SQLAlchemy
+```
+
+
+# autenticacion
+
+- [fastapi-blog](https://github.com/sourabhsinha396/fastapi-blog)
+
+
+# full stack app 
+agregar react a nuestra app
+
+- https://github.com/tiangolo/full-stack-fastapi-postgresql
+
+
+```py header="main"
+from typing import Union
+from fastapi import FastAPI,Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+# from api.routes import router
+
+app = FastAPI()
+# app.add_router(router)
+app.mount("/assets", StaticFiles(directory="template/dist/assets"), name="assets")
+templates = Jinja2Templates(directory="template/dist")
+
+@app.get("/", response_class=HTMLResponse)
+async def read_item(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="index.html", context={"id": id}
+    )
+```
+
+<FileTree>
+- proyecto/
+  - **env**
+  - template/
+    - dist/
+      - assets/
+      - index.html
+    - public/
+      - assets/
+        - vite.svg
+    - src/
+      - assets/
+      - vite.svg
+      - App.tsx
+      - main.tsx
+      - App.css
+  - api/
+  - main.py
+  
+</FileTree>
+
+
+
+
+<Tabs>
+    <TabItem label="projecto 1">
+        ```sh header="none"
+          version de python = 3.8
+          numpy 1.26.3
+        ```
+    </TabItem>
+       <TabItem label="projecto 2">
+        ```sh header="none"
+          version de python = 3.0
+          numpy1 0.0.1
+        ```
+    </TabItem>
+</Tabs>
+
+<FileTree>
+- proyecto/
+  - **env**
+    - docs/
+  - archivos_de_proyecto/
+</FileTree>
