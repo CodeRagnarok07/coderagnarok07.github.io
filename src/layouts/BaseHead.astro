@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import "../styles/ui.css";
 import StylesComponents from "./styles_components.astro";
 interface Props {
 	title: string;
@@ -58,6 +59,19 @@ const { title, description, image = "favicon.svg" } = Astro.props;
 	<meta property="twitter:title" content={title} />
 	<meta property="twitter:description" content={description} />
 	<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+	<script>
+		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+		if (
+			localStorage.getItem("color-theme") === "dark" ||
+			(!("color-theme" in localStorage) &&
+				window.matchMedia("(prefers-color-scheme: dark)").matches)
+		) {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	</script>
 
 	<!-- styles -->
 	<slot />

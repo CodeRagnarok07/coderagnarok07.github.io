@@ -1,7 +1,9 @@
 # Modificar estilos del administrador de django
 
 Copia la carpeta a tu carpeta static
-env/lib/python3.8/site-packages/django/contrib/admin/static/admin/css
+env/lib/python3.8/site-packages/django/contrib/admin/static/admin/
+
+a /{static_root}/
 
 
 # Mejoras: 

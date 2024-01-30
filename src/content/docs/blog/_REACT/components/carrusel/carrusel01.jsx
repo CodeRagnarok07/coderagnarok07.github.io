@@ -9,7 +9,7 @@ const Carrusel = () => {
             <Link className='flex items-center justify-center w-full h-full '>
 
                 <button className='bg-gray-500 mx-2' onClick={() => slider.current.scrollLeft -= 200}>
-                    <svg class='w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800' fillRule='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 19l-7-7 7-7'></path></svg>
+                    <svg class='w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800' fillRule='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' strokeLinejoin='round' stroke-width='2' d='M15 19l-7-7 7-7'></path></svg>
                 </button>
                 <Link ref={slider} class='snap-x overflow-scroll scroll-smooth h-full flex items-center justify-start'>
                     {images.map((e, i) => (
@@ -19,7 +19,7 @@ const Carrusel = () => {
                     ))}
                 </Link>
                 <button className='bg-gray-500 mx-2' onClick={() => slider.current.scrollLeft += 200}>
-                    <svg class='w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800' fillRule='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7'></path></svg>
+                    <svg class='w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800' fillRule='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' strokeLinejoin='round' stroke-width='2' d='M9 5l7 7-7 7'></path></svg>
                 </button>
             </Link>
 

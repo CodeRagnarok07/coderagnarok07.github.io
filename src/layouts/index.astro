@@ -1,50 +1,23 @@
 ---
 import BaseHead from "@layouts/BaseHead.astro";
-import Navbar from "@components/ui/Navbar/index.astro";
-import Footer from "@components/ui/Footer/index.astro";
+import Navbar from "./ui/Navbar/index.astro";
+import Footer from "./ui/Footer/index.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 ---
 
 <!doctype html>
 <html lang="en">
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}>
-        <style is:global>
-            * {
-                scroll-behavior: smooth;
-            }
-
-            html,
-            body {
-                width: 100vw;
-                height: 100%;
-            }
-            .container {
-                max-width: 1280px;
-                margin: 0 auto;
-            }
-
-            section {
-                display: inline-flex;
-                width: 100%;
-                overflow-x: hidden;
-                min-height: 100vh;
-                min-height: 100dvh;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                margin-left: auto;
-                margin-right: auto;
-                @apply pb-28 pt-4 sm:pb-4 sm:pt-16;
-            }
-        </style>
+        <style is:global></style>
     </BaseHead>
-    <body class="bg-black-dark text-white w-full">
+    <body class="bg-black-dark text-white w-full overflow-x-hidden">
         <Navbar />
 
-        <main class="inline-flex flex-col w-full">
+        <main class="inline-flex flex-col w-full overflow-x-hidden">
             <slot />
         </main>
 
         <Footer />
+        <script src="./theme.js"></script>
     </body>
 </html>

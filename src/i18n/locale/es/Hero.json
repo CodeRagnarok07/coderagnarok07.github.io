@@ -1,0 +1,24 @@
+{
+    "title": "Hola Soy Ángel",
+    "subtitle": "Experto en diseño y desarrollo de aplicaciones",
+    "CTA": {
+        "p": "¿Tienes una idea genial para tu negocio digital, pero no sabes cómo llevarla a cabo? ",
+        "r": "No te preocupes, yo te puedo ayudar. Te ofrezco mis servicios de:"
+    },
+    "items": [
+        {
+            "title": "Análisis y diseño:",
+            "content": "Estudio tu idea y te propongo la mejor solución para tu proyecto, teniendo en cuenta tus necesidades, tu público objetivo y tu presupuesto."
+        },
+        {
+            "title": "Desarrollo y testing:",
+            "content": "Programo tu proyecto con las tecnologías más adecuadas para cada caso, asegurando la calidad, la funcionalidad y la seguridad de tu producto."
+        },
+        {
+            "title": "Lanzamiento y mantenimiento:",
+            "content": "Lanzamiento y mantenimiento: Te ayudo a publicar tu proyecto en las plataformas que elijas, y te ofrezco un servicio de mantenimiento y soporte continuo para que tu producto siempre esté actualizado y operativo."
+        }
+    ],
+    "caption": "No dejes pasar esta oportunidad y contacta conmigo ahora mismo. Juntos podemos transformar tu idea en un proyecto escalable, innovador y rentable.",
+    "btn": "Contáctame"
+}
