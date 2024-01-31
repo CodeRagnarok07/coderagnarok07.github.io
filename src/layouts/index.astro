@@ -8,12 +8,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 <!doctype html>
 <html lang="en">
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}>
-        <style is:global></style>
     </BaseHead>
-    <body class="bg-black-dark text-white w-full overflow-x-hidden">
+    <body class="">
         <Navbar />
 
-        <main class="inline-flex flex-col w-full overflow-x-hidden">
+        <main class="">
             <slot />
         </main>
 

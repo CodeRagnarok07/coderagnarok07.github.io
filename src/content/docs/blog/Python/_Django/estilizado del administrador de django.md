@@ -44,3 +44,23 @@ a /{static_root}/
 }
 
 ```
+
+
+
+
+You may want either AdminInline or list_editable Django features:
+
+If you have linked models, say a Project and a Product, which is linked to Project, you can make your product editable as inlines:
+
+class ProductInline(admin.TabularInline):
+    model = Product
+
+class Project(admin.ModelAdmin):
+    model = Project
+    inlines = [ProductInline, ]
+If you have a standalone table, say, Product, you can make its list to be editable:
+
+class ProductAdmin(admin.ModelAdmin):
+    model = Product
+    list_display = ['quantity', 'description', 'tax_rate', ] 
+    list_editable = ['quantity', 'description', 'tax_rate', ] 

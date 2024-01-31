@@ -8,12 +8,10 @@ export const SITE_DESCRIPTION = 'diseño y desarrollo de software ';
 export const pages = [
     { name: "home", icon: "home.svg", link: "/#" },
     { name: "services", icon: "services.svg", link: "/#services" },
-    { name: "portfolio", icon: "portfolio.svg", link: "/#portfolio" },
+    { name: "portfolio", icon: "portfolio.svg", link: "/portfolio" },
     { name: "about", icon: "about.svg", link: "/#about" },
     { name: "contact", icon: "contact.svg", link: "/#contact" },
     { name: "blog", icon: "blog.svg", link: "/blog" },
-
-
 ]
 
 

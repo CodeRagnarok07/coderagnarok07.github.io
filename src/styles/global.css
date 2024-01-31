@@ -1,152 +1,20 @@
-/* /////////////////////////////////////////////////////////////// */
-/* /////// RESETS /////// */
-
 *,
-*::before,
-*::after {
-	box-sizing: border-box;
-	/* border: 1px red solid; */
-}
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+*:before,
+*:after {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-
+html,
 body {
-	line-height: 1;
+	width: 100vw;
+	height: 100%;
 }
 
-ol,
-ul {
-	list-style: none;
-}
-
-blockquote,
-q {
-	quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-
-/* /////////////////////////////////////////////////////////////// */
 /* /////// FONTS /////// */
 
 @font-face {
@@ -250,4 +118,102 @@ small,
 		font-size: 20px;
 	}
 
+}
+
+
+
+/* UI COMPONENTS */
+
+
+
+section {
+	@apply py-4;
+	display: inline-flex;
+
+}
+
+
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.container2 {
+	@apply max-w-screen-xl mx-auto;
+}
+
+
+
+
+
+section {
+	width: 100%;
+	overflow-x: hidden;
+	min-height: 100vh;
+	min-height: 100dvh;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	@apply pb-28 pt-4 sm:pb-4 sm:pt-16;
+}
+
+
+.btn {
+	@apply px-2 py-1 text-sm leading-none cursor-pointer rounded-[4px] transition-colors duration-300;
+}
+
+.btn-md {
+	@apply px-3 py-2 text-xl leading-none cursor-pointer rounded-md;
+}
+
+.btn-lg {
+	@apply px-4 py-2 text-3xl leading-none cursor-pointer rounded-lg;
+}
+
+/* primary */
+.btn-primary {
+	@apply border bg-black-dark border-primary hover:shadow-sm hover:shadow-primary text-white hover:bg-primary hover:text-white;
+}
+
+.border-box-primary {
+	@apply transition-shadow duration-500 border border-primary shadow-primary text-white hover:shadow-primary hover:shadow-[0px_0px_30px_0px];
+}
+
+/* secondary */
+.btn-secondary {
+	@apply border bg-black-dark border-secondary hover:shadow-sm hover:shadow-secondary text-white hover:bg-secondary hover:text-white;
+}
+
+.border-box-secondary {
+	@apply transition-shadow duration-500 border border-secondary shadow-secondary text-white hover:shadow-secondary hover:shadow-[0px_0px_30px_0px];
+}
+
+/* danger */
+.btn-danger {
+	@apply border bg-black-dark border-danger hover:shadow-sm hover:shadow-danger text-white hover:bg-danger hover:text-white;
+}
+
+.border-box-danger {
+	@apply transition-shadow duration-500 border border-danger shadow-danger text-white hover:shadow-danger hover:shadow-[0px_0px_30px_0px];
+}
+
+/* purple */
+.btn-purple {
+	@apply border bg-black-dark border-purple hover:shadow-sm hover:shadow-purple text-white hover:bg-purple hover:text-white;
+}
+
+.border-box-purple {
+	@apply transition-shadow duration-500 border border-purple shadow-purple text-white hover:shadow-purple hover:shadow-[0px_0px_30px_0px];
+}
+
+/* blue */
+.btn-blue {
+	@apply border bg-black-dark border-blue hover:shadow-sm hover:shadow-blue text-white hover:bg-blue hover:text-white;
+}
+
+.border-box-blue {
+	@apply transition-shadow duration-500 border border-blue shadow-blue text-white hover:shadow-blue hover:shadow-[0px_0px_30px_0px];
 }

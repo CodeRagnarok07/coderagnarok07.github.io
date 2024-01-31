@@ -2,8 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
-import "../styles/ui.css";
-import StylesComponents from "./styles_components.astro";
+// import StylesComponents from "./styles_components.astro";
 interface Props {
 	title: string;
 	description: string;
@@ -75,5 +74,5 @@ const { title, description, image = "favicon.svg" } = Astro.props;
 
 	<!-- styles -->
 	<slot />
-	<StylesComponents />
+	<!-- <StylesComponents /> -->
 </head>
