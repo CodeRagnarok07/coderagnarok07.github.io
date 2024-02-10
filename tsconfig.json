@@ -7,21 +7,9 @@
       "@consts": [
         "src/consts.ts"
       ],
-      "@components/*": [
-        "src/components/*"
+      "@/*": [
+        "src/*"
       ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@util/*": [
-        "src/util/*"
-      ],
-      "@i18n/*": [
-        "src/i18n/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ]
     }
   }
 }

@@ -1,0 +1,35 @@
+---
+import Card from "./starlight/Card-Tumbail.astro";
+---
+
+<ul class="fluid-grid">
+	<Card
+		size="750"
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+	<Card
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+	<Card
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+</ul>
+
+<style>
+	.fluid-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+		gap: 1rem;
+		list-style: none;
+		padding: 0;
+	}
+	.fluid-grid > :global(*) {
+		margin-top: 0 !important;
+	}
+</style>

@@ -1,18 +1,19 @@
 ---
-title: Blog
+title: Intro
 description: Get started building your docs site with Starlight.
-template: splash
 
 # import Hero from "@/components/flowbite/Hero.astro";
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## [Blog y Recursos](/blog/)
-<CardGrid stagger>
-  <LinkCard
-    title="Python"
-    description="Conoce el interprete de python"
+
+<LinkCard
+  icon="moon"
+    title="python"
     href="/blog/python"
   />
-</CardGrid>
+
+<Card title="Moons" icon="moon" link="blog/python"> 
+  Io, Europa, Ganymede
+</Card>

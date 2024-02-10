@@ -1,0 +1,14 @@
+---
+import data from "@/i18n/locale/es/services.json";
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
+---
+
+<CardGrid stagger>
+    {
+        data.items.map((v) => (
+            <Card title={v.title} icon={v.icon}>
+                {v.content}
+            </Card>
+        ))
+    }
+</CardGrid>

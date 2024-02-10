@@ -1,6 +1,6 @@
 ---
 import tablet from "@assets/divice/tablet.png";
-import HeaderText from "@components/ui/HeaderText.astro";
+import HeaderText from "@/components/ui/HeaderText.astro";
 
 const images = ["", "", ""];
 ---
@@ -23,7 +23,7 @@ const images = ["", "", ""];
         border: 10px solid black;
     }
 </style>
-<section id="portfolio" class="container relative">
+<section id="portfolio" class="relative">
     <HeaderText aling="center">
         <h2 slot="title">Portafolio de proyectos</h2>
         <p slot="description">
@@ -34,9 +34,7 @@ const images = ["", "", ""];
         </p>
     </HeaderText>
 
-    <div
-        class="flex sm:flex-row flex-col items-center gap-10 justify-between my-[5%]"
-    >
+    <div class="flex">
         {
             images.map((v) => (
                 <div class="device border-box-secondary trasition-all duration-500 group hover:bg-opacity-50">
