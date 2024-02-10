@@ -14,7 +14,7 @@ hero:
       icon: right-arrow
       variant: primary
     - text: Contacto
-      link: "#contacto"
+      link: "https://discordapp.com/users/355587084515540992"
       icon: external
  
 ---
@@ -24,13 +24,16 @@ import Skills from '@/components/Skills.astro';
 import Blog from './blog/index.mdx'
 import Portafolio from './portafolio/index.mdx'
 
-/assets/bg/bg-skills.png
-
 
 <Portafolio/>
 <br/>
 <br/>
 <br/>
+<section class="relative">
+<img class="absolute object-fixed inset-y-0 right-0 -z-10" src="../../assets/bg/bg-skills.png" alt=""/>
+
 # Skills 
 <Skills/>
 <Blog/>
+</section>
+
