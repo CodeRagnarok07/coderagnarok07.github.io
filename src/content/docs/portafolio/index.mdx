@@ -4,10 +4,30 @@ title: portafolio
 template: splash
 
 ---
-import Gallery from '@/components/Gallery.astro';
+
+import CardTumbail from "@/components/starlight/Card-Tumbail.astro";
+import {  CardGrid } from "@astrojs/starlight/components";
 
 # [Portafolio](/portafolio)
-Nuestro propósito es ayudar a las personas a alcanzar sus objetivos emprendedores y convertirse en líderes en sus campos. Nos esforzamos por ser una organización disruptiva y acogedora que fomente el crecimiento y el desarrollo personal de nuestros miembros. 
-<Gallery/>
+
+
+<CardGrid>
+	<CardTumbail
+		size="750"
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+	<CardTumbail
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+	<CardTumbail
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+</CardGrid>
 
 --- 

@@ -37,5 +37,9 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
+  customCss: [
+    './src/styles/ui_components.css',
+    './src/styles/theme.css',
+  ],
   // base: '/',
 });

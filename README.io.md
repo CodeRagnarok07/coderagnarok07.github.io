@@ -40,14 +40,7 @@ Here are some ideas to get you started:
 		tool to learn English using algorithms of spaced repetition, text to speech and a model of
 		questionnaire with flashcards quite efficient being in its beta phase:
 	</p>
-	<figure>
-		<a style=" color: #486fdb;
-    text-decoration: none;
-    font-weight: bold;"  target="_blank" href="https://angelriera.notion.site/Wordbook-Web-Application-Learn-Language-Django-PostgresSQL-DRF-SJWT-React-Next-js-Red-c726fe8db73845d598e772aa49a59909">
-			<span>📘</span>Wordbook
-			Web Application Learn Language [ Django - PostgresSQL - DRF -
-			SJWT || React - Next.js - Redux - TailwindCSS ]</a>
-	</figure>
+
 </div>
 <div style="display: flex; justify-content: space-around;">
 	<!-- CONTACT -->

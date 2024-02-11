@@ -1,8 +1,9 @@
 ---
 import Card from "./starlight/Card-Tumbail.astro";
----
+import {  CardGrid } from "@astrojs/starlight/components";
 
-<ul class="fluid-grid">
+---
+<CardGrid>
 	<Card
 		size="750"
 		title="Athena OS"
@@ -19,7 +20,7 @@ import Card from "./starlight/Card-Tumbail.astro";
 		href="https://athenaos.org"
 		thumbnail="/portfolio/tat.png"
 	/>
-</ul>
+</CardGrid>
 
 <style>
 	.fluid-grid {
