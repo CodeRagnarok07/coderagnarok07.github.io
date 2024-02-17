@@ -70,3 +70,24 @@
 .border-box-blue {
 	@apply transition-shadow duration-500 border border-blue shadow-blue text-white hover:shadow-blue hover:shadow-[0px_0px_30px_0px];
 }
+
+
+/* Fonts */
+
+.heroTitle {
+	color: black;
+	margin-bottom: 4px;
+	text-shadow:
+		1px 1px 1px #000000,
+		-2px 2px 6px #464aa9,
+		2px -2px 6px #6459ff;
+
+	line-height: var(--sl-line-height-headings);
+
+	&> span {
+		text-shadow: 1px 1px 1px #000000;
+	}
+
+	
+}
+

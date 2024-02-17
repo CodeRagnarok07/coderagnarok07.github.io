@@ -6,8 +6,11 @@ template: splash
 
 import HeroStartlight from "@/components/Hero.astro"
 import Skills from '@/components/Skills.astro';
-import Blog from './blog/index.mdx'
+// import Blog from './blog/index.mdx'
 import Portafolio from './portafolio/index.mdx'
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 
 
 
@@ -33,6 +36,13 @@ import Portafolio from './portafolio/index.mdx'
 <br/>
 <br/>
 <br/>
-<Blog/>
+## [Blog y Recursos](/blog/)
+<CardGrid stagger>
+    {/* description="Conoce el interprete de python" */}
+  <LinkCard
+    title="Python"
+    href="/blog/python"
+  />
+</CardGrid>
 </section>
 
