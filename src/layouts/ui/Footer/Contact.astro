@@ -7,6 +7,9 @@ let data = {
 // const setData = (data: string) => {
 //     console.log(data);
 // };
+
+type size = "sm" | "md";
+const { size: size = "sm" } = Astro.props;
 ---
 
 <style>
@@ -19,11 +22,14 @@ let data = {
         padding: 0;
         margin: 0;
     }
+    form {
+      
+    }
 </style>
 
 <div id="contact" class="w-full flex justify-center">
     <form
-        class="w-[300px] border-box-primary border-sm p-6 rounded-lg gap-4 flex flex-col bg-black-dark"
+        class={`w-full border-box-primary border-sm p-6 rounded-lg gap-4 flex flex-col bg-black-dark`}
     >
         <input
             name={"name"}

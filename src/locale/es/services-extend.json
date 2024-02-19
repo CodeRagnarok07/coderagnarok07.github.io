@@ -1,16 +1,24 @@
 {
     "CTA": {
-        "p": "¿Quieres impulsar tu negocio digital ?",
-        "r": "Entonces, estás en el lugar correcto. Te ofrezco mis servicios de:"
+        "p": "Mis habilidades",
+        "r": "Me permiten crear soluciones personalizadas que se ajustan a los objetivos"
     },
     "items": [
-      
+        {
+            "icon": "pencil",
+            "title": "Diseño UX UI",
+            "content": "Creo interfaces de usuario atractivas y funcionales, siguiendo las últimas tendencias y las mejores prácticas de UX. Así, logro captar y retener la atención de tus leads, y aumentar su satisfacción y fidelidad."
+        },
         {
             "icon": "open-book",
             "title": "Desarrollo frontend",
             "content": "Utilizo JavaScript, Python y otras tecnologías web de vanguardia para desarrollar sitios y aplicaciones web rápidas, responsivas y optimizadas. Con esto, consigo mejorar la experiencia de usuario, el posicionamiento SEO y la velocidad de carga de tus proyectos."
         },
-     
+        {
+            "icon": "setting",
+            "title": "Desarrollo backend",
+            "content": "Programo en Python y otros lenguajes de programación potentes y versátiles para crear proyectos seguros, escalables y eficientes. Con esto, garantizo el buen funcionamiento y la calidad de tus productos digitales."
+        },
         {
             "icon": "laptop",
             "title": "Gestión de servidor",

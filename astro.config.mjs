@@ -30,7 +30,9 @@ export default defineConfig({
       },
     }),
     sitemap(),
-    tailwind(),
+    tailwind({
+      nesting: true,
+    }),
 
   ],
   site: 'https://coderagnarok07.github.io/',

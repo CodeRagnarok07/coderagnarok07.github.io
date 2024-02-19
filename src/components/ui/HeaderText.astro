@@ -6,7 +6,7 @@ interface Props {
 const { aling } = Astro.props;
 ---
 
-<style>
+<style is:global>
     .center {
         text-align: center;
         justify-content: center;
@@ -25,6 +25,14 @@ const { aling } = Astro.props;
     svg {
         margin: 0 !important;
     }
+    @media (max-width: 575px); {
+        header{
+            text-align: center !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+    }
+  
 </style>
 
 <header class={`inline-flex flex-col ${aling} overflow-hidden`}>

@@ -1,18 +1,64 @@
 ---
 import Mobile from "@/layouts/Mobile.astro";
-// import Skills from '@/components/Skills.astro';
-// import Portafolio from '@/constent/docs/portafolio/index.mdx'
+import Skills from "@/components/Skills.astro";
+
+import Contact from "@/layouts/ui/Footer/Contact.astro";
+import HeaderText from "@/components/ui/HeaderText.astro";
 ---
 
 <Mobile>
-    <section id="home">
-        <article  class=" relative container flex items-center">
-           
+    <section class="relative" id="contact">
+        <img
+        class="absolute object-fixed inset-y-0 -right-[5px] -z-10 opacity-85 w-full "
+        src="/assets/bg/bg1.png"
+        alt=""
+    />
 
+        <article class="container flex justify-center items-center">
+            <div>
+                <HeaderText aling="center">
+                    <h1 slot="title" class="uppercase">contacto</h1>
+                    <h4 slot="description">
+                        ¿Tienes alguna pregunta o proyecto en mente? No dudes en
+                        ponerte en contacto conmigo.
+                    </h4>
+                </HeaderText>
+
+                <div class="mt-[10%] max-w-[500px] mx-auto">
+                    <Contact />
+                </div>
+            </div>
+        </article>
+        <article>
+            <h1>hola mundo</h1>
+        </article>
+    </section>
+
+    <section id="services" class="relative">
+        <img
+        class="absolute object-fixed inset-y-0 right-0 -z-10"
+        src="/assets/bg/bg-skills.png"
+        alt=""
+    />
+
+        <article
+            class="overflow-y-scroll container pb-24 pt-4 md:pb-0 md:pt-[5rem]"
+        >
+            <div>
+                <Skills />
+                
+            </div>
+        </article>
+
+        <article><h1>hola mundo</h1></article>
+    </section>
+
+    <section id="home">
+        <article class="relative container flex items-center">
             <div
                 class="flex w-full items-center flex-col-reverse md:flex-row h-max overflow-visible"
             >
-                <div class="w-full text-center md:text-left  ">
+                <div class="w-full text-center md:text-left">
                     <h1 class="tet-5xl md:text-7xl heroTitle">
                         <span class="text-secondary">Desarrollo</span> & <span
                             class="text-primary">Diseño</span
@@ -23,9 +69,11 @@ import Mobile from "@/layouts/Mobile.astro";
                         materializa tu idea de negocio digital con CodeRagnarok
                     </h4>
                     <div
-                        class="flex flex-wrap flex-row items-center md:justify-start  w-full py-4 justify-center gap-4"
+                        class="flex flex-wrap flex-row items-center md:justify-start w-full py-4 justify-center gap-4"
                     >
-                        <div class="btn-lg btn-primary border-box-primary text-nowrap">
+                        <div
+                            class="btn-lg btn-primary border-box-primary text-nowrap"
+                        >
                             Get Started
                         </div>
                         <div class="btn-lg btn-secondary border-box-secondary">
@@ -36,29 +84,11 @@ import Mobile from "@/layouts/Mobile.astro";
 
                 <img
                     class="absolute inset-0 w-full -z-10 opacity-60
-                    md:left-auto md:right-[10%] md:w-auto 
-                    "
+                    md:left-auto md:right-[10%] md:w-auto"
                     src="/assets/haker.png"
                     alt="desarrollador de aplicaciones y software"
                 />
             </div>
-            
-            
-
-        </article>
-
-
-        <article>
-            <h1>hola mundo</h1>
-        </article>
-    </section>
-
-    <section id="services">
-        <article>
-            <h1>hola mundo</h1>
-        </article>
-        <article>
-            <h1>hola mundo</h1>
         </article>
     </section>
 

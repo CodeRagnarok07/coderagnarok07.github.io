@@ -4,33 +4,25 @@
         "r": "Entonces, estás en el lugar correcto. Te ofrezco mis servicios de:"
     },
     "items": [
+      
         {
-            "icon": "pencil",
-            "title": "Diseño UX UI",
-            "content": "Creo interfaces de usuario atractivas y funcionales, siguiendo las últimas tendencias y las mejores prácticas de UX. Así, logro captar y retener la atención de tus leads, y aumentar su satisfacción y fidelidad."
-        },
-        {
-            "icon": "open-book",
+            "icon_startlight": "open-book",
             "title": "Desarrollo frontend",
             "content": "Utilizo JavaScript, Python y otras tecnologías web de vanguardia para desarrollar sitios y aplicaciones web rápidas, responsivas y optimizadas. Con esto, consigo mejorar la experiencia de usuario, el posicionamiento SEO y la velocidad de carga de tus proyectos."
         },
+     
         {
-            "icon": "setting",
-            "title": "Desarrollo backend",
-            "content": "Programo en Python y otros lenguajes de programación potentes y versátiles para crear proyectos seguros, escalables y eficientes. Con esto, garantizo el buen funcionamiento y la calidad de tus productos digitales."
-        },
-        {
-            "icon": "laptop",
+            "icon_startlight": "laptop",
             "title": "Gestión de servidor",
             "content": "Manejo el cloud AWS, el hosting y las bases de datos con solvencia y profesionalidad. Con esto, aseguro la disponibilidad, la seguridad y el rendimiento de tus recursos en la nube."
         },
         {
-            "icon": "rocket",
+            "icon_startlight": "rocket",
             "title": "Metodologías ágiles",
             "content": "Aplico las metodologías ágiles para organizar y proyectar mis trabajos de forma efectiva y flexible. Con esto, facilito la comunicación, la colaboración y la entrega de valor en cada etapa del proceso."
         },
         {
-            "icon": "magnifier",
+            "icon_startlight": "magnifier",
             "title": "Nociones de marketing y Diseño UX UI",
             "content": "Conozco las estrategias de marketing y diseño para hacer que tus proyectos sean atractivos, relevantes y rentables. Con esto, contribuyo a alcanzar tus objetivos de ventas y crecimiento."
         }
