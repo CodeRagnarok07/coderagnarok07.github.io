@@ -1,0 +1,70 @@
+---
+// const bord = require('/src/assets/svg/nav/Interface.svg')
+
+import { pages } from "@/content/consts";
+
+import SvgBgMovil from "./BgMovil.svg";
+
+import SocialIcon from '@/assets/icon.astro'
+import type  {IconType} from '@/assets/icon.astro'
+
+---
+
+<nav class="fixed inset-x-0 bottom-0 sm:bottom-auto sm:top-0 z-[1000]">
+    <img
+        src={SvgBgMovil.src}
+        alt=""
+        class="sm:hidden absolute w-full translate-y-[-20%] scale-[105%] z-[-1]"
+    />
+    <div class="flex justify-between pt-[10%] pb-2 sm:py-4 container">
+        <h4 class="hidden md:flex">CodeRagnarok</h4>
+
+        <div class="flex w-full md:w-auto md:ml-auto justify-around">
+            {
+                pages.map((v) => (
+                    <a
+                        href={v.link}
+                        class=" text-white
+                        flex flex-col  items-center cursor-pointer 
+                        p-1 rounded-lg gap-[2%]
+                        
+                        border-b-2 border-transparent
+
+                        bg-primary bg-opacity-40  hover:bg-opacity-100
+
+                        
+                        hover:border-white
+                        transition-colors duration-700
+                        
+                        sm:px-2
+                        sm:flex-row
+                        sm:rounded-[4px]
+                        sm:bg-transparent
+                        "
+                    >
+                    <SocialIcon icon={v.icon as IconType}/>
+                       
+
+
+                        <small class="hidden xs:inline px-1">{v.name}</small>
+                    </a>
+                ))
+            }
+        </div>
+
+        <!-- 
+            // <img class="h-6 w-6 sm:h-4 sm:w-4" src={`/assets/svg/nav/${v.icon}`} alt={"#" + v} />
+
+        -->
+    </div>
+</nav>
+
+<style>
+    nav {
+        background: linear-gradient(
+            180deg,
+            rgba(74, 108, 226, 0) 0%,
+            #464aa9 100%
+        );
+    }
+</style>

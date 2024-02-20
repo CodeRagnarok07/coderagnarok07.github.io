@@ -1,0 +1,48 @@
+---
+import icons from './icons'
+
+const keys = Object.entries(icons).reduce<string[]>(
+    (acc, module) =>
+        acc.concat(
+            Object.keys(module[1]).map(
+                (iconName) => `${module[0]}.${iconName}`,
+            ),
+        ),
+    [],
+);
+
+export type IconType = keyof typeof icons;
+
+interface Props {
+    size?: string;
+    fill?: string;
+    icon: IconType;
+}
+
+const { size = "33px", fill = "none", icon } = Astro.props;
+---
+
+<i set:html={icons[icon]}>
+
+</i>
+
+
+
+<style define:vars={{ size }}>
+    svg {
+        width: var(--size);
+        height: var(--size);
+        display: grid;
+        place-content: center;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+    g,
+    path {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+    }
+</style>

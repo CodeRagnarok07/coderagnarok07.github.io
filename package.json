@@ -17,6 +17,7 @@
     "@astrojs/starlight": "^0.15.2",
     "@astrojs/starlight-tailwind": "^2.0.1",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.5.2",
     "@types/hast": "^3.0.3",
     "astro": "^4.1.1",
     "hast-util-from-html": "^2.0.1",

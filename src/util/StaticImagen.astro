@@ -1,0 +1,14 @@
+---
+import type { ImageMetadata } from 'astro';
+
+
+
+const thumbnails = import.meta.glob<{ default: ImageMetadata }>(
+	'../assets/showcase/*{.png,.jpg,.jpeg,.webp,.avif}'
+);
+const thumbnail = thumbnails[`../assets/showcase/${Astro.props.thumbnail}`];
+if (!thumbnail) {
+	throw new Error(`Could not resolve showcase thumbnail: ${Astro.props.thumbnail}`);
+}
+const src = (await thumbnail()).default;
+---

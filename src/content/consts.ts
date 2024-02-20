@@ -6,16 +6,32 @@ export const SITE_DESCRIPTION = 'diseño y desarrollo de software ';
 
 
 export const pages = [
-    { name: "home", icon: "home.svg", link: "/#home" },
-    { name: "services", icon: "services.svg", link: "/#services" },
-    { name: "portfolio", icon: "portfolio.svg", link: "/#portfolio" },
+    { name: "home", icon: "nav.home", link: "/#home" },
+    { name: "services", icon: "nav.services", link: "/#services" },
+    { name: "portfolio", icon: "nav.portfolio", link: "/#portfolio" },
+    { name: "contact", icon: "nav.contact", link: "/#contact" },
     // { name: "about", icon: "about.svg", link: "/#about" },
-    { name: "contact", icon: "contact.svg", link: "/#contact" },
     // { name: "blog", icon: "blog.svg", link: "/blog" },
 ]
 
 
 export const socialLinks = [
+    {
+        name: "twitter",
+        link: "https://twitter.com/AngelFelipeRCH",
+        icon: "social.twitter"
+    },
+    {
+        name: "git",
+        link: "https://github.com/CodeRagnarok07",
+        icon: "social.youtube"
+
+    },
+    {
+        name: "ig",
+        link: "https://www.instagram.com/angelfeliperch/",
+        icon: "social.instagram"
+    },
     // {
     //     name: "discord",
     //     link: "#",
@@ -26,11 +42,7 @@ export const socialLinks = [
     //     link: "#",
     //     icon: "facebook.svg"
     // },
-    {
-        name: "ig",
-        link: "https://www.instagram.com/angelfeliperch/",
-        icon: "ig.svg"
-    },
+  
     // {
     //     name: "tiktok",
     //     link: "#",
@@ -41,17 +53,7 @@ export const socialLinks = [
     //     link: "#",
     //     icon: "twicht.svg"
     // },
-    {
-        name: "twitter",
-        link: "https://twitter.com/AngelFelipeRCH",
-        icon: "X.svg"
-    },
-    {
-        name: "git",
-        link: "https://github.com/CodeRagnarok07",
-        icon: "youtube.svg"
-
-    }
+  
     // {
     //     name: "youtube",
     //     link: "#",
