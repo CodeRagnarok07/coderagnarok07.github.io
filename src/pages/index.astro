@@ -5,26 +5,14 @@ import Skills from "@/components/Skills.astro";
 import Contact from "@/components/layouts/Footer/Contact.astro";
 import HeaderText from "@/components/ui/HeaderText.astro";
 
-import Icons from '@/assets/icon.astro'
-import type {IconType} from '@/assets/icon.astro'
+import Icons from "@/assets/icon.astro";
+import type { IconType } from "@/assets/icon.astro";
 
-import {socialLinks} from '@/content/consts'
-import Portfolio from '@/components/Portfolio.astro'
+import { socialLinks } from "@/content/consts";
+import Portfolio from "@/components/Portfolio.astro";
 ---
 
 <Mobile>
-        
-    <section id="portfolio"
-    >
-    <!-- class="bg-center bg-fixed bg-opacity-60 bg-[url('/assets/bg/bg-skills.png')]" -->
-        <img
-        class="absolute opacity-50 object-fixed object-left inset-0 h-auto -z-10"
-        src="/assets/bg/bg-skills.png"
-        alt=""
-    />
-        <Portfolio/>
-    </section>
-
     <section id="home">
         <article class="relative container flex items-center">
             <div
@@ -34,17 +22,12 @@ import Portfolio from '@/components/Portfolio.astro'
                     <h1 class="tet-5xl md:text-7xl heroTitle">
                         <span class="text-secondary">Desarrollo</span> & <span
                             class="text-primary">Diseño</span
-                        > de <br class="hidde md:flex"> software de calidad
+                        > de <br class="hidde md:flex" /> software de calidad
                     </h1>
                     <hr class="" />
 
-                    <div>
+                    <div></div>
 
-                    
-
-                </div>
-                    
-                        
                     <h4 class="">
                         materializa tu idea de negocio digital con CodeRagnarok
                     </h4>
@@ -72,36 +55,56 @@ import Portfolio from '@/components/Portfolio.astro'
         </article>
     </section>
 
-   
-
     <section id="services" class="relative">
         <img
-        class="absolute object-fixed inset-y-0 right-0 -z-10"
-        src="/assets/bg/bg-skills.png"
-        alt=""
-    />
+            class="absolute object-fixed inset-y-0 right-0 -z-10"
+            src="/assets/bg/bg-skills.png"
+            alt=""
+        />
 
         <article
             class="overflow-y-scroll container pb-24 pt-4 md:pb-0 md:pt-[5rem]"
         >
             <div>
                 <Skills />
-                
             </div>
         </article>
 
         <article><h1>hola mundo</h1></article>
     </section>
 
-  
-
-   
-    <section  id="contact" class="relative">
+    <section id="portfolio">
+        <!-- class="bg-center bg-fixed bg-opacity-60 bg-[url('/assets/bg/bg-skills.png')]" -->
         <img
-        class="absolute object-fixed inset-y-0 -right-[5px] -z-10 opacity-85 w-full "
-        src="/assets/bg/bg1.png"
-        alt=""
-    />
+            class="absolute opacity-50 object-fixed object-left inset-0 h-auto -z-10"
+            src="/assets/bg/bg-skills.png"
+            alt=""
+        />
+        <!-- <article class="container flex justify-center items-center">
+            <div>
+                <HeaderText aling="center">
+                    <h1 slot="title" class="uppercase">Portafolio</h1>
+                    <h4 slot="description">
+                        Sigueme en mis redes sociales para estar al día con mis
+                        últimos proyectos y publicaciones.
+                    </h4>
+                </HeaderText>
+
+                <div
+                    class="mt-[10%] max-w-[500px] mx-auto flex justify-around items-center"
+                >
+                </div>
+            </div>
+        </article> -->
+        <Portfolio />
+    </section>
+
+    <section id="contact" class="relative">
+        <img
+            class="absolute object-fixed inset-y-0 -right-[5px] -z-10 opacity-85 w-full"
+            src="/assets/bg/bg1.png"
+            alt=""
+        />
 
         <article class="container flex justify-center items-center">
             <div>
@@ -124,19 +127,21 @@ import Portfolio from '@/components/Portfolio.astro'
                 <HeaderText aling="center">
                     <h1 slot="title" class="uppercase">Redes Sociales</h1>
                     <h4 slot="description">
-                        Sigueme en mis redes sociales para estar al día con mis últimos proyectos y publicaciones.
+                        Sigueme en mis redes sociales para estar al día con mis
+                        últimos proyectos y publicaciones.
                     </h4>
                 </HeaderText>
 
-                <div class="mt-[10%] max-w-[500px] mx-auto flex justify-around items-center">
-                    {socialLinks.map(e=>
-                        <Icons size={"55px"}  icon={e.icon as IconType } />
-                )}
-    
+                <div
+                    class="mt-[10%] max-w-[500px] mx-auto flex justify-around items-center"
+                >
+                    {
+                        socialLinks.map((e) => (
+                            <Icons size={"55px"} icon={e.icon as IconType} />
+                        ))
+                    }
                 </div>
             </div>
         </article>
-
-      
     </section>
 </Mobile>

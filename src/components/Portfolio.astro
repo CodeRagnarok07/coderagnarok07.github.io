@@ -1,24 +1,72 @@
 ---
-import HeaderText from '@/components/ui/HeaderText.astro'
+import HeaderText from "@/components/ui/HeaderText.astro";
+
+import data from "@/content/i18n/es/PortFolio_Items.json";
+
+// const upisaPaths = thumbnails.filter((path) => path.includes("/upisa/"));
+
+import Divices from "./PortfolioDivices.astro";
+
+const images = Object.entries(
+    import.meta.glob<{ default: ImageMetadata }>(
+        "../assets/media/portfolio/*/*{.png,.jpg,.jpeg,.webp,.avif}",
+    ),
+);
 ---
 
-    <article class="container flex justify-center items-center">
-        <div>
-            <HeaderText aling="center">
-                <h1 slot="title" class="uppercase">Portafolio</h1>
-                <h4 slot="description">
-                    Sigueme en mis redes sociales para estar al día con mis últimos proyectos y publicaciones.
-                </h4>
-            </HeaderText>
+{
+    data.map((e) => (
+        <article class="container flex ">
+            <div
+                class="border-box-blue h-[70%] my-auto w-full  p-4 md:p-8 rounded-md bg-black-dark bg-opacity-50 flex flex-col items-center
+            md:flex-row 
+            "
+            >
+                <div class="my-auto ">
+                    <Divices
+                        paths={images.filter((path) => path[0].includes(e.id))}
+                    />
+                </div>
+                <div class="md:-ml-[10%]">
+                    <h3 class="text-center">{e.Title}</h3>
+                    <div class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4 ">
+                        {e.github && (
+                            <a
+                                href={e.github}
+                                target="_blank"
+                                class="btn-md btn-primary border-box-primary text-nowrap"
+                            >
+                                github
+                            </a>
+                        )}
+                        {e.live && (
+                            <a
+                                href={e.live}
+                                target="_blank"
+                                class="btn-md btn-secondary border-box-secondary"
+                            >
+                                live
+                            </a>
+                        )}
 
-            <div class="mt-[10%] max-w-[500px] mx-auto flex justify-around items-center">
-             
-
+                        {e.description && (
+                            <a
+                                href={e.description}
+                                target="_blank"
+                                class="btn-md btn-secondary border-box-secondary"
+                            >
+                                descripcion
+                            </a>
+                        )}
+                    </div>
+                </div>
             </div>
-        </div>
-    </article>
+        </article>
+    ))
+}
+<!-- <Image
+                src={"/favicon.svg"}
+                alt="Un pájaro sentado sobre un nido de huevos."
+            /> -->
 
-    <article>
-        <h1>hola mundo</h1>
-    </article>
 

@@ -1,0 +1,29 @@
+{
+    "CTA": {
+        "p": "¿Quieres impulsar tu negocio digital ?",
+        "r": "Entonces, estás en el lugar correcto. Te ofrezco mis servicios de:"
+    },
+    "items":[
+        {
+            "id": "upisa",
+            "name": "UPISA",
+            "Title": "(UPISA) Distribuidora internacional de cárnicos",
+            "description": "",
+            "url_description": "portfolio/upisa",
+            "github": "portfolio/upisa",
+            "live": "portfolio/upisa"
+        },
+        {
+            "id": "upisa",
+            "name": "UPISA",
+            "Title": "(UPISA) Distribuidora internacional de cárnicos",
+            "description": "",
+            "url_description": "portfolio/upisa",
+            "github": "portfolio/upisa",
+            "live": "portfolio/upisa"
+        }
+    
+    ],
+    "caption": "No lo dudes más y contáctame para empezar a trabajar juntos. Te aseguro que no te arrepentirás de elegirme como tu freelance de confianza.",
+    "cta": "Contáctame"
+}
