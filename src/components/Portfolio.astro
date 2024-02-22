@@ -1,11 +1,13 @@
 ---
-import HeaderText from "@/components/ui/HeaderText.astro";
-
+// import HeaderText from "@/components/ui/HeaderText.astro";
 import data from "@/content/i18n/es/PortFolio_Items.json";
-
-// const upisaPaths = thumbnails.filter((path) => path.includes("/upisa/"));
-
 import Divices from "./PortfolioDivices.astro";
+
+// import { getCollection } from "astro:content";
+// const dataColection = await getCollection("docs");
+// const dataPortfolio = dataColection.filter((e) => {
+//     return e.id.includes("portfolio");
+// });
 
 const images = Object.entries(
     import.meta.glob<{ default: ImageMetadata }>(
@@ -24,7 +26,9 @@ const images = Object.entries(
             >
                 <div class="my-auto ">
                     <Divices
-                        paths={images.filter((path) => path[0].includes(e.id))}
+                        paths={images.filter((path) => {
+                            // console.log(typeof path[0])
+                            return path[0].includes(e.id)})}
                     />
                 </div>
                 <div class="md:-ml-[10%]">
@@ -68,5 +72,3 @@ const images = Object.entries(
                 src={"/favicon.svg"}
                 alt="Un pájaro sentado sobre un nido de huevos."
             /> -->
-
-

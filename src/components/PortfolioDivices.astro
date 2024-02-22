@@ -2,7 +2,9 @@
 import { Image } from 'astro:assets';
 import lgDivice from '/assets/divice/desktop.png'
 const {paths} = Astro.props 
-
+if(! paths[0]){
+    return false
+}
 const thumbnail = paths[0][1];
 if (!thumbnail) {
     throw new Error(`Could not resolve showcase thumbnail: `);

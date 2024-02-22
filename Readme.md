@@ -1,25 +1,56 @@
 
-# paginas
+# Todo
 
+## UI
+- [ ] barra de navegacion
+  - [x] responsiva
+  - [ ] Colores mas vivos
+- [ ] 
+
+
+## paginas
+- Portafolio
+  - [ ] 3 dispositivos
+    - [x] lg
+    - [ ] md
+    - [ ] sm
+  - [ ] Tecnologias
+    - [ ] asociadas al blog
+  - [x] descripcion de los proyectos
+  - [ ] proyectos agregados terminados
+    - [ ] upisa
+    - [ ] tat
+    - [ ] okConstructora
+  - [ ] SubDivision por tipos
+    - [ ] Proyectos personales
+    - [ ] Pedidos de clientes
+    - [ ] tipo de proyecto
 - Home | objetivo: contrata a un frelance experto en desarroll
-  - Que soy y que hago?
-  - Portafolio
-  - Servicios / Skills: marketing, figma, desarrollo web
-  - Mi especialidad; La auto Sustentabilidad, desarrollo sostenible
-    - Porque deberian contratarme?
-    - Que puedo ofrecer?
-  - Testimonios
-  - Contacto
-  - Mini Blog
+  - [ ] Mini About
+    - [ ] Que soy y que hago?
+    - [ ] acerca de mi
+- [ ] about: Conoceme, experiencia, habilidades
+  - [ ] Mi filosofia
+  - [ ] mi experiencia laboral
+  - [ ] Proyectos y portafolio
+  - [ ] Curriculo
+
+- [ ] Servicios / Skills: marketing, figma, desarrollo web
+  - [ ] Mi especialidad; La auto Sustentabilidad, desarrollo sostenible
+    - [ ] Porque deberian contratarme?
+    - [ ] Que puedo ofrecer?
+  - [ ] Testimonios
+- [ ] Contacto
+  - [ ] Redes sociales
+  - [ ] mail
+  - [ ] ws
+- [ ] Mini Blog
   
-- about: Conoceme, experiencia, habilidades
-  - Mi filosofia
-  - acerca de mi
-  - mi experiencia laboral
-  - Proyectos y portafolio
-  - Curriculo
-  
-- Interanacionalizacion 
+
+
+- Internacionalizacion 
+
+
 
 
 # home
@@ -29,11 +60,7 @@ hola soy angel
 transforma tu idea en un proyecto escalable 
 Contacta me ahora y pongamos en materializar tu idea
 
-
-
-
 Hola Soy Ángel, un freelance experto en desarrollo web y móvil. 
-
 ¿Tienes una idea genial para tu negocio digital, pero no sabes cómo llevarla a cabo? 
 No te preocupes, yo te puedo ayudar. 
 Te ofrezco mis servicios de:

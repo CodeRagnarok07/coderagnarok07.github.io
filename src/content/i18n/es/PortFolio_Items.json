@@ -1,21 +1,44 @@
 [
-    {
-        "id": "upisa",
-        "name": "UPISA",
-        "Title": "(UPISA) Distribuidora internacional de cárnicos",
-        "description": "portfolio/upisa",
-        "url_description": "portfolio/upisa",
-        "github": "portfolio/upisa",
-        "live": "portfolio/upisa"
-    },
+  
     {
         "id": "tat",
         "name": "TAT",
         "Title": "Tribunal Administrativo Tributario de Panama",
         "description": "portfolio/tat",
-        "url_description": "portfolio/upisa",
         "github": null,
         "live": "https://tat.gob.pa/"
+    },
+    {
+        "id": "upisa",
+        "name": "UPISA",
+        "Title": "(UPISA) Distribuidora internacional de cárnicos",
+        "description": "portfolio/upisa",
+        "github": "https://github.com/CodeRagnarok07/UPISA",
+        "live": "https://upisa.com.py/"
+    },
+    {
+        "id": "Framework-CSS-Aduana-Paraguay",
+        "name": "Framework-CSS-Aduana-Paraguay",
+        "Title": "Framework de CSS Tribunal de Aduana de Paraguay",
+        "description": "portfolio/Framework-CSS-Aduana-Paraguay",
+        "github": "https://github.com/CodeRagnarok07/Framework-CSS-Aduana-Paraguay",
+        "live": "https://template-aduana-paraguay.vercel.app/"
+    },
+    {
+        "id": "Naciones-Unidas",
+        "name": "Naciones-Unidas",
+        "Title": "Plataforma de presentación de informes para la CIADDIS",
+        "description": "portfolio/Naciones-Unidas",
+        "github": "https://github.com/CodeRagnarok07/Naciones-Unidas",
+        "live": "https://coderagnarok07.github.io/OEA-Proyect/"
+    },
+    {
+        "id": "okconstructora",
+        "name": "okconstructora",
+        "Title": "OkConstructora",
+        "description": "portfolio/okconstructora",
+        "github": "https://github.com/CodeRagnarok07/OKConstructora",
+        "live": "https://okconstructora.com/"
     }
 
 ]
