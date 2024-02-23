@@ -1,27 +1,21 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
     "baseUrl": "./",
     "paths": {
       "@consts": [
-        "src/consts.ts"
+        "src/locale/consts.ts"
       ],
-      "@components/*": [
-        "src/components/*"
+      "@/*": [
+        "src/*"
       ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@util/*": [
-        "src/util/*"
-      ],
-      "@i18n/*": [
-        "src/i18n/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ]
-    }
+      
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      },
+    ],
   }
 }

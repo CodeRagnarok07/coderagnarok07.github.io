@@ -1,0 +1,21 @@
+---
+import BaseHead from "@/components/layouts/BaseHead.astro";
+import Navbar from "@/components/layouts/Navbar/index.astro";
+import Footer from "@/components/layouts/Footer/index.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/content/consts";
+---
+
+<!doctype html>
+<html lang="en">
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <body class="">
+        <Navbar />
+
+        <main class="">
+            <slot />
+        </main>
+
+        <Footer />
+        <script src="./theme.js"></script>
+    </body>
+</html>

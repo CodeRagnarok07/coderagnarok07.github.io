@@ -1,0 +1,79 @@
+---
+import BaseHead from "@/components/layouts/BaseHead.astro";
+import Navbar from "@/components/layouts/Navbar/index.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/content/consts";
+---
+
+<html lang="en">
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <body class="bg-[#030713] text-white leading-none">
+        <Navbar />
+
+        <main>
+            <slot />
+        </main>
+
+        <!-- <Footer /> -->
+    </body><style is:global>
+    a{
+        text-decoration: none !important;
+    }
+        .container {
+            margin: 0 auto;
+            min-width: 100%;
+        }
+        main {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            /* scroll-snap-type: y mandatory; */
+            max-height: min-content;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            & > section {
+                position: relative;
+                overflow: auto;
+                max-height: 100vh;
+                max-height: 100dvh;
+                width: 100%;
+
+                max-width: 100dvw;
+
+                display: flex;
+                flex-shrink: 0;
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+                flex-direction: column;
+                scroll-snap-type: y mandatory;
+
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                overflow-x: hidden;
+
+                & > article {
+                    min-height: 100dvh;
+                    max-height: 100dvh;
+                    width: 100dvw;
+                    max-width: 100dvw;
+                    scroll-snap-align: center;
+                    scroll-snap-stop: always;
+                    overflow-y: scroll;
+                    overflow: hidden;
+
+
+                }
+            }
+        }
+        main::-webkit-scrollbar,
+        main>section::-webkit-scrollbar,
+        main>section>article::-webkit-scrollbar{
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            display: none;
+        }
+         
+    </style>
+</html>

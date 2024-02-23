@@ -1,0 +1,47 @@
+---
+interface Props {
+    name?: string;
+}
+
+const { name } = Astro.props;
+---
+
+<button
+    class="icon-preview"
+    aria-label={`Copy ${name} name to clipboard`}
+    data-name={name}
+>
+    <!-- <Icon name={icon} size="1.5rem" /> -->
+    <div class="main">
+        <slot />
+    </div>
+    {name && <span aria-live="polite">name</span>}
+</button>
+
+<style>
+    .icon-preview {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid var(--sl-color-gray-5);
+        display: flex;
+        flex-direction: column;
+        font-size: var(--sl-text-sm);
+        gap: 0.25rem;
+        margin: 0;
+        padding: 0.75rem;
+        background: none;
+    }
+    .main {
+        --size: 1.5rem;
+        width: var(--size);
+        height: var(--size);
+    }
+
+    .icon-preview:hover,
+    .icon-preview:focus {
+        cursor: pointer;
+        border: 1px solid var(--sl-color-gray-3);
+        background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+    }
+</style>

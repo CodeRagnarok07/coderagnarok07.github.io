@@ -1,21 +1,66 @@
 ---
-title: Blog De Ragnarok 👨‍💻
-description: Get started building your docs site with Starlight.
-# template: splash
-# hero:
-#   tagline: Congrats on setting up a new Starlight project!
-
-#   actions:
-#     - text: Example Guide
-#       link: /wiki/programacion/element/
-#       icon: right-arrow
-#       variant: primary
+title: ""
+template: splash
 
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import HeroStartlight from "@/components/starlight/Hero.astro"
+import Skills from '@/components/starlight/Skills.astro';
+import CardTumbail from "@/components/starlight/Card-Tumbail.astro";
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 
- <Card title="Moons" icon="moon"> 
-    Io, Europa, Ganymede
-  </Card>
+
+
+
+<HeroStartlight/> 
+
+
+
+
+# [Portafolio](/portafolio)
+<CardGrid>
+	<CardTumbail
+		size="750"
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+	<CardTumbail
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+	<CardTumbail
+		title="Athena OS"
+		href="https://athenaos.org"
+		thumbnail="/portfolio/tat.png"
+	/>
+</CardGrid>
+
+<br/>
+<br/>
+<br/>
+
+
+<section class="relative">
+<img class="absolute object-fixed inset-y-0 right-0 -z-10" src="../../assets/bg/bg-skills.png" alt=""/>
+
+# Skills 
+<Skills/>
+
+
+<br/>
+<br/>
+<br/>
+## [Blog y Recursos](/blog/)
+<CardGrid stagger>
+    {/* description="Conoce el interprete de python" */}
+  <LinkCard
+    title="Python"
+    href="/blog/python"
+  />
+</CardGrid>
+</section>
+

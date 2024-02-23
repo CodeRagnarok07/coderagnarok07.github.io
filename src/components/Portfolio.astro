@@ -1,63 +1,74 @@
 ---
-import tablet from "@assets/divice/tablet.png";
-import HeaderText from "@components/ui/HeaderText.astro";
+// import HeaderText from "@/components/ui/HeaderText.astro";
+import data from "@/content/i18n/es/PortFolio_Items.json";
+import Divices from "./PortfolioDivices.astro";
 
-const images = ["", "", ""];
+// import { getCollection } from "astro:content";
+// const dataColection = await getCollection("docs");
+// const dataPortfolio = dataColection.filter((e) => {
+//     return e.id.includes("portfolio");
+// });
+
+const images = Object.entries(
+    import.meta.glob<{ default: ImageMetadata }>(
+        "../assets/media/portfolio/*/*{.png,.jpg,.jpeg,.webp,.avif}",
+    ),
+);
 ---
 
-<style>
-    section::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-position: center;
-        /* transform: scale(1.5); */
-        background-image: url("/assets/bg/bg-portfolio.png");
-        background-repeat: no-repeat;
-        z-index: -20;
-        filter: contrast(1.5);
-    }
-    .device {
-        @apply w-[250px] h-[300px] flex justify-center items-center  relative  shadow-md bg-black  border-4 rounded-lg overflow-hidden;
-        box-shadow: 0px 0px 0px 2px;
-        border: 10px solid black;
-    }
-</style>
-<section id="portfolio" class="container relative">
-    <HeaderText aling="center">
-        <h2 slot="title">Portafolio de proyectos</h2>
-        <p slot="description">
-            Nuestro propósito es ayudar a las personas a alcanzar sus objetivos
-            emprendedores y convertirse en líderes en sus campos. Nos esforzamos
-            por ser una organización disruptiva y acogedora que fomente el
-            crecimiento y el desarrollo personal de nuestros miembros.
-        </p>
-    </HeaderText>
-
-    <div
-        class="flex sm:flex-row flex-col items-center gap-10 justify-between my-[5%]"
-    >
-        {
-            images.map((v) => (
-                <div class="device border-box-secondary trasition-all duration-500 group hover:bg-opacity-50">
-                    <img
-                        class="flex scale-y-110 trasition-all duration-1000 h-full absolute inset-0 object-cover -translate-y-2 object-center group-hover:z-[-1]  group-hover:rotate-12  group-hover:scale-150"
-                        src="https://tailwindui.com/img/templates/catalyst/banner.png"
-                        alt=""
+{
+    data.map((e) => (
+        <article class="container flex ">
+            <div
+                class="border-box-blue h-[70%] my-auto w-full  p-4 md:p-8 rounded-md bg-black-dark bg-opacity-50 flex flex-col items-center
+            md:flex-row 
+            "
+            >
+                <div class="my-auto ">
+                    <Divices
+                        paths={images.filter((path) => {
+                            // console.log(typeof path[0])
+                            return path[0].includes(e.id)})}
                     />
-                    <div class="btn btn-secondary w-[30%] text-center">ver</div>
                 </div>
-            ))
-        }
-    </div>
-    <div class="flex justify-center">
-        <div class="btn-lg btn-secondary border-box-secondary">ver todos</div>
-    </div>
-</section>
+                <div class="md:-ml-[10%]">
+                    <h3 class="text-center">{e.Title}</h3>
+                    <div class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4 ">
+                        {e.github && (
+                            <a
+                                href={e.github}
+                                target="_blank"
+                                class="btn-md btn-primary border-box-primary text-nowrap"
+                            >
+                                github
+                            </a>
+                        )}
+                        {e.live && (
+                            <a
+                                href={e.live}
+                                target="_blank"
+                                class="btn-md btn-secondary border-box-secondary"
+                            >
+                                live
+                            </a>
+                        )}
 
-<!-- 
-    aspect relation
-    destop = 16:9
-    tablet = 4:3
-    mobile = 1:1 | 3:4 | 9:16
- -->
+                        {e.description && (
+                            <a
+                                href={e.description}
+                                target="_blank"
+                                class="btn-md btn-secondary border-box-secondary"
+                            >
+                                descripcion
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </article>
+    ))
+}
+<!-- <Image
+                src={"/favicon.svg"}
+                alt="Un pájaro sentado sobre un nido de huevos."
+            /> -->

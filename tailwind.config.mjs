@@ -1,16 +1,19 @@
 /** @type {import('tailwindcss').Config} */
+import starlightPlugin from '@astrojs/starlight-tailwind';
+import colors from 'tailwindcss/colors';
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		container: {
 			padding: {
-			  DEFAULT: '2%',
-			  md: '10%',
-			//   xl: 'auto',
-			
+				DEFAULT: '2%',
+				md: '10%',
+				//   xl: 'auto',
+
 			},
-			
-		  },
+
+		},
 		screens: {
 			'xs': '320px', // => @media (min-width: 640px) { ... }
 			'sm': '575px', // => @media (min-width: 640px) { ... }
@@ -18,8 +21,8 @@ export default {
 			'lg': '1024px', // => @media (min-width: 1024px) { ... }
 			'xl': '1280px', // => @media (min-width: 1280px) { ... }
 			'2xl': '1536px', // => @media (min-width: 1536px) { ... }
-		  },
-		  colors: {
+		},
+		colors: {
 			transparent: 'transparent',
 			current: 'currentColor',
 			//black
@@ -33,7 +36,7 @@ export default {
 			//white
 			'white': '#CBCBCB',
 			'white-light': '#D3D3D3',
-	
+
 			//primary
 			'primary': '#464AA9',
 			'primary-light': '#4A6CE2',
@@ -54,10 +57,18 @@ export default {
 			'blue': '#0090F9',
 			'blue-dark': '#1572B6',
 
-		  },
-		extend: {
-
 		},
+		extend: {
+			colors: {
+				accent: colors.indigo,
+				// Tu escala de grises preferida. Zinc es el más cercano a los valores predeterminados de Starlight.
+				gray: colors.sky,
+			},
+		}
 	},
-	plugins: [],
+	plugins: [
+		starlightPlugin(),
+	]
+		,
+	
 }

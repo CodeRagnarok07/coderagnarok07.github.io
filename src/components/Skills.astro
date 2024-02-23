@@ -1,0 +1,25 @@
+---
+import services from "@/content/i18n/es/services.json"
+
+import HeaderText from "./ui/HeaderText.astro";
+---
+
+
+<HeaderText aling="left">
+    <h1 slot="title" class="">{services.CTA.p}</h1>
+    <h4 slot="description"  class="mb-[1.5rem]">{services.CTA.r}</h4>
+</HeaderText>
+
+<div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-[5%]">
+    {
+        services.items.map((v) => (
+            <a href="#contact" class="no-underline">
+                <div class="border-box-blue p-4 md:p-8 rounded-md bg-secondary bg-opacity-20">
+                    <h4 class="mb-4">{v.title}</h4>
+
+                    {v.content}
+                </div>
+            </a>
+        ))
+    }
+</div>
