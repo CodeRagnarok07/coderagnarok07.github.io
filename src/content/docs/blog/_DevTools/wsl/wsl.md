@@ -1,3 +1,76 @@
+
+ok el dia de hoy quisiera realizar este rapido video
+
+sobre las herramientas que mas me ayudan a multiplicar mi productividad a la hora de desarrollar
+
+son 2 simples herramientas que me hacen mi dia mas productivo
+
+el editor de codigo y una terminal poderoza como la de linux
+
+si la verdad que es muy bueno utilizar una terminal de linux para desarrollar cualquier cosa.
+
+basicamente por que los errores son mucho mas faciles de corregir que en windows
+
+pero ya se!
+te preguntaras como puedo desarrollar en linux si tengo windows 10
+
+la verdad que eso es lo que le vengo a mostrar
+
+una herrmienta de windos llamada windos subsytem for linux
+
+lo cual significa que puedes tener esta herrmienta de linux a tu dispocion
+
+y te voy a mostrar como combinar estas dos herrmientas
+
+# paso 1
+
+ok asi que comenzamos por instalar nuestro editor de codigo favorito en mi caso visual estudio code
+
+buscamos en google o nuestro buscador de preferencia "vscode"
+
+podemos tener muchos resultados,
+
+code.visualstudio que es la pagina oficial y la pagina de microsoft podemos igualmente descargarlas por igual
+
+aqui tambien tendremos mucha informacion sobre como usar esta herramienta aunque yo te recomiendo que si eres nivel basico mejor
+
+veas algunos cursos aqui en youtube
+
+te dejo algunos canales muy buenos para comenzar en la programacion
+
+entre los beneficios de visual estudio code esta la personalizacion
+
+la intregracion de otras herrmientas por medio de pluggins, como docker, github,
+
+o en concreto wsl que es de lo que trata este tutorial
+
+una vez descargado instalamos, damos aceptar los terminos, siguiente, seleccionamos estas dos casillas que ya te muestro como te ayudaran
+
+y listo aqui como podras ver puedes personalizar esta herramienta y usar la terminal integrada
+
+comenzar a desarrollar
+
+usar una carpeta como ambiente de desarrollo
+
+podemos hacer click derecho dentro de la carpeta y comenzar a usar la carpeta o simplemente arrastrarla
+
+# paso 2
+
+pero esta terminal es muy pobre para desarrollar asi que vamos al paso 2
+
+instalar la terminar de linux
+
+la verdad es que este paso puede ser muy frustrante y puede dar mucho miedo por que hay que realizar algunas configuraciones avanzadas
+
+pero debes superar ese miedo o nunca podras avanzar al siguiente nivel como programador
+
+sip. esto lo digo por mi, ya que pase bastante tiempo limitado por el miedo
+
+y una vez que supere el miedo o las limitaciones, me dije como pude ser tan tonto para no superar esto antes
+
+pero todo a su tiempo
+
+
 # NOTE el post esta en notion
 
 # Ubuntu en windows para programadores
@@ -56,14 +129,14 @@ podemos saber donde esta esa carpeta dentro de nuestra computadora exjecutando
 
 sudo apt update && sudo apt upgrade. => ejecutamos las intalaciones que neesitamos
 
+
+
+
+
 # Installacion de node 
-
-
 sudo apt-get install curl
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install --lts
-
-
 ## Instalación de Versiones: (wget)
 
 ```bash
@@ -75,6 +148,4 @@ $ nvm install v16.15.1 ⇒ elegir versión
 $ sudo apt install nodejs instalacion de node
 $ sudo apt install npm Instalacion de npm
 $ nodejs -v Version de node
-
 ```
-
