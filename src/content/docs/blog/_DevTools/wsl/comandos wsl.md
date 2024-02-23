@@ -23,3 +23,12 @@ nvm install v16.15.1 ⇒ elegir versión
 sudo apt install nodejs instalacion de node
 sudo apt install npm Instalacion de npm
 nodejs -v Version de node
+
+
+# Limpiar instalacionesp
+
+sudo apt-get clean
+sudo apt-get autoremove --purge
+sudo apt-get remove python3.10
+sudo apt-get autoremove
+sudo apt --fix-broken install 

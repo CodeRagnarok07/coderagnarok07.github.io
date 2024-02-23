@@ -8,22 +8,6 @@ sudo apt install libgmp3-dev libpq-dev python3 python3-virtualenv curl gnupg
 
 
 
-
-# instalacion de pgadmin (server)
-
-
-$ sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
-$ sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/focal pgadmin4 main" \
-  > /etc/apt/sources.list.d/pgadmin4.list && sudo apt update'
-$ sudo apt install pgadmin4-web 
-$ sudo /usr/pgadmin4/bin/setup-web.sh
-curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
-pgadmin4
-
-- https://serverspace.io/es/support/help/initial-setup-of-ubuntu-server-22-04/
-- https://www.digitalocean.com/community/tutorials/how-to-install-configure-pgadmin4-server-mode-es
-
-
 # PgAdmin server (python)
 https://www.pgadmin.org/download/pgadmin-4-python/
 
@@ -236,6 +220,14 @@ module.exports = {
   ],
 };
 
+{
+        name: 'django',
+        cmd: 'gunicorn',
+        args: '--bind unix:/tmp/django.sock --workers=1 --threads=25 --chdir ~/django config.wsgi:application',
+        watch: true,
+        interpreter: '~/django/.venv/bin/python'
+       }
+
 pm2 restart ecosystem.config.js
 
 pm2 save
@@ -256,6 +248,15 @@ server {
         listen [::]:80; #In most cases, when starting nginx -t gives an error, is sent to this line, when you get an error, comment out the line
         server_name django testing; #Server name
 
+		location / {
+                root /var/www/html;
+                # Add index.php to the list if you are using PHP
+                index index.html index.htm index.nginx-debian.html;
+                server_name _;
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
         location /pgadmin4/ {
                 include proxy_params;
                 proxy_pass http://unix:/tmp/pgadmin4.sock;

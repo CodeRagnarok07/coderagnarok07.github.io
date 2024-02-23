@@ -13,4 +13,6 @@ $ chmod 400 /path/key-pair-name.pem
 ```
 
 
+
+
 - https://99robots.com/how-to-fix-permission-error-ssh-amazon-ec2-instance/
