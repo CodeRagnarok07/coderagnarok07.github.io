@@ -1,3 +1,9 @@
----
-title: 0 bases de python
----
+Utilizar https://ideone.com/ para desarrollar el código. Ideone tiene varios lenguajes que puedes utilizar. En caso no encuentre Typescript, puede utilizar Javascript o NodeJS.
+
+
+
+Luego de terminar el código, pueden probar los algoritmos insertando la entrada (vía entrada estándar o standard input), para ello, hacemos clic en stdin, luego aparecerá otra caja de texto con título “enter input(stdin)”. En esa caja, puede copiar los datos de entrada de los casos de prueba mencionados en los problemas. Cuando todo esté conforme, puede hacer clic en el botón verde RUN
+
+
+
+https://ideone.com/ 

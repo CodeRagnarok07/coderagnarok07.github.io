@@ -1,0 +1,11 @@
+# Git
+
+git config --global user.name "angel"
+git config --global user.email "angel"
+
+
+
+https://github.com/cli/cli#installation
+
+sudo apt install gh
+gh auth login

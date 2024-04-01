@@ -1,0 +1,17 @@
+
+
+# wsl asp
+
+--
+python docker_pull.py mcr.microsoft.com/dotnet/aspnet
+python docker_pull.py mcr.microsoft.com/dotnet/core/aspnet
+mcr.microsoft.com/dotnet/core/aspnet:8.0 AS base
+wsl --import dotnet ./dotnet dotnet_core_aspnet.tar
+https://nishanc.medium.com/configuring-wsl2-for-net-development-515e8160bae6
+--
+
+sudo apt install zlib1g
+https://learn.microsoft.com/es-es/dotnet/core/install/linux-ubuntu-2204
+
+
+

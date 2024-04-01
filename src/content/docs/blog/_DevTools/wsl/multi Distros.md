@@ -5,6 +5,8 @@ https://learn.microsoft.com/es-es/windows/wsl/use-custom-distro
 # descargar de distro
 https://github.com/NotGlop/docker-drag
 
+ 
+
 
 ver distros disponibles
 ```sh
@@ -28,6 +30,8 @@ https://terminaldelinux.com/terminal/administracion/instalar-y-configurar-sudo/
 instalacion de sudo
 ```
 apt-get update && apt upgrade -y && apt-get install sudo && sudo apt-get install git curl wget -y
+
+apt-get update && apt-get install -y lsb-release && apt-get clean all
 ```
 
 $ su - root

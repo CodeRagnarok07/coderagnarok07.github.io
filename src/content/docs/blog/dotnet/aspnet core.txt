@@ -1,0 +1,8 @@
+
+
+# inicializacion de proyecto
+
+dotnet new web -o newproyect
+dotnet watch run
+
+

@@ -17,7 +17,7 @@ x = x - 2  # Resta"
 x = x * 2  # Multiplicacion"
 x = x / 2  # Divicion"
 x = x % 2  # Modulo"
-x = x // 2 # Divicion sin float"
+x = x // 2 # Divicion sin float, sirve para redondear al minimo"
 x = x ** 2 # Potencia"
 x = -x     # negated
 x = +x     # unchanged
@@ -74,23 +74,3 @@ divmod(x, y)    # the pair (x // y, x % y)
 pow(x, y)      # x**y
 ```
 
-# Operadores Binarios
-
-suman un 1 a la expresión binaria
-```python
-x = x & 2
-x = x | 2
-x = x ^ 2
-x = x >> 2
-x = x <<
-```
-
-Sintaxis corta
-
-```python
-x &= 2	    ""
-x |= 2	    ""
-x ^= 2	    ""
-x >>= 2	    ""
-x <<= 2	    ""
-```
