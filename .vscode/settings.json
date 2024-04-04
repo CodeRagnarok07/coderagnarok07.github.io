@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
+        "astrojs",
+        "consts",
         "ocupable",
         "postgresql",
+        "tsconfigs",
         "VARCHAR"
     ]
 }

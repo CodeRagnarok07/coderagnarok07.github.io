@@ -7,9 +7,9 @@ for (let key = 0; key < array.length; key++) {
    
     setTimeout(()=>{
         console.log("ejecución setime out", i++)
-    },1000)
+    },1000);
     
-    new Promise fetch(`https://picsum.photos/id/${key}/300/300`).then(res => console.log("ejecución fetch", i++))
+    fetch(`https://picsum.photos/id/${key}/300/300`).then(res => console.log("ejecución fetch", i++));
 
     
 }

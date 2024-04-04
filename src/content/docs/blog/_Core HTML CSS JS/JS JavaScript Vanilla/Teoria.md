@@ -1,10 +1,10 @@
-
-
 # execution context
-es el entorno de ejecución del código JavaScript. crea y ejecuta y destruye el contexto según su llamado por medio del código, determina el scope léxico dentro de cada contexto por medio de la palabra clave this
+- es el entorno de ejecución del código JavaScript. 
+- crea y ejecuta y destruye el contexto según su llamado por medio call stack
+- determina el entorno léxico o scope dentro de cada contexto por medio de la palabra clave this
+
 
 ## entorno léxico
-
 es un objeto literal con la información de las variables y funciones dentro de un [execution context](#execution-context) 
 teniendo acceso a su propio valor this con este objecto
 
@@ -19,9 +19,9 @@ fase de ejecución del contexto en el que se definen sus valores, por ello son u
 el registro guarda en memoria los datos de el [execution context](#execution-context) y su entorno léxico durante la ejecución
 guarda el orden de ejecucion de las funciones, la creacion y destrucion del entorno lexico y su registro en memoria
 
-# event loop
 
-característica agregada por los navegadores a JavaScript para realizar operaciones asincrónicas
+# event loop
+característica agregada por los navegadores a JavaScript para realizar operaciones asincrónas
 sin bloquear la ejecución, distribuyendo el orden de prioridad de la cola de tareas enviandolos al stack 
 la prioridad es, tareas de js > tareas web Apis > micro tareas webApis
 
