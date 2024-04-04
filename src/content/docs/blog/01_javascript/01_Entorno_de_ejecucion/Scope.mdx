@@ -1,0 +1,20 @@
+---
+title: entorno léxico
+description: Get started building your docs site with Starlight.
+---
+
+# execution context
+- es el entorno de ejecución del código JavaScript. 
+- crea y ejecuta y destruye el contexto según su llamado por medio call stack
+- determina el entorno léxico o scope dentro de cada contexto por medio de la palabra clave this
+
+
+## entorno léxico
+es un objeto literal con la información de las variables y funciones dentro de un [execution context](#execution-context) 
+teniendo acceso a su propio valor this con este objecto
+
+### fase 1 hoisting 
+fase de creación del contexto en el que primero se definen las claves (nombres de variables y funciones) dentro del contexto
+
+### fase 2 Binding
+fase de ejecución del contexto en el que se definen sus valores, por ello son undefine si se llaman antes de declararse

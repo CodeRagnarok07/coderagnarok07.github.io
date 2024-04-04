@@ -1,0 +1,70 @@
+---
+title: Lo Raro de Javascript
+description: Get started building your docs site with Starlight.
+---
+# Rarezas de js
+
+```js
+a = [1,2,3]
+b = [4,5,6]
+
+a+b // '1,2,34,5,6'
+c = [...a,...b] // [1, 2, 3, 4, 5, 6]
+d = (a + [,,] + b).split(",") // ['1', '2', '3', '4', '5', '6']
+
+
+10,2
+2
+
+0,1 + 0,2 // 3.000000000000004
+
+![ ] // false
++[] // 0
+
+[]==false // true
+[,]==false // true
+
+[,,].length // 2
+[,].length // 1
+
+"" - - "" // 0
+"" - - "" // 0
+0/0 //NaN
+1/0 // Infinity
+
+Math.pow(10, 309) //Infinity
+
+2
+0+"0" // '00'
+null + "0" // 'null0'
+null + [,,,,,] // 'null,,,,'
+
+0 + null // 0
+[] + 0 + null // '0null'
+[] + [] 
+''
+[] - []
+0
+[] + undefined
+'undefined'
+undefined - []
+NaN
+undefined - [] == true
+false
+[] - [true]
+NaN
+true + ("sadasdsa" - 0) // NaN
+false - [] 
+0
+
+NaN++ // NaN
+
+- "" + null + + + + + "1" * null - [,] // 0
+
+
+
+
+{}+[] // 0
+[] + {} // object
+
+```

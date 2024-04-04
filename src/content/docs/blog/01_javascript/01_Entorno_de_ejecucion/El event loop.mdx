@@ -1,0 +1,118 @@
+---
+title: Event Loop
+description: Get started building your docs site with Starlight.
+---
+
+JavaScript es un lenguaje versátil y poderoso que se ejecuta en entornos como navegadores web
+
+El motor V8 (desarrollado por Google) es el responsable de ejecutar el código JS en la mayoría de los navegadores modernos. El navegador crea un entorno de ejecución para cada pestaña o ventana, donde se carga y ejecuta el código JS.
+
+
+## event loop
+
+JavaScript es un lenguaje de programación de un solo subproceso, lo que significa que ejecuta una tarea a la vez. (bloqueante)
+
+Sin embargo, gracias al modelo de concurrencia basado en el event loop, puede lograr el efecto de ejecución no bloqueante.
+
+el event loop Funciona como un bucle que verifica constantemente si hay tareas pendientes en la cola de mensajes (también conocida como message queue).
+
+Cuando una tarea asíncrona, como un setTimeout o una solicitud de red, se completa, se coloca en la cola de mensajes.
+
+El event loop toma las tareas de la cola y las ejecuta en el orden en que llegaron, asegurando que el programa sea reactivo y no se bloquee mientras espera tareas largas.
+
+característica agregada por los navegadores a JavaScript para realizar operaciones asincrónas
+sin bloquear la ejecución, distribuyendo el orden de prioridad de la cola de tareas enviandolos al stack 
+la prioridad es, tareas de js > tareas web Apis > micro tareas webApis
+
+
+### Pila de Llamadas (Call Stack):
+La pila de llamadas es una estructura de datos que rastrea las llamadas a funciones en un programa.
+Cada vez que se llama a una función, se agrega un marco de pila que contiene referencias a los argumentos y variables locales de esa función.
+Cuando una función se completa, su marco se elimina de la parte superior de la pila.
+El orden de ejecución sigue el principio “último en entrar, primero en salir” (LIFO).
+
+Ejemplo: Si llamamos a la función bar, se crea un marco de pila para ella, y si bar llama a foo, se crea otro marco de pila para foo encima del de bar.
+
+el registro guarda en memoria los datos de el [execution context](#execution-context) y su entorno léxico durante la ejecución
+guarda el orden de ejecucion de las funciones, la creacion y destrucion del entorno lexico y su registro en memoria
+
+
+### Objetos en el Montón (Heap):
+Los objetos en JavaScript se asignan en el montón, que es una región grande de memoria.
+El montón almacena objetos de forma no estructurada y se gestiona automáticamente por el motor V8.
+Los objetos en el montón persisten incluso después de que se eliminen los marcos de pila.
+
+### Cola de Mensajes (Message Queue):
+La cola de mensajes es una lista de mensajes que deben procesarse.
+Cada mensaje tiene una función asociada que se ejecutará para manejarlo.
+Durante el event loop, el motor de JavaScript procesa los mensajes en la cola, comenzando por el más antiguo.
+Cuando se procesa un mensaje, se elimina de la cola y se llama a la función correspondiente.
+Ejemplos de tareas en la cola incluyen setTimeout, fetch y eventos del DOM.
+
+## las WEB API's
+son características no propias de js si no del navegador que permiten manejar funciones mas lentas sin bloquear la ejecución
+distribuye el orden de ejecución en la [cola de tareas]() dependiendo de su prioridad
+
+- tarea
+  - setTimeout | setInterval
+  - fetch
+  - Intersection DOM
+- micro tarea
+  - Promise
+  - async await
+  - process.NextTick
+  - mutation observer
+  - insertection
+
+
+#### cola de tareas
+determina el orden de prioridad de ejecucion de las tareas web api
+el orden de ejecucion de tareas del call stack es el siguiente 
+1. tarea [javascript puro]
+2. micro tarea  web-api 
+3. Tarea web-api
+
+
+
+### Bucle de Eventos (Event Loop):
+El event loop es un bucle constante que monitorea tanto la cola de mensajes como la pila de llamadas.
+Si la pila no está vacía, el event loop espera hasta que lo esté y luego coloca la siguiente función de la cola en la pila.
+Si la cola está vacía, el event loop espera a que llegue un nuevo mensaje.
+El procesamiento de funciones continúa hasta que la pila esté nuevamente vacía.
+En resumen, el event loop coordina la ejecución de tareas asíncronas en JavaScript, asegurando que las operaciones no bloqueen la aplicación y manteniendo la capacidad de respuesta
+
+
+
+
+
+
+
+# el shadowDOM
+esta por encima del DOM, visualmente se muestra cuando se le señala y tapa el DOM original
+Es un DOM que puede ser usado para modificarlo con js y CSS de manera cerrada y del resto del documento, 
+
+# prototype
+
+todos las variables son Objetos que heredan funciones de objeto Object
+proto o prototype puede acceder a las funciones del elemento padre
+
+```js
+Object.prototype.newFunction = () => console.log("esta function puede ser usada en todos los elementos del js")
+
+const newObjetoString = new Object("soy un string")
+
+newObjetoString._proto_.newFunction()
+newObjetoString._proto_.create_inline_for_this = ()=> console.log("function solo para este objeto string")
+```
+también prototype aguarda los métodos dependiendo del tipo de elemento
+
+
+# Las funciones compose
+son funciones que pueden combinar funciones,
+es una function que recibe dos funciones y devuelve una function 
+
+
+# funciones pura y funciones impuras
+funciones puras son aquellas que son mandadas directamente al call stack ya que su retorno no cambia y son rápidas
+funciones impuras son funciones tipo web api que pueden ser async 
+
