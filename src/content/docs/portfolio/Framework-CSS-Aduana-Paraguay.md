@@ -1,6 +1,6 @@
 ---
 title: Framework de CSS basado en Bootstrap y Tailwind CSS para el Tribunal de Aduana de Paraguay
-template: splash
+# template: splash
 ---
 
 # [Live URL](https://template-aduana-paraguay.vercel.app/)

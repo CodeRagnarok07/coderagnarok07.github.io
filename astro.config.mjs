@@ -18,7 +18,11 @@ export default defineConfig({
           </svg>
           
           `
-        }
+        },
+       { 
+        label: "JAVASCRIPT",
+        autogenerate: { directory: 'blog/01_javascript' },
+      }
 
       ],
       social: {
