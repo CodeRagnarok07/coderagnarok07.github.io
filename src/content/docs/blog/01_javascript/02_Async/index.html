@@ -8,16 +8,66 @@
 </head>
 
 <body>
- <h1>hola mundo</h1>
-    <script>
+ <h1>Event loop</h1>
 
-        new Promise(function (resolve, reject) {
-            console.log("promise1");
-            resolve();
-        }).then(function () {
-            console.log("promise2");
-        });
+ 
+
+
+    <script>
+        "use strict"
+
+        const t = "📜 task =>"
+        const wmt = "❗ Micro =>"
+        const wt = "‼ Macro =>";
+        const Danger =`
+        color:red;
+        font-size:1rem;
+        -webkit-text-stroke: .5px black;
+        font-weight:bold`
+
+        fetch("x")
+        .then(r=>console.log(wt, "fetch log1"))
+        .catch(r=> console.log(wt,"catch"))
+
+        setTimeout(()=>{
+            console.log("%cMACRO TAREAS W", Danger)
+            console.log(wt, "set time log2")
+        },0)
+
+
+        let a = new Promise((r,err)=>{
+            r("hola mundo")
+        })
+
+        a.then(r => {
+            console.log(wmt, r)
+        })
+
+
+
+        async function async2() {
+            console.trace()
+
+            console.log("AWAIT")
+            return wmt + "AWAIT RETURN "
+        }
+
+
+        console.log("%c TAREAS W", Danger)
+        console.log(a)
+        console.log(async2());
+
+      
+
+        (async()=>{
+            console.log("%cMicro TAREAS W", Danger)
+
+            const A = await async2()
+            console.log(A)
+            console.log(wmt, "tarea en async function auto llamada")
+        })();
     </script>
+
 
 </body>
 
