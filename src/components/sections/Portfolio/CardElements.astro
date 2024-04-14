@@ -1,23 +1,15 @@
 ---
 // import HeaderText from "@/components/ui/HeaderText.astro";
-import data from "@/content/i18n/es/PortFolio_Items.json";
-import Divices from "./PortfolioDivices.astro";
+import imgData from "@/assets/media/portfolio";
+import PortFolioDiviceSelector from './DiviceSelector.astro'
 
-// import { getCollection } from "astro:content";
-// const dataColection = await getCollection("docs");
-// const dataPortfolio = dataColection.filter((e) => {
-//     return e.id.includes("portfolio");
-// });
 
-const images = Object.entries(
-    import.meta.glob<{ default: ImageMetadata }>(
-        "../assets/media/portfolio/*/*{.png,.jpg,.jpeg,.webp,.avif}",
-    ),
-);
+const getImgsFromKey = async(id:string)=> imgData.filter((path) => path[0].includes(id))
+
+const {data} = Astro.props
+
 ---
 
-{
-    data.map((e) => (
         <article class="container flex ">
             <div
                 class="border-box-blue h-[70%] my-auto w-full  p-4 md:p-8 rounded-md bg-black-dark bg-opacity-50 flex flex-col items-center
@@ -25,27 +17,25 @@ const images = Object.entries(
             "
             >
                 <div class="my-auto ">
-                    <Divices
-                        paths={images.filter((path) => {
-                            // console.log(typeof path[0])
-                            return path[0].includes(e.id)})}
+                
+                     <PortFolioDiviceSelector paths={ getImgsFromKey(data.id)}
                     />
                 </div>
                 <div class="md:-ml-[10%]">
-                    <h3 class="text-center">{e.Title}</h3>
+                    <h3 class="text-center">{data.Title}</h3>
                     <div class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4 ">
-                        {e.github && (
+                        {data.github && (
                             <a
-                                href={e.github}
+                                href={data.github}
                                 target="_blank"
                                 class="btn-md btn-primary border-box-primary text-nowrap"
                             >
                                 github
                             </a>
                         )}
-                        {e.live && (
+                        {data.live && (
                             <a
-                                href={e.live}
+                                href={data.live}
                                 target="_blank"
                                 class="btn-md btn-secondary border-box-secondary"
                             >
@@ -53,9 +43,9 @@ const images = Object.entries(
                             </a>
                         )}
 
-                        {e.description && (
+                        {data.description && (
                             <a
-                                href={e.description}
+                                href={data.description}
                                 target="_blank"
                                 class="btn-md btn-secondary border-box-secondary"
                             >
@@ -66,8 +56,6 @@ const images = Object.entries(
                 </div>
             </div>
         </article>
-    ))
-}
 <!-- <Image
                 src={"/favicon.svg"}
                 alt="Un pájaro sentado sobre un nido de huevos."

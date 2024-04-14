@@ -23,7 +23,7 @@ const { aling } = Astro.props;
         align-items: end;
     }
     svg {
-        margin: 0 !important;
+        margin: 0.5rem !important;
     }
     @media (max-width: 575px); {
         header{
@@ -39,16 +39,14 @@ const { aling } = Astro.props;
     <div class="whitespace-nowrap w-min inline-flex flex-col">
         <slot name="title" />
 
-        <svg
-            class="w-full scale-125"
-            height="1"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                d="M395 0L673.954 0.292893L789.5 1L673.954 1.70711L395 2L116.046 1.70711L0.5 1L116.046 0.292893L395 0Z"
-                fill="#D3D3D3"></path>
-        </svg>
+     
+        <svg 
+        
+        class="w-full scale-125"
+        height="1" viewBox="0 0 790 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M395 0L673.954 0.292893L789.5 1L673.954 1.70711L395 2L116.046 1.70711L0.5 1L116.046 0.292893L395 0Z" fill="#D3D3D3"/>
+            </svg>
+            
     </div>
 
     <slot name="description" />

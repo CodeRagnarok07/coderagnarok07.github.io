@@ -2,6 +2,8 @@
 import starlightPlugin from '@astrojs/starlight-tailwind';
 import colors from 'tailwindcss/colors';
 
+const variants = ["primary", "secondary", "danger", "purple", "blue"]
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -68,7 +70,13 @@ export default {
 	},
 	plugins: [
 		starlightPlugin(),
+	],
+	safelist: [
+		// "bg-primary",
+		{ pattern: /bg-(primary|secondary|danger|purple|blue)/,variants: ['hover'],},
+		{ pattern: /shadow-(primary|secondary|danger|purple|blue)/,variants: ['hover'],},
+		{ pattern: /border-(primary|secondary|danger|purple|blue)/,variants: ['hover'],},
 	]
-		,
+
 	
 }

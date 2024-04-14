@@ -7,6 +7,9 @@
       "@consts": [
         "src/locale/consts.ts"
       ],
+      "@ui": [
+        "src/components/ui/*"
+      ],
       "@/*": [
         "src/*"
       ],
@@ -17,5 +20,6 @@
         "name": "@astrojs/ts-plugin"
       },
     ],
+
   }
 }

@@ -1,0 +1,9 @@
+---
+import dataPortfolio from "@/content/i18n/es/PortFolio_Items.json";
+import CardElement from "@/components/sections/Portfolio/CardElements.astro";
+
+---
+
+{dataPortfolio.map(e=>(
+    <CardElement data={e}/>
+))}

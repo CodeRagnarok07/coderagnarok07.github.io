@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+// import lgDivice from '/assets/divice/desktop.png'
+
+
+
+
+const { path } = Astro.props 
+
+
+
+const src = await path
+
+---
+
+<div class=`relative px-[6%] xs:px-[5%] overflow-hidden mx-auto w-[80%] xs:w-[70%]  aspect-[16/9]`>
+    <Image src={src} class="relative z-40 object-top w-full h-full object-contain " alt="dispositivo desktop" />
+    <!-- <img class="absolute inset-0 z-50  w-full h-full" src="/assets/divice/desktop.png" alt=""> -->
+</div>
