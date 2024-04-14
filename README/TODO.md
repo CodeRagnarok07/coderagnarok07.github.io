@@ -1,5 +1,10 @@
 
 # Todo
+- [x] branch principal de deploy
+- [ ] hero
+- [ ] hacer funcionar el contacto
+- [ ] cambiar la UX de deskto y dejar la de movil
+- [ ] Terminar los mokups y hacerlos empaquetables
 
 ## UI
 - [ ] barra de navegacion

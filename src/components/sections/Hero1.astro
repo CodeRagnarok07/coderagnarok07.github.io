@@ -1,0 +1,87 @@
+---
+import bg from '@/assets/media/hero-haker-hoodie.png'
+---
+<style define:vars={{ image: `url("${bg.src}")` }}>
+    article{
+        background-image: var(--image);
+        background-position: 50% -20% ;
+        background-repeat: no-repeat;
+
+        
+    }
+    .heroTitle {
+	color: black;
+	margin-bottom: 4px;
+	text-shadow:
+		1px 1px 1px #000000,
+		-2px 2px 6px #a9468b,
+		2px -2px 6px #000000
+		;
+
+	line-height: var(--sl-line-height-headings);
+  
+
+
+
+	&> span.text-secondary {
+		text-shadow:
+		1px 1px 1px #000000,
+		-2px 2px 6px #003750,
+		2px -2px 6px #003750;
+	    line-height: var(--sl-line-height-headings);
+
+	}
+    &> span.text-primary {
+		text-shadow:
+		1px 1px 1px #000000,
+		-2px 2px 6px #33368d,
+		2px -2px 6px #33368d;
+	    line-height: var(--sl-line-height-headings);
+
+	}
+
+	
+}
+
+</style>
+
+
+<article id="home" 
+
+class="text-white text-center relative  h-full  overflow-auto">
+
+<div class="container flex items-center mx-auto h-full">
+
+    <div class="flex items-center flex-col w-full h-max overflow-visible gap-4"
+    >
+
+
+            <h1 class="text-4xl md:text-7xl font-bold uppercase heroTitle !text-danger">
+                <span class="text-primary">Diseño</span>
+                & 
+                <span class="text-secondary">Desarrollo</span> 
+                 de <br class="hidde md:flex" /> 
+                software full-stack
+            </h1>
+
+            <h2 class="text-xl md:text-3xl ">
+                una visión estratégica y liderazgo técnico, asegurando que las decisiones tecnológicas apoyen los objetivos del negocio.
+            </h2>
+
+            <div
+                class="flex gap-4"
+            >
+                <a href="#contact"
+                    class="btn-lg btn-primary border-box-primary text-nowrap"
+                >
+                    Contacto
+                </a>
+                <a href="#contact" class="btn-lg btn-secondary border-box-secondary">
+                    
+                    Ver Mas
+                </a>
+            </div>
+    </div>
+</div>
+
+</article>
