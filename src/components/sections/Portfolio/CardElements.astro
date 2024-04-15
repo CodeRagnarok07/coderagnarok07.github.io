@@ -1,12 +1,18 @@
 ---
 // import HeaderText from "@/components/ui/HeaderText.astro";
 import imgData from "@/assets/media/portfolio";
-import PortFolioDiviceSelector from './DiviceSelector.astro'
+import DiviceSelector from './DiviceSelector.astro'
 
 
-const getImgsFromKey = async(id:string)=> imgData.filter((path) => path[0].includes(id))
+   
+
+
+const getImgsFromKey = (id:string):TypeGetImgsFromKey => {return imgData.filter((path) => path[0].includes(id))}
 
 const {data} = Astro.props
+
+const s = getImgsFromKey(data.id)
+
 
 ---
 
@@ -18,7 +24,7 @@ const {data} = Astro.props
             >
                 <div class="my-auto ">
                 
-                     <PortFolioDiviceSelector paths={ getImgsFromKey(data.id)}
+                     <DiviceSelector pathsList={ getImgsFromKey(data.id)}
                     />
                 </div>
                 <div class="md:-ml-[10%]">

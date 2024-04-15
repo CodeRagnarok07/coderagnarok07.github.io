@@ -1,9 +1,21 @@
 ---
-// recibe un array y determina el tipo de dive a utilizar y con el formateo 
+// recibe un array y determina el tipo de dive a utilizar y con el formateo
 import ImgMockup from "@/lib/ImgMockup/index.astro";
 
-const {array} = Astro.props
-console.log(array)
+interface Props {
+    pathsList: TypeGetImgsFromKey;
+}
+const { pathsList } = Astro.props;
+
+const getSize = (elemet: ImgsFromKey): string => {
+    const extension = elemet[0].split("/");
+    const getsize = extension[extension.length - 1].split(".")[0];
+    return getsize;
+};
 ---
 
-
+{
+    pathsList.map((e) => (
+        <>{ e[1]().then((r) => <ImgMockup size={getSize(e) as SizeType } pathMeta={r.default} />)}</>
+    ))
+}

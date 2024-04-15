@@ -1,19 +1,48 @@
 ---
-import { Image } from 'astro:assets';
-// import lgDivice from '/assets/divice/desktop.png'
+import { Image } from "astro:assets";
+import md_divice from "./divices/3x4/index.svg";
+import sm_divice from "./divices/9x16/index.svg";
+import lg_divice from "./divices/16x9/index.svg";
 
 
+interface Props {
+    pathMeta?: ImageMetadata;
+    src?: string;
+    size:SizeType 
+    
+}
 
+const { pathMeta, src, size } = Astro.props;
 
-const { path } = Astro.props 
+const getSize = (size:SizeType):{img:ImageMetadata, aspect: String} =>{
+    switch (size) {
+            case "lg":
+                return {img:lg_divice, aspect: "16/9"}
+            case "md":
+                return {img:md_divice, aspect: "3/4"}
+            case "sm":
+                return {img:sm_divice, aspect: "9/16"}
+            default:
+                return {img:md_divice, aspect: "3/4"}
+        }
+}
 
-
-
-const src = await path
+const imgDivice = getSize(size)
 
 ---
 
-<div class=`relative px-[6%] xs:px-[5%] overflow-hidden mx-auto w-[80%] xs:w-[70%]  aspect-[16/9]`>
-    <Image src={src} class="relative z-40 object-top w-full h-full object-contain " alt="dispositivo desktop" />
-    <!-- <img class="absolute inset-0 z-50  w-full h-full" src="/assets/divice/desktop.png" alt=""> -->
+<div
+    class="relative px-[6%] xs:px-[5%] overflow-hidden mx-auto w-[80%] xs:w-[70%]  aspect-[${imgDivice.aspect}]"
+>
+    {
+        pathMeta ? (
+            <Image
+                src={pathMeta}
+                class="relative z-40 object-top w-full h-full object-contain  "
+                alt="dispositivo desktop"
+            />
+        ) : (src && <img src={src} alt="" />)
+    }
+    <Image src={imgDivice.img}
+     class="border-red-500 border-2 absolute inset-0 z-50 w-full h-full" alt="" />
 </div>
