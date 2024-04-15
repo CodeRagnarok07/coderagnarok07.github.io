@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import md_divice from "./divices/3x4/index.png";
+import sm_divice from "./divices/9x16/index.png";
+import lg_divice from "./divices/16x9/index.png";
+
+interface Props {
+    pathMeta?: ImageMetadata;
+    src?: string;
+    size: SizeType;
+}
+
+const { pathMeta, src, size } = Astro.props;
+
+const getSize = (size: SizeType): { img: ImageMetadata; aspect: String } => {
+    switch (size) {
+        case "lg":
+            return { img: lg_divice, aspect: "16/9" };
+        case "md":
+            return { img: md_divice, aspect: "3/4" };
+        case "sm":
+            return { img: sm_divice, aspect: "9/16" };
+        default:
+            return { img: md_divice, aspect: "3/4" };
+    }
+};
+
+const imgDivice = getSize(size);
+---
+
+<style
+    define:vars={{
+        image: `url("${imgDivice.img.src}")`,
+        aspect: `${imgDivice.aspect}`,
+    }}
+>
+    .frame_divice {
+        background-image: var(--image);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        inset: 0;
+
+        overflow: hidden;
+        padding: 40px;
+    }
+</style>
+
+<div
+    class="relative z-10 min-h-80 w-auto"
+    style=`aspect-ratio: ${imgDivice.aspect};`
+>
+    <div class="frame_divice relative z-50">
+        {
+            pathMeta && (
+                <Image
+                    src={pathMeta}
+                    class="relative z-40 object-top w-full h-full object-contain"
+                    alt="dispositivo desktop"
+                />
+            )
+        }
+    </div>
+</div>
+
+<!-- <Image src={imgDivice.img} class=" absolute inset-0 z-50 w-full h-full" alt="" /> -->

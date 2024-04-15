@@ -4,45 +4,75 @@ import md_divice from "./divices/3x4/index.svg";
 import sm_divice from "./divices/9x16/index.svg";
 import lg_divice from "./divices/16x9/index.svg";
 
-
 interface Props {
     pathMeta?: ImageMetadata;
     src?: string;
-    size:SizeType 
-    
+    size: SizeType;
 }
 
 const { pathMeta, src, size } = Astro.props;
 
-const getSize = (size:SizeType):{img:ImageMetadata, aspect: String} =>{
+const getSize = (size: SizeType): { img: ImageMetadata; aspect: String } => {
     switch (size) {
-            case "lg":
-                return {img:lg_divice, aspect: "16/9"}
-            case "md":
-                return {img:md_divice, aspect: "3/4"}
-            case "sm":
-                return {img:sm_divice, aspect: "9/16"}
-            default:
-                return {img:md_divice, aspect: "3/4"}
-        }
-}
+        case "lg":
+            return { img: lg_divice, aspect: "16/9" };
+        case "md":
+            return { img: md_divice, aspect: "3/4" };
+        case "sm":
+            return { img: sm_divice, aspect: "9/16" };
+        default:
+            return { img: md_divice, aspect: "3/4" };
+    }
+};
 
-const imgDivice = getSize(size)
-
+const imgDivice = getSize(size);
 ---
 
+<style define:vars={{ ratio: `${imgDivice.aspect}` }}>
+    .frame_size, img {
+        aspect-ratio: var(--ratio);
+    }
+    .divice{
+
+
+    }
+    .divice-lg {
+
+    @aplly sm:pt-[5%] px-[11%] xl:px-[12%]
+
+    
+    }
+    .divice-md {
+    
+
+    }
+    .divice-sm {
+        
+    }
+
+</style>
+
 <div
-    class="relative px-[6%] xs:px-[5%] overflow-hidden mx-auto w-[80%] xs:w-[70%]  aspect-[${imgDivice.aspect}]"
+    class:list={[
+        "relative z-10 w-full h-auto overflow-hidden ",
+        `aspect-[${imgDivice.aspect}]`,
+        "frame_size",
+    ]}
 >
+    <Image
+        src={imgDivice.img}
+        class="absolute inset-0 z-50 w-full h-auto"
+        alt=""
+    />
     {
         pathMeta ? (
             <Image
                 src={pathMeta}
-                class="relative z-40 object-top w-full h-full object-contain  "
+                class:list={["relative z-40 object-top w-full h-auto object-contain", "sm:pt-[5%] px-[11%] xl:px-[12%]"]}
                 alt="dispositivo desktop"
             />
-        ) : (src && <img src={src} alt="" />)
+        ) : (
+            src && <img src={src} alt="" />
+        )
     }
-    <Image src={imgDivice.img}
-     class="border-red-500 border-2 absolute inset-0 z-50 w-full h-full" alt="" />
 </div>
