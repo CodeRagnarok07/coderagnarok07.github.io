@@ -1,8 +1,8 @@
 ---
-import "@/assets/styles/ui_components.css"
-import "@/assets/styles/fonts.css"
-import "@/assets/styles/layout.css"
-import "@/assets/styles/theme.css"
+import "@/styles/ui_components.css"
+import "@/styles/fonts.css"
+import "@/styles/layout.css"
+import "@/styles/theme.css"
 
 import BaseHead from "@/components/layouts/BaseHead.astro";
 import Navbar from "@/components/layouts/Navbar/index.astro";
@@ -12,7 +12,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/content/consts";
 
 <!doctype html>
 <html lang="en">
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} >
+    
+    </BaseHead>    
     <body class="bg-black-dark">
         <Navbar />
 

@@ -14,14 +14,12 @@ body {
 section {
 	/* @apply py-4; */
 	display: inline-flex;
-
 }
 
 
 
 section {
 	width: 100%;
-	overflow-x: hidden;
 	min-height: 100vh;
 	min-height: 100dvh;
 	flex-direction: column;

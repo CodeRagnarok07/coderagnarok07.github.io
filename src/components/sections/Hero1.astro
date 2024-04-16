@@ -1,14 +1,13 @@
 ---
-import bg from '@/assets/media/hero-haker-hoodie.png'
+import bg from '@/assets/media/bg/hero-haker-hoodie.png'
 ---
 <style define:vars={{ image: `url("${bg.src}")` }}>
-    article{
+    .home_hero{
         background-image: var(--image);
         background-position: 50% -20% ;
         background-repeat: no-repeat;
-
-        
     }
+    
     .heroTitle {
 	color: black;
 	margin-bottom: 4px;
@@ -46,9 +45,9 @@ import bg from '@/assets/media/hero-haker-hoodie.png'
 </style>
 
 
-<article id="home" 
+<section id="home" 
 
-class="text-white text-center relative  h-full  overflow-auto">
+class="home_hero text-white text-center relative  h-full  overflow-auto">
 
 <div class="container flex items-center mx-auto h-full">
 
@@ -84,4 +83,4 @@ class="text-white text-center relative  h-full  overflow-auto">
     </div>
 </div>
 
-</article>
+</section>

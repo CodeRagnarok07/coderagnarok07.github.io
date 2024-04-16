@@ -2,7 +2,8 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "baseUrl": "./",
+    "verbatimModuleSyntax":true,
+    "baseUrl": "/root/p/p/current",
     "paths": {
       "@consts": [
         "src/locale/consts.ts"
@@ -12,14 +13,14 @@
       ],
       "@/*": [
         "src/*"
-      ],
-      
+      ]
     },
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
-      },
+      }
     ],
-
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

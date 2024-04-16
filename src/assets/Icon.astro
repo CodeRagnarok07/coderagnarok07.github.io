@@ -13,20 +13,26 @@ const keys = Object.entries(icons).reduce<string[]>(
 
 export type IconType = keyof typeof icons;
 
+
 interface Props {
     size?: string;
     fill?: string;
+    className?: string;
     icon: IconType;
 }
 
-const { size = "33px", fill = "none", icon } = Astro.props;
+const { size = "33px", fill = "none", icon, className="" } = Astro.props;
 ---
 
-<i set:html={icons[icon]}>
+<i class={className} set:html={icons[icon]}>
 
 </i>
 
-
+<!-- <script>
+    const svg:SVGSVGElement | null = document.querySelector("svg")
+    svg?.setAttribute('width', '0');
+    svg?.setAttribute('height', '0');
+</script> -->
 
 <style define:vars={{ size }}>
     svg {

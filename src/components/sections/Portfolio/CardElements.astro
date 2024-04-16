@@ -1,37 +1,35 @@
 ---
 // import HeaderText from "@/components/ui/HeaderText.astro";
-import imgData from "@/assets/media/portfolio";
-import DiviceSelector from './DiviceSelector.astro'
+import imgData from "@/assets/portfolio";
+import DiviceSelector from "./DiviceSelector.astro";
 // import Card from '@/components/ui/Card.astro'
 
+const getImgsFromKey = (id: string): TypeGetImgsFromKey => {
+    return imgData.filter((path) => path[0].includes(id));
+};
 
-   
+interface Props {
+    data: DataPortfolio;
+}
 
-
-const getImgsFromKey = (id:string):TypeGetImgsFromKey => {return imgData.filter((path) => path[0].includes(id))}
-
-const {data} = Astro.props
-
-const s = getImgsFromKey(data.id)
-
-
+const { data } = Astro.props;
 ---
-    <section class="min-h-screem">
 
-        <article class="container mx-auto flex w-full h-full  ">
-            <div
-                class="border-box-blue h-full  my-auto w-full md:py-20  p-4 md:p-8 rounded-md bg-black-dark bg-opacity-70 flex flex-col items-center md:flex-row 
-            "
-            >
-                <div class="relative z-10 w-full md:w-1/2 my-auto ">
-                
-                     <DiviceSelector pathsList={ getImgsFromKey(data.id)}
-                    />
-                </div>
-                <div class="relative z-20 w-full md:w-1/2 ">
-                    <h3 class="text-center">{data.Title}</h3>
-                    <div class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4 ">
-                        {data.github && (
+<section class="min-h-screem">
+    <article class="container mx-auto flex w-full h-full">
+        <div
+            class="border-box-blue h-full my-auto w-full md:py-20 p-4 md:p-8 rounded-md bg-black-dark bg-opacity-70 flex flex-col items-center md:flex-row"
+        >
+            <div class="relative z-10 w-full md:w-1/2 my-auto">
+                {data && <DiviceSelector pathsList={getImgsFromKey(data.id)} />}
+            </div>
+            <div class="relative z-20 w-full md:w-1/2">
+                <h3 class="text-center">{data.Title}</h3>
+                <div
+                    class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4"
+                >
+                    {
+                        data.github && (
                             <a
                                 href={data.github}
                                 target="_blank"
@@ -39,8 +37,10 @@ const s = getImgsFromKey(data.id)
                             >
                                 github
                             </a>
-                        )}
-                        {data.live && (
+                        )
+                    }
+                    {
+                        data.live && (
                             <a
                                 href={data.live}
                                 target="_blank"
@@ -48,9 +48,11 @@ const s = getImgsFromKey(data.id)
                             >
                                 live
                             </a>
-                        )}
+                        )
+                    }
 
-                        {data.description && (
+                    {
+                        data.description && (
                             <a
                                 href={data.description}
                                 target="_blank"
@@ -58,10 +60,10 @@ const s = getImgsFromKey(data.id)
                             >
                                 descripcion
                             </a>
-                        )}
-                    </div>
+                        )
+                    }
                 </div>
             </div>
-        </article>
-    </section>
-
+        </div>
+    </article>
+</section>

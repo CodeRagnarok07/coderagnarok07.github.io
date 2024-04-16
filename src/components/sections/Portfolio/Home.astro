@@ -1,12 +1,34 @@
 ---
-import bg from "@/assets/media/PortfolioBg.png";
+import bg from "@/assets/media/bg/PortfolioBg.png";
 import HeaderText from "@/components/ui/HeaderText.astro";
+// import dataPortfolio from "@/content/i18n/es/PortFolio_Items.json";
+import Card from "@/components/ui/Card.astro";
+import ImgMockup from "@/lib/ImgMockup/index.astro";
+
+//  DataPortfolio
+import UpisaImg from "@/assets/portfolio/upisa/lg.png";
+import TATImg from "@/assets/portfolio/tat/lg.png";
+import okconstructoraImg from "@/assets/portfolio/okconstructora/lg.png";
+
+const data = [
+    {
+        img: UpisaImg,
+        name: "UPISA",
+    },
+    {
+        img: TATImg,
+        name: "TAT",
+    },
+    {
+        img: okconstructoraImg,
+        name: "OkConstructora",
+    },
+];
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
     section {
         position: relative;
-  
     }
 
     section::before {
@@ -40,12 +62,32 @@ import HeaderText from "@/components/ui/HeaderText.astro";
                 </h3>
             </HeaderText>
         </div>
-        <a
-            href="/portfolio"
-            class="btn-lg btn-secondary border-box-secondary"
-        >
-            Ver Todo
-        </a>
-        <!-- <h4 class="text-xl md:text-3xl"> ¡explora cómo puedo llevar tus ideas al siguiente nivel!</h4> -->
+
+        <div class="flex justify-between gap-6 flex-wrap mb-4">
+            {
+                data.map((e) => (
+                    <a href="/portfolio">
+                        <Card theme="primary" className={"pb-5 px-10"}>
+                            <div class="w-[300px] mx-auto p-5">
+                                <ImgMockup size={"lg"} pathMeta={e.img} />
+                            </div>
+                            <h4>{e.name}</h4>
+                        </Card>
+                    </a>
+                ))
+            }
+        </div>
+
+        <div class="mt-10 flex flex-col gap-5 items-center">
+            <a
+                href="/portfolio"
+                class="btn-lg btn-secondary border-box-secondary"
+            >
+                Ver Todo
+            </a>
+            <h4 class="text-xl md:text-3xl">
+                ¡explora cómo puedo llevar tus ideas al siguiente nivel!
+            </h4>
+        </div>
     </div>
 </section>

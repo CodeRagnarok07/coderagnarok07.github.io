@@ -1,0 +1,230 @@
+[
+    {
+        "cargo": {
+            "id": "}z|t",
+            "name": "Senior Full-Stack developer",
+            "color": "default"
+        },
+        "description-empresa": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "Nos posicionamos como un aliado estratégico, ayudando a negocios de todo el mundo a superar este desafío y establecer una presencia sólida en los canales digitales relevantes. Nuestro enfoque integral y nuestra experiencia nos permiten conectar marcas con sus clientes de manera efectiva, asegurando que no se pierdan ninguna oportunidad de negocio en el vasto y cambiante mundo digital.",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "Nos posicionamos como un aliado estratégico, ayudando a negocios de todo el mundo a superar este desafío y establecer una presencia sólida en los canales digitales relevantes. Nuestro enfoque integral y nuestra experiencia nos permiten conectar marcas con sus clientes de manera efectiva, asegurando que no se pierdan ninguna oportunidad de negocio en el vasto y cambiante mundo digital.",
+                "href": null
+            }
+        ],
+        "Referencia": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "Carlos Zanotti",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "Carlos Zanotti",
+                "href": null
+            }
+        ],
+        "Contacto referencia": "zanotti@arsis.com.py",
+        "Web Site": "https://arsisteam.com/",
+        "ubicacion": [],
+        "Skills": [],
+        "date": {
+            "start": "2022-06-28",
+            "end": null,
+            "time_zone": null
+        },
+        "name": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "Arsis",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "Arsis",
+                "href": null
+            }
+        ],
+        "id": "29060729-d81a-4551-8cfa-ef678752d8bd"
+    },
+    {
+        "cargo": {
+            "id": "}z|t",
+            "name": "Senior Full-Stack developer",
+            "color": "default"
+        },
+        "description-empresa": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "IDEATI es una empresa, con base en Ciudad de Panamá, especialista en servicios en Tecnología de la Información, con actividad en varios países de Latinoamérica.",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": true,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "IDEATI es una empresa, con base en Ciudad de Panamá, especialista en servicios en Tecnología de la Información, con actividad en varios países de Latinoamérica.",
+                "href": null
+            }
+        ],
+        "Referencia": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "Ing. Eduardo Méndez",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "Ing. Eduardo Méndez",
+                "href": null
+            }
+        ],
+        "Contacto referencia": "eduardo.mendez@ideati.net",
+        "Web Site": "https://www.ideati.net/",
+        "ubicacion": [
+            {
+                "id": "=ctr",
+                "name": "Panamá",
+                "color": "default"
+            }
+        ],
+        "Skills": [],
+        "date": {
+            "start": "2022-04-01",
+            "end": "2023-05-31",
+            "time_zone": null
+        },
+        "name": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "IDEATI S.A",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": true,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "IDEATI S.A",
+                "href": null
+            }
+        ],
+        "id": "24a1187d-b187-4816-8206-00a56eec69b6"
+    },
+    {
+        "cargo": {
+            "id": "}z|t",
+            "name": "Senior Full-Stack developer",
+            "color": "default"
+        },
+        "description-empresa": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "arasaIT es una empresa de TI que se esfuerza por ofrecer soluciones de TI a la medida del cliente. Ya sea que esté buscando una solución empaquetada o un desarrollo continuo, arasaIT tiene el sistema adecuado para usted",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "arasaIT es una empresa de TI que se esfuerza por ofrecer soluciones de TI a la medida del cliente. Ya sea que esté buscando una solución empaquetada o un desarrollo continuo, arasaIT tiene el sistema adecuado para usted",
+                "href": null
+            }
+        ],
+        "Referencia": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "Raul Arguello",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "Raul Arguello",
+                "href": null
+            }
+        ],
+        "Contacto referencia": "raul@arasait.com",
+        "Web Site": "http://arasait.com/",
+        "ubicacion": [],
+        "Skills": [],
+        "date": {
+            "start": "2022-06-28",
+            "end": null,
+            "time_zone": null
+        },
+        "name": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "Arasait",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "Arasait",
+                "href": null
+            }
+        ],
+        "id": "9ce1f640-5c54-43de-8e95-0f8663ab4bfe"
+    }
+]

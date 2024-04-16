@@ -1,9 +1,11 @@
 ---
 import dataPortfolio from "@/content/i18n/es/PortFolio_Items.json";
 import CardElement from "@/components/sections/Portfolio/CardElements.astro";
+
+
 ---
 
 
     <div class="flex flex-col gap-10 ">
-        {dataPortfolio.map((e) => <CardElement data={e} />)}
+        {dataPortfolio.map((e) => <CardElement data={e as DataPortfolio} />)}
     </div>

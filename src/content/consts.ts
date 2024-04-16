@@ -4,8 +4,16 @@
 export const SITE_TITLE = 'CodeRagnarok';
 export const SITE_DESCRIPTION = 'diseño y desarrollo de software ';
 
+import type { IconType } from "@/assets/Icon.astro";
+import icons from '@/assets/icons'
 
-export const pages = [
+interface pagesType{
+     name:string,
+     link:string,
+     icon: IconType
+}
+
+export const pages:pagesType[] = [
     { name: "home", icon: "nav.home", link: "/#home" },
     { name: "services", icon: "nav.services", link: "/#services" },
     { name: "portfolio", icon: "nav.portfolio", link: "/#portfolio" },
@@ -15,7 +23,7 @@ export const pages = [
 ]
 
 
-export const socialLinks = [
+export const socialLinks:pagesType[] = [
     {
         name: "twitter",
         link: "https://twitter.com/AngelFelipeRCH",
