@@ -2,18 +2,16 @@
 // import HeaderText from "@/components/ui/HeaderText.astro";
 import imgData from "@/assets/portfolio";
 import DiviceSelector from "./DiviceSelector.astro";
-// import Card from '@/components/ui/Card.astro'
+import dataPortfolio from "@/content/i18n/es/PortFolio_Items.json";
+
 
 const getImgsFromKey = (id: string): TypeGetImgsFromKey => {
     return imgData.filter((path) => path[0].includes(id));
 };
 
-interface Props {
-    data: DataPortfolio;
-}
 
-const { data } = Astro.props;
 ---
+{dataPortfolio.map((e) => (
 
 <section class="min-h-screem">
     <article class="container mx-auto flex w-full h-full">
@@ -21,17 +19,17 @@ const { data } = Astro.props;
             class="border-box-blue h-full my-auto w-full md:py-20 p-4 md:p-8 rounded-md bg-black-dark bg-opacity-70 flex flex-col items-center md:flex-row"
         >
             <div class="relative z-10 w-full md:w-1/2 my-auto">
-                {data && <DiviceSelector pathsList={getImgsFromKey(data.id)} />}
+                <DiviceSelector pathsList={getImgsFromKey(e.id)} />
             </div>
             <div class="relative z-20 w-full md:w-1/2">
-                <h3 class="text-center">{data.Title}</h3>
+                <h3 class="text-center">{e.Title}</h3>
                 <div
                     class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4"
                 >
                     {
-                        data.github && (
+                        e.github && (
                             <a
-                                href={data.github}
+                                href={e.github}
                                 target="_blank"
                                 class="btn-md btn-primary border-box-primary text-nowrap"
                             >
@@ -40,9 +38,9 @@ const { data } = Astro.props;
                         )
                     }
                     {
-                        data.live && (
+                        e.live && (
                             <a
-                                href={data.live}
+                                href={e.live}
                                 target="_blank"
                                 class="btn-md btn-secondary border-box-secondary"
                             >
@@ -52,9 +50,9 @@ const { data } = Astro.props;
                     }
 
                     {
-                        data.description && (
+                        e.description && (
                             <a
-                                href={data.description}
+                                href={e.description}
                                 target="_blank"
                                 class="btn-md btn-secondary border-box-secondary"
                             >
@@ -67,3 +65,6 @@ const { data } = Astro.props;
         </div>
     </article>
 </section>
+
+))}
+

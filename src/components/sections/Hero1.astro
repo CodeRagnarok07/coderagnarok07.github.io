@@ -1,86 +1,89 @@
 ---
-import bg from '@/assets/media/bg/hero-haker-hoodie.png'
+import bg from "@/assets/media/bg/hero-haker-hoodie_100.png";
 ---
+
 <style define:vars={{ image: `url("${bg.src}")` }}>
-    .home_hero{
-        background-image: var(--image);
-        background-position: 50% -20% ;
+    .home_hero {
+        background: linear-gradient(rgb(0 0 0 / 64%), rgb(0 0 0 / 0%)),
+            var(--image);
+        background-position: 50% 50%;
+        background-origin: content-box;
         background-repeat: no-repeat;
+        box-shadow: inset 0px -2rem 15rem 2rem rgb(0 0 0);
+        background-size: 150%;
     }
-    
+    @media (min-width: 768px) {
+        .home_hero {
+            box-shadow: inset 0px 1rem 9rem 11rem rgb(0 0 0);
+            background-size: 80%;
+            background-position: 50% -20%;
+        }
+    }
+
     .heroTitle {
-	color: black;
-	margin-bottom: 4px;
-	text-shadow:
-		1px 1px 1px #000000,
-		-2px 2px 6px #a9468b,
-		2px -2px 6px #000000
-		;
+        color: black;
+        margin-bottom: 4px;
+        text-shadow:
+            1px 1px 1px #000000,
+            -2px 2px 6px #a9468b,
+            2px -2px 6px #000000;
 
-	line-height: var(--sl-line-height-headings);
-  
+        line-height: var(--sl-line-height-headings);
 
-
-
-	&> span.text-secondary {
-		text-shadow:
-		1px 1px 1px #000000,
-		-2px 2px 6px #003750,
-		2px -2px 6px #003750;
-	    line-height: var(--sl-line-height-headings);
-
-	}
-    &> span.text-primary {
-		text-shadow:
-		1px 1px 1px #000000,
-		-2px 2px 6px #33368d,
-		2px -2px 6px #33368d;
-	    line-height: var(--sl-line-height-headings);
-
-	}
-
-	
-}
-
+        & > span.text-secondary {
+            text-shadow:
+                1px 1px 1px #000000,
+                -2px 2px 6px #003750,
+                2px -2px 6px #003750;
+            line-height: var(--sl-line-height-headings);
+        }
+        & > span.text-primary {
+            text-shadow:
+                1px 1px 1px #000000,
+                -2px 2px 6px #33368d,
+                2px -2px 6px #33368d;
+            line-height: var(--sl-line-height-headings);
+        }
+    }
 </style>
 
-
-<section id="home" 
-
-class="home_hero text-white text-center relative  h-full  overflow-auto">
-
-<div class="container flex items-center mx-auto h-full">
-
-    <div class="flex items-center flex-col w-full h-max overflow-visible gap-4"
-    >
-
-
-            <h1 class="text-4xl md:text-7xl font-bold uppercase heroTitle !text-danger">
+<section
+    id="home"
+    class="home_hero text-white text-center relative h-full overflow-auto"
+>
+    <div class="container flex items-center mx-auto h-full">
+        <div
+            class="flex items-center flex-col w-full h-max overflow-visible gap-4"
+        >
+            <h1
+                class="text-4xl md:text-6xl font-bold uppercase heroTitle !text-danger"
+            >
                 <span class="text-primary">Diseño</span>
-                & 
-                <span class="text-secondary">Desarrollo</span> 
-                 de <br class="hidde md:flex" /> 
+                &
+                <span class="text-secondary">Desarrollo</span>
+                de <br class="hidde md:flex" />
                 software full-stack
             </h1>
 
-            <h2 class="text-xl md:text-3xl ">
-                una visión estratégica y liderazgo técnico, asegurando que las decisiones tecnológicas apoyen los objetivos del negocio.
+            <h2 class="text-xl md:text-3xl">
+                una visión estratégica y liderazgo técnico, asegurando que las
+                decisiones tecnológicas apoyen los objetivos del negocio.
             </h2>
 
-            <div
-                class="flex gap-4"
-            >
-                <a href="#contact"
+            <div class="flex gap-4">
+                <a
+                    href="#contact"
                     class="btn-lg btn-primary border-box-primary text-nowrap"
                 >
                     Contacto
                 </a>
-                <a href="#contact" class="btn-lg btn-secondary border-box-secondary">
-                    
+                <a
+                    href="#contact"
+                    class="btn-lg btn-secondary border-box-secondary"
+                >
                     Ver Mas
                 </a>
             </div>
+        </div>
     </div>
-</div>
-
 </section>

@@ -1,41 +1,42 @@
 
 # Todo
 - [x] branch principal de deploy
-- [ ] hero
+- [x] hero
 - [ ] hacer funcionar el contacto
-- [ ] cambiar la UX de deskto y dejar la de movil
-- [ ] Terminar los mokups y hacerlos empaquetables
+- [ ] cambiar la UX de desktop y dejar la de Movil
+
 
 ## UI
-- [ ] barra de navegacion
+- [ ] Botones responsivos
+
+- [ ] barra de navegación
   - [x] responsiva
-  - [ ] Colores mas vivos
-- [ ] 
+  - [x] Colores mas vivos
+- [ ] Barra de scroll
 
 
 ## paginas
 - Portafolio
-  - [ ] 3 dispositivos
+  - [x] 3 dispositivos
     - [x] lg
-    - [ ] md
-    - [ ] sm
-  - [ ] Tecnologias
+  - [ ] Tecnologías
     - [ ] asociadas al blog
-  - [x] descripcion de los proyectos
-  - [ ] proyectos agregados terminados
-    - [ ] upisa
-    - [ ] tat
-    - [ ] okConstructora
+  - [x] descripción de los proyectos
+  - [x] proyectos agregados terminados
+    - [x] Upisa
+    - [x] tat
+    - [x] okConstructora
   - [ ] SubDivision por tipos
     - [ ] Proyectos personales
     - [ ] Pedidos de clientes
     - [ ] tipo de proyecto
+
 - Home | objetivo: contrata a un frelance experto en desarroll
   - [ ] Mini About
     - [ ] Que soy y que hago?
     - [ ] acerca de mi
+
 - [ ] about: Conoceme, experiencia, habilidades
-  - [ ] Mi filosofia
   - [ ] mi experiencia laboral
   - [ ] Proyectos y portafolio
   - [ ] Curriculo
@@ -45,11 +46,15 @@
     - [ ] Porque deberian contratarme?
     - [ ] Que puedo ofrecer?
   - [ ] Testimonios
+
+
+- [ ] Footer
 - [ ] Contacto
   - [ ] Redes sociales
   - [ ] mail
   - [ ] ws
-- [ ] Mini Blog
+  - [ ] Discord [Crear]
+
   
 
 

@@ -41,7 +41,7 @@ const data = [
         height: 100%;
 
         z-index: -10;
-        opacity: 0.4;
+        opacity: 0.7;
         filter: brightness(50%) contrast(120%);
 
         background-image: var(--image);
@@ -49,7 +49,7 @@ const data = [
         background-repeat: no-repeat;
     }
 </style>
----
+
 <section id="portfolio" class="text-white text-center">
     <div class="container flex-col flex items-center mx-auto h-full">
         <div
@@ -58,16 +58,16 @@ const data = [
             <HeaderText aling="center">
                 <h1 slot="title" class="uppercase">Portafolio</h1>
                 <h3 slot="description">
-                    Descubre mi trabajo y proyectos en mi portafolio digital
+                    Conoce la calidad de mi trabajo
                 </h3>
             </HeaderText>
         </div>
 
-        <div class="flex justify-between gap-6 flex-wrap mb-4">
+        <div class="flex flex-col md:flex-row justify-between gap-10 lg:gap-6  mb-4 items-center">
             {
                 data.map((e) => (
-                    <a href="/portfolio">
-                        <Card theme="primary" className={"pb-5 px-10"}>
+                    <a class="w-full mx-auto" href="/portfolio">
+                        <Card theme="primary" className={"pb-5 px-10 bg-black-dark bg-opacity-90"}>
                             <div class="w-[300px] mx-auto p-5">
                                 <ImgMockup size={"lg"} pathMeta={e.img} />
                             </div>
@@ -85,9 +85,9 @@ const data = [
             >
                 Ver Todo
             </a>
-            <h4 class="text-xl md:text-3xl">
+            <!-- <h4 class="text-xl md:text-3xl">
                 ¡explora cómo puedo llevar tus ideas al siguiente nivel!
-            </h4>
+            </h4> -->
         </div>
     </div>
 </section>
