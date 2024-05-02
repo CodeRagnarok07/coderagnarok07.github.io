@@ -3,68 +3,49 @@
 import imgData from "@/assets/portfolio";
 import DiviceSelector from "./DiviceSelector.astro";
 import dataPortfolio from "@/content/i18n/es/PortFolio_Items.json";
-
+import Card from "@/components/ui/Card.astro";
+import Btn from "@/components/ui/Btn.astro";
 
 const getImgsFromKey = (id: string): TypeGetImgsFromKey => {
     return imgData.filter((path) => path[0].includes(id));
 };
-
-
 ---
-{dataPortfolio.map((e) => (
 
-<section class="min-h-screem">
-    <article class="container mx-auto flex w-full h-full">
-        <div
-            class="border-box-blue h-full my-auto w-full md:py-20 p-4 md:p-8 rounded-md bg-black-dark bg-opacity-70 flex flex-col items-center md:flex-row"
-        >
-            <div class="relative z-10 w-full md:w-1/2 my-auto">
-                <DiviceSelector pathsList={getImgsFromKey(e.id)} />
-            </div>
-            <div class="relative z-20 w-full md:w-1/2">
-                <h3 class="text-center">{e.Title}</h3>
-                <div
-                    class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4"
+{
+    dataPortfolio.map((e) => (
+        <section class="min-h-screem">
+            <article class="container mx-auto flex w-full h-full">
+                <Card
+                    theme="secondary"
+                    className={
+                        "pb-5 px-10  h-full my-auto w-full md:py-20 p-4 md:p-8 rounded-md bg-black-dark bg-opacity-70 flex flex-col items-center md:flex-row"
+                    }
                 >
-                    {
-                        e.github && (
-                            <a
-                                href={e.github}
-                                target="_blank"
-                                class="btn-md btn-primary border-box-primary text-nowrap"
-                            >
-                                github
-                            </a>
-                        )
-                    }
-                    {
-                        e.live && (
-                            <a
-                                href={e.live}
-                                target="_blank"
-                                class="btn-md btn-secondary border-box-secondary"
-                            >
-                                live
-                            </a>
-                        )
-                    }
+                    <div class="relative z-10 w-full md:w-1/2 my-auto">
+                        <DiviceSelector pathsList={getImgsFromKey(e.id)} />
+                    </div>
+                    <div class="relative z-20 w-full md:w-1/2">
+                        <h3 class="text-center">{e.Title}</h3>
+                        <div class="flex flex-wrap flex-row items-center w-full py-4 justify-center gap-4">
+                            {e.github && (
+                                <a href={e.github} target="_blank">
+                                    <Btn theme="primary">github</Btn>
+                                </a>
+                            )}
+                            {e.live && (
+                                <a
+                                    href={e.live}
+                                    target="_blank"
+                                   
+                                >
+                                   <Btn theme="secondary">Ver</Btn>
+                                </a>
+                            )}
 
-                    {
-                        e.description && (
-                            <a
-                                href={e.description}
-                                target="_blank"
-                                class="btn-md btn-secondary border-box-secondary"
-                            >
-                                descripcion
-                            </a>
-                        )
-                    }
-                </div>
-            </div>
-        </div>
-    </article>
-</section>
-
-))}
-
+                        </div>
+                    </div>
+                </Card>
+            </article>
+        </section>
+    ))
+}

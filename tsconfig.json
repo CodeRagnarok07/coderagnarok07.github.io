@@ -2,14 +2,11 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "verbatimModuleSyntax":true,
+    "verbatimModuleSyntax": true,
     "baseUrl": "/root/p/p/current",
     "paths": {
       "@consts": [
         "src/locale/consts.ts"
-      ],
-      "@ui": [
-        "src/components/ui/*"
       ],
       "@/*": [
         "src/*"

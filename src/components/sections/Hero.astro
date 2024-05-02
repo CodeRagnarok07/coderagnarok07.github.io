@@ -1,5 +1,6 @@
 ---
 import bg from "@/assets/media/bg/hero-haker-hoodie_100.png";
+import Btn from "@/components/ui/Btn.astro";
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
@@ -70,18 +71,14 @@ import bg from "@/assets/media/bg/hero-haker-hoodie_100.png";
                 decisiones tecnológicas apoyen los objetivos del negocio.
             </h2>
 
-            <div class="flex gap-4">
-                <a
-                    href="#contact"
-                    class="btn-lg btn-primary border-box-primary text-nowrap"
-                >
-                    Contacto
+            <div class="flex  gap-4">
+                
+                <a href="">
+                    <Btn theme="primary" size="lg"> Portfolio </Btn>
                 </a>
-                <a
-                    href="#contact"
-                    class="btn-lg btn-secondary border-box-secondary"
-                >
-                    Ver Mas
+
+                <a href="">
+                    <Btn theme="secondary"  size="lg"> Contacto </Btn>
                 </a>
             </div>
         </div>

@@ -9,6 +9,7 @@ import ImgMockup from "@/lib/ImgMockup/index.astro";
 import UpisaImg from "@/assets/portfolio/upisa/lg.png";
 import TATImg from "@/assets/portfolio/tat/lg.png";
 import okconstructoraImg from "@/assets/portfolio/okconstructora/lg.png";
+import Btn from "@/components/ui/Btn.astro";
 
 const data = [
     {
@@ -81,9 +82,8 @@ const data = [
         <div class="mt-10 flex flex-col gap-5 items-center">
             <a
                 href="/portfolio"
-                class="btn-lg btn-secondary border-box-secondary"
             >
-                Ver Todo
+                <Btn theme="primary" size="lg"> Portfolio </Btn>
             </a>
             <!-- <h4 class="text-xl md:text-3xl">
                 ¡explora cómo puedo llevar tus ideas al siguiente nivel!

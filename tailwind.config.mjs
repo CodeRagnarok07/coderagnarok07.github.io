@@ -74,6 +74,7 @@ export default {
 	safelist: [
 		// "bg-primary",
 		{ pattern: /bg-(primary|secondary|danger|purple|blue)/,variants: ['hover'],},
+		{ pattern: /btn-(primary|secondary|danger|purple|blue)/,variants: ['hover'],},
 		{ pattern: /shadow-(primary|secondary|danger|purple|blue)/,variants: ['hover'],},
 		{ pattern: /border-(primary|secondary|danger|purple|blue)/,variants: ['hover'],},
 	]
