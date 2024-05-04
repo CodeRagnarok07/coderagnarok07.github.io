@@ -20,10 +20,10 @@ export default defineConfig({
   }), sitemap(), tailwind({
     nesting: true
   }), react()],
-  site: 'https://coderagnarok07.github.io/',
   image: {
     service: passthroughImageService()
   },
-  customCss: ['./src/styles/ui_components.css', './src/styles/theme.css']
+  customCss: ['./src/styles/ui_components.css', './src/styles/theme.css'],
+  site: 'https://coderagnarok07.github.io/',
   // base: '/',
 });
