@@ -1,0 +1,60 @@
+---
+import Icon from "@/assets/Icon.astro";
+import type { IconType } from "@/assets/Icon.astro";
+import HeaderText from "../ui/HeaderText.astro";
+import bg from "@/assets/media/bg/bg1.png";
+import { socialLinks } from "@/content/consts";
+---
+
+<article id="contact">
+    <div
+        class="flex flex-col items-center justify-center h-full md:my-auto gap-4"
+    >
+        <HeaderText aling="center">
+            <h1 slot="title" class="">
+                Deseas <br class="flex sm:hidden" /> contactarme?
+            </h1>
+            <h4 slot="description" class="mb-[1.5rem]">
+                Puedes hacerlo a travez de mis redes sociales
+            </h4>
+        </HeaderText>
+
+        <div class="flex gap-2 flex-wrap justify-center items-center">
+            {
+                socialLinks.map((v) => (
+                    <a href={v.link}>
+                        <div class="w-12 sm:w-16 h-12 sm:h-16">
+                            <Icon icon={v.icon} />
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</article>
+
+<style define:vars={{ image: `url("${bg.src}")` }}>
+    article {
+        position: relative;
+        z-index: 20;
+    }
+    article::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100vw;
+        width: 100%;
+        height: 100%;
+
+        z-index: -10;
+        opacity: 0.4;
+        filter: brightness(150%) contrast(150%);
+        background: linear-gradient(rgb(0 0 0 / 64%), rgb(0 0 0 / 0%)),
+            var(--image);
+        /* box-shadow: inset 0px -2rem 15rem 2rem rgb(0 0 0); */
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+    }
+</style>

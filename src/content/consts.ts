@@ -16,8 +16,8 @@ interface pagesType{
 
 export const pages:pagesType[] = [
     { name: "home", icon: "nav.home", link: "/#home" },
-    { name: "services", icon: "nav.services", link: "/#services" },
     { name: "portfolio", icon: "nav.portfolio", link: "/#portfolio" },
+    { name: "services", icon: "nav.services", link: "/#services" },
     { name: "contact", icon: "nav.contact", link: "/#contact" },
     // { name: "about", icon: "about.svg", link: "/#about" },
     // { name: "blog", icon: "blog.svg", link: "/blog" },
@@ -27,20 +27,26 @@ export const pages:pagesType[] = [
 export const socialLinks:pagesType[] = [
     {
         name: "twitter",
-        link: "https://twitter.com/AngelFelipeRCH",
+        link: "https://twitter.com/CodeRagnarok_",
         icon: "social.twitter"
     },
     {
         name: "git",
         link: "https://github.com/CodeRagnarok07",
-        icon: "social.youtube"
+        icon: "social.github"
 
+    },
+    {
+        name: "Linkedin",
+        link: "https://www.linkedin.com/in/angelriera/",
+        icon: "social.linkedin"
     },
     {
         name: "ig",
         link: "https://www.instagram.com/angelfeliperch/",
         icon: "social.instagram"
     },
+
     // {
     //     name: "discord",
     //     link: "#",

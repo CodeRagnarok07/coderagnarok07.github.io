@@ -1,9 +1,7 @@
 ---
-
 import bg from "@/assets/media/bg/PortfolioBg.png";
 import HeaderText from "@/components/ui/HeaderText.astro";
 import ListElements from "./CardElements.astro";
-
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
@@ -17,7 +15,6 @@ import ListElements from "./CardElements.astro";
         box-shadow: inset 0px -2rem 15rem 2rem rgb(0 0 0);
         background-size: 150%;
         background-attachment: fixed; */
-  
     }
 
     section::before {
@@ -34,20 +31,18 @@ import ListElements from "./CardElements.astro";
         filter: brightness(50%) contrast(120%);
 
         background-image: var(--image);
-        background-position: 50% -20%;
+        background-position: 50% 50%;
         background-repeat: no-repeat;
         /* background-attachment: fixed; */
     }
 </style>
 
-<section
-    id="portfolio"
-    class="text-white text-center   "
->
-
-    <article class="container flex flex-col items-center justify-center mx-auto h-auto mb-auto">
+<section id="portfolio" class="text-white text-center">
+    <article
+        class="container flex flex-col items-center justify-center mx-auto h-auto mb-auto"
+    >
         <div
-            class="flex items-center flex-col w-full h-max overflow-visible gap-4 -mt-64 uppercase"
+            class="flex items-center flex-col w-full h-max overflow-visible  uppercase gap-20"
         >
             <HeaderText aling="center">
                 <h1 slot="title" class="uppercase">Portafolio</h1>
@@ -55,8 +50,18 @@ import ListElements from "./CardElements.astro";
                     Descubre mi trabajo y proyectos en mi portafolio digital
                 </h3>
             </HeaderText>
+
+            <div class="flex justify-center">
+                <div
+                    class="animate-bounce  shadow-secondary shadow-2xl p-2 w-10 h-10 ring-1 ring-secondary rounded-full flex items-center justify-center"
+                >
+                <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                  </svg>
+                </div>
+            </div>
         </div>
     </article>
 
-    <ListElements/>
+    <ListElements />
 </section>
