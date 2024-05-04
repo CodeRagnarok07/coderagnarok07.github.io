@@ -26,7 +26,6 @@ concurrency:
 
 env:
   BUILD_PATH: "." # default value when not using subfolders
-  STORE_PATH: "."
   # BUILD_PATH: subfolder
 
 jobs:
@@ -59,7 +58,7 @@ jobs:
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
-          path: ${{ steps.get-pnpm-store-dir-directory.outputs.STORE_PATH }}
+          path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -70,7 +69,7 @@ jobs:
         run: |
           pnpm astro build \
             --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+            --base ""
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
