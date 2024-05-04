@@ -51,12 +51,10 @@ import Btn from "@/components/ui/Btn.astro";
 
 <article
     id="home"
-    class="home_hero text-white text-center relative max-h-min overflow-auto bg-fixed"
+    class="home_hero text-white text-center relative max-h-min overflow-auto bg-fixed md:pt-[15%]"
 >
-    <div class="container flex items-center mx-auto h-full">
-        <div
-            class="flex items-center flex-col w-full h-max overflow-visible gap-4"
-        >
+    <div class="container flex flex-col justify-center items-center mx-auto h-full ">
+     
             <h1
                 class="text-4xl md:text-6xl font-bold uppercase heroTitle !text-danger"
             >
@@ -82,6 +80,5 @@ import Btn from "@/components/ui/Btn.astro";
                     <Btn theme="secondary"  size="lg"> Contacto </Btn>
                 </a>
             </div>
-        </div>
     </div>
 </article>

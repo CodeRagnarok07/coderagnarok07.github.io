@@ -3,14 +3,12 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "verbatimModuleSyntax": true,
-    "baseUrl": "/root/p/p/current",
+    "baseUrl": ".",
     "paths": {
-      "@consts": [
-        "src/locale/consts.ts"
-      ],
-      "@/*": [
-        "src/*"
-      ]
+      "@consts": [ "src/locale/consts.ts"],
+      "@layouts/*": [ "src/components/layouts/*"],
+      "@sections/*": [ "src/components/sections/*"],
+      "@/*": [ "src/*"],
     },
     "plugins": [
       {

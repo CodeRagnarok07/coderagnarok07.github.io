@@ -38,18 +38,18 @@ jobs:
       - uses: pnpm/action-setup@v3 # https://github.com/pnpm/action-setup
         with:
           version: 8
+          
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: pnpm
           cache-dependency-path: ${{ env.BUILD_PATH }}//package-lock.json
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
         
-
-
       - name: get pnpm store directory
         shell: bash
         run: |
@@ -62,12 +62,15 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+            
       - name: Install dependencies
         run: pnpm install
         working-directory: ${{ env.BUILD_PATH }}
+
+
       - name: Build with Astro
         run: |
-          pnpm astro build \
+          pnpm run build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base ""
         working-directory: ${{ env.BUILD_PATH }}

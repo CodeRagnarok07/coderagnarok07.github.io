@@ -26,6 +26,7 @@ export default defineConfig({
   image: {
     service: passthroughImageService()
   },
+  
   customCss: ['./src/styles/ui_components.css', './src/styles/theme.css'],
   site: `${myDEPLOYMENT_ASTRO_SITE_CONFIG || 'https://coderagnarok07.github.io/'}`,
   base: `${myDEPLOYMENT_ASTRO_BASE_CONFIG || '/'}`

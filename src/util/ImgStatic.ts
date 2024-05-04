@@ -10,4 +10,4 @@ const thumbnail = thumbnails[`../assets/showcase/`];
 if (!thumbnail) {
 	throw new Error(`Could not resolve showcase thumbnail: `);
 }
-const src = (await thumbnail()).default;
+// const src = (await thumbnail()).default;
