@@ -12,14 +12,15 @@ import Btn from "@/components/ui/Btn.astro";
         background-repeat: no-repeat;
         box-shadow: inset 0px -2rem 15rem 2rem rgb(0 0 0);
         background-size: 150%;
+        background-attachment: fixed;
     }
     @media (min-width: 768px) {
         .home_hero {
             box-shadow: inset 0px 1rem 9rem 11rem rgb(0 0 0);
             background-size: 80%;
-            background-position: 50% -20%;
         }
     }
+  
 
     .heroTitle {
         color: black;
@@ -48,9 +49,9 @@ import Btn from "@/components/ui/Btn.astro";
     }
 </style>
 
-<section
+<article
     id="home"
-    class="home_hero text-white text-center relative h-full overflow-auto"
+    class="home_hero text-white text-center relative h-full overflow-auto bg-fixed"
 >
     <div class="container flex items-center mx-auto h-full">
         <div
@@ -83,4 +84,4 @@ import Btn from "@/components/ui/Btn.astro";
             </div>
         </div>
     </div>
-</section>
+</article>

@@ -1,8 +1,9 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'CodeRagnarok';
-export const SITE_DESCRIPTION = 'diseño y desarrollo de software ';
+export const SITE_TITLE = "Code Ragnarok";
+export const SITE_DESCRIPTION = `Creación de aplicaciones y sistemas escalables, desde el frontend hasta el backend. 
+Convierte conceptos e ideas en código funcional y eficiente.`;
 
 import type { IconType } from "@/assets/Icon.astro";
 import icons from '@/assets/icons'

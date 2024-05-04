@@ -2,7 +2,7 @@
 import Carusel3Dcss from '@/lib/Css3D'
 import { useState, useEffect } from 'react'
 import styles from './styles.module.scss'
-import data from '@/content/i18n/es/hardSkills'
+// import data from '@/content/i18n/es/hardSkills'
 const BlogCTA = () => {
 
     const [current, setCurrent] = useState(0)

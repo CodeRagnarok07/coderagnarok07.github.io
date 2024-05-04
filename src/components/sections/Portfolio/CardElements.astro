@@ -13,8 +13,8 @@ const getImgsFromKey = (id: string): TypeGetImgsFromKey => {
 
 {
     dataPortfolio.map((e) => (
-        <section class="min-h-screem">
-            <article class="container mx-auto flex w-full h-full">
+        <article class="">
+            <div class="container mx-auto flex w-full h-min ">
                 <Card
                     theme="secondary"
                     className={
@@ -45,7 +45,7 @@ const getImgsFromKey = (id: string): TypeGetImgsFromKey => {
                         </div>
                     </div>
                 </Card>
-            </article>
-        </section>
+            </div>
+        </article>
     ))
 }

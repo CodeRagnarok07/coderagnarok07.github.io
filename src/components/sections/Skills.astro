@@ -5,7 +5,11 @@ import HeaderText from "../ui/HeaderText.astro";
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
-    section::before {
+    article {
+        position: relative;
+        z-index: 20;
+    }
+    article::before {
         content: "";
         position: absolute;
         top: 0;
@@ -16,16 +20,17 @@ import HeaderText from "../ui/HeaderText.astro";
 
         z-index: -10;
         opacity: 0.4;
-        filter: brightness(50%) contrast(120%);
+        filter: brightness(50%)  contrast(150%);
 
         background-image: var(--image);
-        background-position: 50% -20%;
+        background-position: 50% 10%;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 </style>
 
-<section class=" relative text-white">
-    <article class="container mx-auto">
+<article class=" relative text-white">
+    <div class="container mx-auto">
         <HeaderText aling="left">
             <h1 slot="title" class="">{services.CTA.p}</h1>
             <h4 slot="description" class="mb-[1.5rem]">{services.CTA.r}</h4>
@@ -44,5 +49,5 @@ import HeaderText from "../ui/HeaderText.astro";
                 ))
             }
         </div>
-    </article>
-</section>
+    </div>
+</article>
