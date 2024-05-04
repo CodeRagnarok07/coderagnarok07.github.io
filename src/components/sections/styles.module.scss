@@ -144,36 +144,36 @@
 
 .exp {
     // margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+    // display: flex;
+    // flex-direction: column;
+    // gap: 2.5rem;
 
-    position: relative;
-    z-index: 5;
+    // position: relative;
+    // z-index: 5;
 
-    &::before {
-        position: absolute;
-        content: "";
-        @include inset(-10%, 0, -10%, 82%);
-        background-color: v.$primary;
-        width: 5px;
-        height: 130%;
+    // &::before {
+    //     position: absolute;
+    //     content: "";
+    //     @include inset(-10%, 0, -10%, 82%);
+    //     background-color: v.$primary;
+    //     width: 5px;
+    //     height: 130%;
 
-        display: none;
+    //     display: none;
 
-        @include bp-lg {
-            display: flex;
-        }
+    //     @include bp-lg {
+    //         display: flex;
+    //     }
 
-        @media (min-width: 831px) {
-            left: 84%;
-        }
+    //     @media (min-width: 831px) {
+    //         left: 84%;
+    //     }
 
-        @media (min-width: 925px) {
-            left: 86%;
-        }
+    //     @media (min-width: 925px) {
+    //         left: 86%;
+    //     }
 
-    }
+    // }
 
 
 

@@ -23,7 +23,7 @@ const Experience = () => {
         // event.target.parentNode.children[1]?.classList.toggle(styles.hidden_scale)
     }
 
-    return <section id='exp'>
+    return <article id='exp'>
         <div className="box-title">
             <h1>Experiencia</h1>
         </div>
@@ -72,7 +72,7 @@ const Experience = () => {
         </div>
 
 
-    </section>
+    </article>
 }
 
 export default Experience;

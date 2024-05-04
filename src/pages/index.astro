@@ -1,20 +1,16 @@
 ---
-import Layout from "@/components/layouts/Mobile.astro";
+import Layout from "@/components/layouts/index.astro";
 import Skills from "@/components/sections/Skills.astro";
 
 import HomeHero from "@/components/sections/HomeHero.astro";
 import Portfolio from "@/components/sections/Portfolio/Home.astro";
 import PortfolioPage from "@/components/sections/Portfolio/Page.astro";
+
+import BlogCTA from "@/components/sections/BlogCTA";
 ---
 
 <Layout>
-
-    <section >
-        <HomeHero />
-        <Portfolio />
-        <Skills />
-    </section>
-    
-    <PortfolioPage />
-
+    <section><HomeHero /></section>
+    <section><Portfolio /></section>
+    <section><Skills /></section>
 </Layout>

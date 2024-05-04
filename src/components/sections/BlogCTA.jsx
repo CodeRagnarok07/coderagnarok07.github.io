@@ -2,7 +2,7 @@
 import Carusel3Dcss from '@/lib/Css3D'
 import { useState, useEffect } from 'react'
 import styles from './styles.module.scss'
-// import data from '@/content/i18n/es/hardSkills'
+import data from '@/content/i18n/es/hardSkills'
 const BlogCTA = () => {
 
     const [current, setCurrent] = useState(0)
@@ -10,7 +10,7 @@ const BlogCTA = () => {
    
 
 
-    return <section className="container" id='skills'>
+    return <article className="container" id='skills'>
 
         <div className="box-title">
             <h1>Skills</h1>
@@ -29,7 +29,7 @@ const BlogCTA = () => {
                 <div className={styles.text_cont}>
                     <h3>{data[current].name[0].plain_text}</h3>
 
-                    <p>
+                    {/* <p>
                         {childData ? childData.length > 0 && childData.map((child, k) =>(
                           <span key={k}> {child.name}, </span>
                             
@@ -39,7 +39,7 @@ const BlogCTA = () => {
                         ...
                         </>
                     }
-                    </p>
+                    </p> */}
 
                     <div className='w-full flex justify-center'>
                         <div className="btn btn-primary">ver mas</div>
@@ -54,6 +54,6 @@ const BlogCTA = () => {
 
 
 
-    </section>
+    </article>
 }
 export default BlogCTA
