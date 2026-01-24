@@ -15,6 +15,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/content/consts";
 
         <!-- <Footer /> -->
         <style is:global>
+            @import "tailwindcss";
             a {
                 text-decoration: none !important;
             }
@@ -39,7 +40,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/content/consts";
                 & > section {
                     position: relative;
                     overflow: auto;
-                    
+
                     width: 100%;
                     max-width: 100dvw;
 
@@ -64,7 +65,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/content/consts";
                         overflow-y: auto;
 
                         padding-bottom: 24%;
-                        @apply pt-4 sm:pt-24 md:pt-28 sm:pb-0 sm:overflow-y-hidden ;
+                        @apply pt-4 sm:pt-24 md:pt-28 sm:pb-0 sm:overflow-y-hidden;
                     }
                 }
             }

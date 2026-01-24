@@ -12,6 +12,7 @@
 	--sl-color-gray-6: #1d2735;
 	--sl-color-black: #14191f;
 }
+
 /* Light mode colors. */
 :root[data-theme='light'] {
 	--sl-color-accent-low: #b9dbff;
@@ -26,4 +27,40 @@
 	--sl-color-gray-6: #e9eef6;
 	--sl-color-gray-7: #f4f6fa;
 	--sl-color-black: #ffffff;
+}
+
+/* tailwind theme */
+@theme {
+	/* Colores base - puedes referenciar variables CSS de theme.css si lo necesitas */
+	--color-black: #191919;
+	--color-black-dark: #060709;
+	--color-black-light: #242728;
+
+	--color-gray: #919190;
+	--color-gray-dark: #89827A;
+
+	--color-white: #CBCBCB;
+	--color-white-light: #D3D3D3;
+
+	--color-primary: #464AA9;
+	--color-primary-light: #4A6CE2;
+	--color-primary-dark: #2E328E;
+
+	--color-secondary: #005C94;
+	--color-secondary-dark: #E44F26;
+
+	--color-danger: #B7455A;
+
+	--color-purple: #A259FF;
+	--color-purple-light: #6E36E5;
+
+	--color-blue: #0090F9;
+	--color-blue-dark: #1572B6;
+
+	--screen-xs: 320px;
+	--screen-sm: 575px;
+	--screen-md: 768px;
+	--screen-lg: 1024px;
+	--screen-xl: 1280px;
+	--screen-2xl: 1536px;
 }
