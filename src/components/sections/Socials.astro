@@ -9,7 +9,7 @@ import { socialLinks } from "@/content/consts";
 <article id="contact" class="">
     <div class="min-h-[50vh] my-auto grid justify-items-center "
     >
-        <HeaderText aling="center">
+        <HeaderText align="center">
             <h1 slot="title" class="">
                 Deseas <br class="flex sm:hidden" /> contactarme?
             </h1>
@@ -21,7 +21,7 @@ import { socialLinks } from "@/content/consts";
         <div class="flex gap-2 flex-wrap justify-center items-center">
             {
                 socialLinks.map((v) => (
-                    <a target="_blank" href={v.link}>
+                    <a target="_blank" rel="noopener noreferrer" href={v.link} aria-label={v.name}>
                         <div class="w-12 sm:w-16 h-12 sm:h-16">
                             <Icon icon={v.icon} />
                         </div>

@@ -15,7 +15,7 @@ const { name } = Astro.props;
     <div class="main">
         <slot />
     </div>
-    {name && <span aria-live="polite">name</span>}
+    {name && <span aria-live="polite">{name}</span>}
 </button>
 
 <style>

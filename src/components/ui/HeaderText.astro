@@ -1,9 +1,9 @@
 ---
 interface Props {
-    aling?: "left" | "center" | "right";
+    align?: "left" | "center" | "right";
 }
 
-const { aling } = Astro.props;
+const { align } = Astro.props;
 ---
 
 <style >
@@ -23,7 +23,7 @@ const { aling } = Astro.props;
         align-items: end;
     }
   
-    @media (max-width: 575px); {
+    @media (max-width: 575px) {
         header{
             text-align: center ;
             justify-content: center ;
@@ -36,7 +36,7 @@ const { aling } = Astro.props;
   
 </style>
 
-<header class={`inline-flex flex-col ${aling} overflow-hidden`}>
+<header class={`inline-flex flex-col ${align} overflow-hidden`}>
     <div class="whitespace-nowrap w-min inline-flex flex-col">
         <slot name="title" />
 

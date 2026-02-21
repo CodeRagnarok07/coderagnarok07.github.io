@@ -33,6 +33,17 @@
 - Astro + Tailwind + TypeScript are the core stack (`astro.config.mjs`, `tailwind.config.mjs`).
 - `src/env.d.ts` defines typings for Astro; keep it updated if adding env vars.
 
+## Interface Behavior (Homepage Layout)
+
+The site has **two distinct layout/scroll behaviors** by viewport. Layout and scroll changes must preserve both.
+
+| Viewport | Behavior | Scroll |
+|----------|----------|--------|
+| **Desktop** (md and up) | Acts as a **landing page**: sections stacked vertically in a single column. | **Main** scrolls vertically (mouse wheel or trackpad). |
+| **Mobile** | Acts as a **finger slider**: horizontal swipe between sections, vertical scroll within the current section. | **Main** scrolls horizontally (swipe between sections). **Section** scrolls vertically (wheel or finger within current section). |
+
+Implementation lives in `src/components/layouts/index.astro`: `main` uses responsive overflow and flex direction (`flex-row` / `md:flex-col`). When changing layout, global overflow, or `prefers-reduced-motion`, ensure desktop vertical scroll (main) and mobile horizontal (main) + vertical (section) scroll still work.
+
 ## Tech Stack
 
 - Astro 5 (sitio principal)
