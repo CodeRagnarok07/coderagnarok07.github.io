@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "skills": {
+    "changelog-generator": {
+      "source": "composiohq/awesome-claude-skills",
+      "sourceType": "github",
+      "computedHash": "0facdb5c491a654e3b0f6d300fb8fa14472d811cb715c632dc2862919b277dae"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+    },
+    "git-commit": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "2607fc60629b82b257136dd2a7a373f0a4466c0b49df7746d845d59313c99b21"
+    },
+    "interface-design": {
+      "source": "dammyjay93/interface-design",
+      "sourceType": "github",
+      "computedHash": "d004c5e5e2e7132e1d64e9c2a339db7f7aaa69053a5c19cddc210dd35dd6fff5"
+    },
+    "skill-creator": {
+      "source": "prowler-cloud/prowler",
+      "sourceType": "github",
+      "computedHash": "1ab9a736522bc20880153e16b5f451167a3887211d696876151e9417d1469323"
+    },
+    "skill-sync": {
+      "source": "prowler-cloud/prowler",
+      "sourceType": "github",
+      "computedHash": "8c671981fc3363d6fd84ab9df8df948b6613c1743bb105c1380fef5c247aece3"
+    },
+    "tailwind-theme-builder": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "computedHash": "5f3b657551b778443613bd41631cfce2fd4159f77c98df3d511c45c275122c15"
+    },
+    "tailwindcss": {
+      "source": "hairyf/skills",
+      "sourceType": "github",
+      "computedHash": "676d95536c3c4a64215535ff09128d6e8d5163eb3fc204ed2cfde61e87b5d892"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "f98931159fa9c7fed043bcd18a891a46dcf89ababa38df13a4c5b7b30dc0ce07"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "4365be772fd3b41994a72ad478472c6d680678e7f3859860ab010e9c46e48ee0"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "a6a44d5498f7e8f68289902f3dedfc6f38ae0cee1e96527c80724cf27f727c2a"
+    },
+    "web-design-methodology": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "computedHash": "bbbae4606bc237fe926d9753c58729fd3502b3272263ddc8a177311a0f077c65"
+    },
+    "web-design-patterns": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "computedHash": "44f360324ac6298cc66060160e90f39ad9237cc7c39b5447dd743159f927a306"
+    }
+  }
+}
