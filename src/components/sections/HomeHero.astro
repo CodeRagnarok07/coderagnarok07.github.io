@@ -5,8 +5,8 @@ import Btn from "@/components/ui/Btn.astro";
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
     .home_hero {
-        background: linear-gradient(rgb(0 0 0 / 64%), rgb(0 0 0 / 0%)),
-            var(--image);
+        background:
+            linear-gradient(rgb(0 0 0 / 64%), rgb(0 0 0 / 0%)), var(--image);
         background-position: 50% 50%;
         background-origin: content-box;
         background-repeat: no-repeat;
@@ -20,14 +20,13 @@ import Btn from "@/components/ui/Btn.astro";
             background-size: 80%;
         }
     }
-  
 
     .heroTitle {
-        color: black;
+        color: #cccccc;
         margin-bottom: 4px;
         text-shadow:
             1px 1px 1px #000000,
-            -2px 2px 6px #a9468b,
+            -2px 2px 6px #838283,
             2px -2px 6px #000000;
 
         line-height: var(--sl-line-height-headings);
@@ -51,13 +50,14 @@ import Btn from "@/components/ui/Btn.astro";
 
 <article
     id="home"
-    class="home_hero text-white text-center relative  overflow-auto bg-fixed  flex "
+    class="home_hero relative flex overflow-auto bg-fixed text-center text-white
+    flex-col items-center justify-center"
 >
-    <div class="grid grid-cols-1 justify-items-center h-min gap-[15%] my-auto  pb-[12rem]  w-full px-[5%] md:px-[10%]">
-     
-            <h1
-                class="text-4xl md:text-6xl font-bold uppercase heroTitle !text-danger"
-            >
+    <div class="container mx-auto my-auto w-full max-w-[1200px] px-6 md:px-10">
+        <div
+            class="grid h-min grid-cols-1 justify-items-center gap-10 pb-[9rem] md:pb-0"
+        >
+            <h1 class="heroTitle text-4xl font-bold uppercase md:text-6xl">
                 <span class="text-primary">Diseño</span>
                 &
                 <span class="text-secondary">Desarrollo</span>
@@ -65,20 +65,21 @@ import Btn from "@/components/ui/Btn.astro";
                 software full-stack
             </h1>
 
-            <h2 class="text-xl md:text-3xl">
-                Creación de aplicaciones y sistemas escalables <br>
-                Convierte conceptos en código funcional y eficiente con una interfaz atractiva y usable
+            <h2 class="max-w-4xl text-lg md:text-3xl">
+                Creación de aplicaciones y sistemas escalables <br />
+                Convierte conceptos en código funcional y eficiente con una interfaz
+                atractiva y usable
             </h2>
 
-            <div class="flex  gap-4">
-                
+            <div class="flex flex-wrap items-center justify-center gap-4">
                 <a href="/portafolio">
                     <Btn theme="primary" size="lg"> Portfolio </Btn>
                 </a>
 
                 <a href="/#contact">
-                    <Btn theme="secondary"  size="lg"> Contacto </Btn>
+                    <Btn theme="secondary" size="lg"> Contacto </Btn>
                 </a>
             </div>
+        </div>
     </div>
 </article>

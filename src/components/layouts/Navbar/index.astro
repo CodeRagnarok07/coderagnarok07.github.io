@@ -30,30 +30,31 @@ import Icon from "@/assets/Icon.astro";
                             href={v.link}
                             class=" text-white
                         flex flex-col  items-center cursor-pointer 
-                        p-1 rounded-lg gap-[2%]
-                        md:py-0
-                        md:pl-0
+                        rounded-lg 
                         
                         border-b-2 border-[#ffffff25]
-
+                        
                         bg-secondary bg-opacity-80  hover:bg-opacity-100
-
+                        
                         
                         hover:border-white
                         transition-colors duration-700
                         
+                        p-1
+                        pb-1
                         sm:px-2
                         sm:flex-row
                         sm:rounded-[4px]
                         sm:bg-transparent
+                        md:py-0
+                        md:pb-2
+                        md:px-1
                         "
                         >
-                            <div class="w-5 h-5 md:m-2">
+                            <div class="flex h-5 w-5 items-center justify-center md:h-6 md:w-6">
                                 <Icon icon={v.icon} />
                             </div>
-                            <small class="hidden xs:inline px-1 pt-1 ">
-                                {v.name}
-                            </small>
+                            <small class=" px-1 pt-1 ">{v.name}</small>
                         </a>
                     ))
                 }
