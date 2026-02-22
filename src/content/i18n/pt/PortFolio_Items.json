@@ -2,7 +2,7 @@
     {
         "id": "tat",
         "name": "TAT",
-        "Title": "Tribunal Administrativo Tributario de Panama",
+        "Title": "Tribunal Administrativo Tributário do Panamá",
         "description": "portfolio/tat",
         "github": null,
         "live": "https://tat.gob.pa/"
@@ -10,7 +10,7 @@
     {
         "id": "upisa",
         "name": "UPISA",
-        "Title": "(UPISA) Distribuidora internacional de cárnicos",
+        "Title": "(UPISA) Distribuidora internacional de carnes",
         "description": "portfolio/upisa",
         "github": "https://github.com/CodeRagnarok07/UPISA",
         "live": "https://upisa.com.py/"
@@ -18,7 +18,7 @@
     {
         "id": "Framework-CSS-Aduana-Paraguay",
         "name": "Framework-CSS-Aduana-Paraguay",
-        "Title": "Framework de CSS Tribunal de Aduana de Paraguay",
+        "Title": "Framework CSS para o Tribunal de Aduana do Paraguai",
         "description": "portfolio/Framework-CSS-Aduana-Paraguay",
         "github": "https://github.com/CodeRagnarok07/Framework-CSS-Aduana-Paraguay",
         "live": "https://template-aduana-paraguay.vercel.app/"
@@ -26,7 +26,7 @@
     {
         "id": "Naciones-Unidas",
         "name": "Naciones-Unidas",
-        "Title": "Plataforma de presentación de informes para la CIADDIS",
+        "Title": "Plataforma de relatórios para a CIADDIS",
         "description": "portfolio/Naciones-Unidas",
         "github": "https://github.com/CodeRagnarok07/Naciones-Unidas",
         "live": "https://coderagnarok07.github.io/OEA-Proyect/"
@@ -42,7 +42,7 @@
     {
         "id": "arrullos",
         "name": "arrullos",
-        "Title": "Arrullos - Panel administrativo e-commerce",
+        "Title": "Arrullos - Painel administrativo de e-commerce",
         "description": "portfolio/arrullos",
         "github": null,
         "live": null
