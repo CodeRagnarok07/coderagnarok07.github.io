@@ -1,14 +1,22 @@
 ---
 import BaseHead from "@/components/layouts/BaseHead.astro";
 import Navbar from "@/components/layouts/Navbar/index.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "@/content/consts";
+import { siteCopy, type Locale } from "@/content/i18n/site";
+
+interface Props {
+    locale?: Locale;
+    basePath?: string;
+}
+
+const { locale = "es", basePath = "/" } = Astro.props;
+const copy = siteCopy[locale];
 ---
 
-<html lang="en" class="dark">
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<html lang={copy.lang} class="dark">
+    <BaseHead title={copy.meta.title} description={copy.meta.description} />
     <body class="bg-[#030713] text-white leading-normal min-h-dvh">
-        <a href="#main-content" class="skip-link"> Saltar al contenido </a>
-        <Navbar />
+        <a href="#main-content" class="skip-link"> {copy.skipToContent} </a>
+        <Navbar locale={locale} basePath={basePath} />
 
         <main id="main-content">
             <slot />

@@ -1,24 +1,24 @@
 {
-    "title": "Hola Soy Ángel",
-    "subtitle": "Experto en diseño y desarrollo de aplicaciones",
+    "title": "Soy Ángel, Senior Software Engineer",
+    "subtitle": "Especialista en desarrollo seguro, AppSec e infraestructura",
     "CTA": {
-        "p": "¿Tienes una idea genial para tu negocio digital, pero no sabes cómo llevarla a cabo? ",
-        "r": "No te preocupes, yo te puedo ayudar. Te ofrezco mis servicios de:"
+        "p": "Construyo software crítico con seguridad y arquitectura como base.",
+        "r": "Trabajo de extremo a extremo con foco en:"
     },
     "items": [
         {
-            "title": "Análisis y diseño:",
-            "content": "Estudio tu idea y te propongo la mejor solución para tu proyecto, teniendo en cuenta tus necesidades, tu público objetivo y tu presupuesto."
+            "title": "AppSec y arquitectura segura:",
+            "content": "Diseño sistemas desacoplados con controles de seguridad desde el inicio, incluyendo hardening de APIs y mitigación de OWASP Top 10."
         },
         {
-            "title": "Desarrollo y testing:",
-            "content": "Programo tu proyecto con las tecnologías más adecuadas para cada caso, asegurando la calidad, la funcionalidad y la seguridad de tu producto."
+            "title": "Desarrollo full-stack:",
+            "content": "Implemento backend con Django/FastAPI y frontend con Next.js/React para entregar productos robustos, mantenibles y escalables."
         },
         {
-            "title": "Lanzamiento y mantenimiento:",
-            "content": "Lanzamiento y mantenimiento: Te ayudo a publicar tu proyecto en las plataformas que elijas, y te ofrezco un servicio de mantenimiento y soporte continuo para que tu producto siempre esté actualizado y operativo."
+            "title": "Infraestructura y operación:",
+            "content": "Orquesto servicios con Docker, Nginx y pipelines CI/CD con enfoque DevSecOps para despliegues confiables en AWS/Azure."
         }
     ],
-    "caption": "No dejes pasar esta oportunidad y contacta conmigo ahora mismo. Juntos podemos transformar tu idea en un proyecto escalable, innovador y rentable.",
-    "btn": "Contáctame"
+    "caption": "Busco colaborar en proyectos donde la robustez técnica y la seguridad sean prioridad absoluta.",
+    "btn": "Contactarme"
 }

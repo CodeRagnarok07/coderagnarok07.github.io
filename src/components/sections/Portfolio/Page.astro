@@ -2,6 +2,22 @@
 import bg from "@/assets/media/bg/PortfolioBg.png";
 import HeaderText from "@/components/ui/HeaderText.astro";
 import ListElements from "./CardElements.astro";
+import type { Locale } from "@/content/i18n/site";
+
+interface Props {
+    locale?: Locale;
+    basePath?: string;
+}
+
+const { locale = "es", basePath = "/" } = Astro.props;
+const pageTitle = locale === "pt" ? "Portfólio" : "Portafolio";
+const pageDescription =
+    locale === "pt"
+        ? "Conheça meu trabalho e projetos no meu portfólio digital"
+        : locale === "en"
+          ? "Discover my work and projects in my digital portfolio"
+        : "Descubre mi trabajo y proyectos en mi portafolio digital";
+const pageTitleFinal = locale === "en" ? "Portfolio" : pageTitle;
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
@@ -45,14 +61,14 @@ import ListElements from "./CardElements.astro";
             class="flex h-max w-full flex-col items-center gap-16 overflow-visible uppercase md:gap-20"
         >
             <HeaderText align="center">
-                <h1 slot="title" class="uppercase">Portafolio</h1>
+                <h1 slot="title" class="uppercase">{pageTitleFinal}</h1>
                 <h3 slot="description">
-                    Descubre mi trabajo y proyectos en mi portafolio digital
+                    {pageDescription}
                 </h3>
             </HeaderText>
 
             <div class="flex justify-center">
-                <a href="/portafolio#tat">
+                <a href={`${basePath}portafolio#tat`}>
 
                 <div
                     class="animate-bounce  shadow-secondary shadow-2xl p-2 w-10 h-10 ring-1 ring-secondary rounded-full flex items-center justify-center"
@@ -67,5 +83,5 @@ import ListElements from "./CardElements.astro";
         </div>
     </article>
 
-    <ListElements />
+    <ListElements locale={locale} />
 </section>

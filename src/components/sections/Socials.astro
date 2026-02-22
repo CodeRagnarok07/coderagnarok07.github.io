@@ -1,9 +1,16 @@
 ---
 import Icon from "@/assets/Icon.astro";
-import type { IconType } from "@/assets/Icon.astro";
 import HeaderText from "../ui/HeaderText.astro";
 import bg from "@/assets/media/bg/bg1.png";
 import { socialLinks } from "@/content/consts";
+import { siteCopy, type Locale } from "@/content/i18n/site";
+
+interface Props {
+    locale?: Locale;
+}
+
+const { locale = "es" } = Astro.props;
+const copy = siteCopy[locale];
 ---
 
 <article id="contact">
@@ -14,10 +21,10 @@ import { socialLinks } from "@/content/consts";
     >
         <HeaderText align="center" className="mb-8 ">
             <h1 slot="title" class="">
-                Deseas <br class="flex sm:hidden" /> contactarme?
+                {copy.contact.title}
             </h1>
             <h4 slot="description">
-                Puedes hacerlo a travez de mis redes sociales
+                {copy.contact.description}
             </h4>
         </HeaderText>
 

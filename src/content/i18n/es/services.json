@@ -1,40 +1,77 @@
 {
     "CTA": {
-        "p": "Mis habilidades",
-        "r": "Me permiten crear soluciones personalizadas que se ajustan a los objetivos"
+        "p": "Capacidades técnicas",
+        "r": "Experiencia aplicada en desarrollo seguro, infraestructura y estrategia de ingeniería"
     },
-    "items": [
+    "sections": [
         {
-            "icon": "pencil",
-            "title": "Diseño UX UI",
-            "content": "Creo interfaces de usuario atractivas y funcionales, siguiendo las últimas tendencias y las mejores prácticas de UX. Así, logro captar y retener la atención de tus leads, y aumentar su satisfacción y fidelidad."
+            "title": "Security & Infrastructure",
+            "tag": "Learning",
+            "description": "Actualmente profundizando en AppSec y seguridad de infraestructura.",
+            "items": [
+               
+                {
+                    "icon": "nav.services",
+                    "title": "AppSec",
+                    "content": "Hardening de APIs, mitigación de OWASP Top 10, seguridad de JWT y gestión segura de secretos (Environ/Vault)."
+                },
+                {
+                    "icon": "nav.portfolio",
+                    "title": "DevSecOps",
+                    "content": "Automatización CI/CD con GitHub Actions, escaneo de vulnerabilidades y despliegues seguros en AWS, Azure y Heroku."
+                },
+                {
+                    "icon": "nav.contact",
+                    "title": "Networking",
+                    "content": "Gestión de redes privadas, protocolos de comunicación y seguridad perimetral."
+                }
+            ]
         },
         {
-            "icon": "open-book",
-            "title": "Desarrollo frontend",
-            "content": "Utilizo JavaScript, Python y otras tecnologías web de vanguardia para desarrollar sitios y aplicaciones web rápidas, responsivas y optimizadas. Con esto, consigo mejorar la experiencia de usuario, el posicionamiento SEO y la velocidad de carga de tus proyectos."
+            "title": "Core Software Engineering",
+            "tag": "Solid Base",
+            "description": "Base técnica consolidada para construir productos robustos end-to-end.",
+            "items": [
+                {
+                    "icon": "nav.services",
+                    "title": "Backend",
+                    "content": "Python con Django y FastAPI, diseño de APIs REST robustas y optimización de PostgreSQL y MySQL."
+                },
+                {
+                    "icon": "nav.home",
+                    "title": "Frontend",
+                    "content": "React.js y Next.js (14+), estado asíncrono con TanStack Query y estilizado con Tailwind CSS y SASS."
+                },
+                {
+                    "icon": "nav.portfolio",
+                    "title": "Integraciones",
+                    "content": "Abstracción de servicios complejos como Microsoft Graph API y autenticación corporativa SSO con Azure AD/MSAL."
+                }
+            ]
         },
         {
-            "icon": "setting",
-            "title": "Desarrollo backend",
-            "content": "Programo en Python y otros lenguajes de programación potentes y versátiles para crear proyectos seguros, escalables y eficientes. Con esto, garantizo el buen funcionamiento y la calidad de tus productos digitales."
-        },
-        {
-            "icon": "laptop",
-            "title": "Gestión de servidor",
-            "content": "Manejo el cloud AWS, el hosting y las bases de datos con solvencia y profesionalidad. Con esto, aseguro la disponibilidad, la seguridad y el rendimiento de tus recursos en la nube."
-        },
-        {
-            "icon": "rocket",
-            "title": "Metodologías ágiles",
-            "content": "Aplico las metodologías ágiles para organizar y proyectar mis trabajos de forma efectiva y flexible. Con esto, facilito la comunicación, la colaboración y la entrega de valor en cada etapa del proceso."
-        },
-        {
-            "icon": "magnifier",
-            "title": "Nociones de marketing y Diseño UX UI",
-            "content": "Conozco las estrategias de marketing y diseño para hacer que tus proyectos sean atractivos, relevantes y rentables. Con esto, contribuyo a alcanzar tus objetivos de ventas y crecimiento."
+            "title": "Engineering Strategy",
+            "tag": "Senior",
+            "description": "Enfoque estratégico para alinear arquitectura, ejecución y negocio.",
+            "items": [
+                {
+                    "icon": "nav.about",
+                    "title": "Arquitectura de software",
+                    "content": "Diseño de monolitos desacoplados, modelado orientado a compliance y aplicación de principios de Clean Code."
+                },
+                {
+                    "icon": "nav.contact",
+                    "title": "Stakeholder management",
+                    "content": "Ingeniería de requisitos y comunicación efectiva con niveles gerenciales en entornos corporativos y gubernamentales."
+                },
+                {
+                    "icon": "nav.blog",
+                    "title": "Metodologías ágiles",
+                    "content": "Gestión de proyectos bajo Scrum con entrega continua de valor."
+                }
+            ]
         }
     ],
-    "caption": "No lo dudes más y contáctame para empezar a trabajar juntos. Te aseguro que no te arrepentirás de elegirme como tu freelance de confianza.",
-    "cta": "Contáctame"
+    "caption": "Colaboro en proyectos donde la robustez técnica y la seguridad sean prioridad desde el diseño.",
+    "cta": "Contactarme"
 }

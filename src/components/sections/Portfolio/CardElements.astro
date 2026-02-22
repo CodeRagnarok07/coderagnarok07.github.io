@@ -2,9 +2,26 @@
 // import HeaderText from "@/components/ui/HeaderText.astro";
 import imgData from "@/assets/portfolio";
 import DiviceSelector from "./DiviceSelector.astro";
-import dataPortfolio from "@/content/i18n/es/PortFolio_Items.json";
+import dataPortfolioEs from "@/content/i18n/es/PortFolio_Items.json";
+import dataPortfolioPt from "@/content/i18n/pt/PortFolio_Items.json";
+import dataPortfolioEn from "@/content/i18n/en/PortFolio_Items.json";
 import Card from "@/components/ui/Card.astro";
 import Btn from "@/components/ui/Btn.astro";
+import type { Locale } from "@/content/i18n/site";
+
+interface Props {
+    locale?: Locale;
+}
+
+const { locale = "es" } = Astro.props;
+const dataPortfolio =
+    locale === "pt"
+        ? dataPortfolioPt
+        : locale === "en"
+          ? dataPortfolioEn
+          : dataPortfolioEs;
+const liveLabel =
+    locale === "pt" ? "Ver online" : locale === "en" ? "View online" : "Ver en linea";
 
 const getImgsFromKey = (id: string): TypeGetImgsFromKey => {
     return imgData.filter((path) => path[0].includes(id));
@@ -38,7 +55,7 @@ const getImgsFromKey = (id: string): TypeGetImgsFromKey => {
                                     target="_blank"
                                    
                                 >
-                                   <Btn theme="secondary">Ver En linea</Btn>
+                                   <Btn theme="secondary">{liveLabel}</Btn>
                                 </a>
                             )}
 

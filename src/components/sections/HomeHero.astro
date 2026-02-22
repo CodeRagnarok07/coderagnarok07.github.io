@@ -1,6 +1,15 @@
 ---
 import bg from "@/assets/media/bg/hero-haker-hoodie_100.png";
 import Btn from "@/components/ui/Btn.astro";
+import { siteCopy, type Locale } from "@/content/i18n/site";
+
+interface Props {
+    locale?: Locale;
+    basePath?: string;
+}
+
+const { locale = "es", basePath = "/" } = Astro.props;
+const copy = siteCopy[locale];
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
@@ -58,26 +67,26 @@ import Btn from "@/components/ui/Btn.astro";
             class="grid h-min grid-cols-1 justify-items-center gap-10 pb-[9rem] md:pb-0"
         >
             <h1 class="heroTitle text-4xl font-bold uppercase md:text-6xl">
-                <span class="text-primary">Diseño</span>
+                <span class="text-primary">{copy.hero.primary}</span>
                 &
-                <span class="text-secondary">Desarrollo</span>
-                de <br class="hidden md:inline-block" />
-                software full-stack
+                <span class="text-secondary">{copy.hero.secondary}</span>
+                <br class="hidden md:inline-block" />
+                {copy.hero.titleSuffix}
             </h1>
 
             <h2 class="max-w-4xl text-lg md:text-3xl">
-                Creación de aplicaciones y sistemas escalables <br />
-                Convierte conceptos en código funcional y eficiente con una interfaz
-                atractiva y usable
+                {copy.hero.subtitleLine1}
+                <br />
+                {copy.hero.subtitleLine2}
             </h2>
 
             <div class="flex flex-wrap items-center justify-center gap-4">
-                <a href="/portafolio">
-                    <Btn theme="primary" size="lg"> Portfolio </Btn>
+                <a href={`${basePath}portafolio`}>
+                    <Btn theme="primary" size="lg"> {copy.hero.portfolioCta} </Btn>
                 </a>
 
-                <a href="/#contact">
-                    <Btn theme="secondary" size="lg"> Contacto </Btn>
+                <a href="#contact">
+                    <Btn theme="secondary" size="lg"> {copy.hero.contactCta} </Btn>
                 </a>
             </div>
         </div>

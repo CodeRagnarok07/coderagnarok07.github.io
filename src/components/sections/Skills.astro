@@ -1,7 +1,20 @@
 ---
-import services from "@/content/i18n/es/services.json";
+import servicesEs from "@/content/i18n/es/services.json";
+import servicesPt from "@/content/i18n/pt/services.json";
+import servicesEn from "@/content/i18n/en/services.json";
 import bg from "@/assets/media/bg/bg-skills.png";
 import HeaderText from "../ui/HeaderText.astro";
+import Icon from "@/assets/Icon.astro";
+import type { IconType } from "@/assets/Icon.astro";
+import type { Locale } from "@/content/i18n/site";
+
+interface Props {
+    locale?: Locale;
+}
+
+const { locale = "es" } = Astro.props;
+const services =
+    locale === "pt" ? servicesPt : locale === "en" ? servicesEn : servicesEs;
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
@@ -19,7 +32,7 @@ import HeaderText from "../ui/HeaderText.astro";
         height: 100%;
 
         z-index: -10;
-        opacity: 0.4;
+        opacity: 0.9;
         filter: brightness(50%) contrast(150%);
 
         background-image: var(--image);
@@ -27,33 +40,242 @@ import HeaderText from "../ui/HeaderText.astro";
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+
+    .skills-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        width: 100%;
+        max-width: 65rem;
+    }
+
+    .skill-section {
+        width: 100%;
+        border: 1px solid rgb(74 108 226 / 45%);
+        border-radius: 0.75rem;
+        background: rgb(3 7 18 / 52%);
+        overflow: hidden;
+        transition: border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .skill-section.is-open {
+        border-color: rgb(74 108 226 / 80%);
+        box-shadow: 0 0 24px rgb(74 108 226 / 30%);
+    }
+
+    .skill-summary {
+        cursor: default;
+        padding: 1rem 1.35rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background: linear-gradient(
+            90deg,
+            rgb(15 23 42 / 92%),
+            rgb(2 6 23 / 76%)
+        );
+    }
+
+    .skill-summary-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .skill-tag {
+        border: 1px solid rgb(147 197 253 / 60%);
+        border-radius: 9999px;
+        padding: 0.24rem 0.72rem;
+        font-size: 0.69rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 700;
+        color: rgb(191 219 254);
+        white-space: nowrap;
+    }
+
+    .section-panel {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-0.3rem);
+        transition:
+            max-height 360ms cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 240ms ease,
+            transform 320ms ease;
+    }
+
+    .skill-section.is-open .section-panel {
+        max-height: 60rem;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .section-body {
+        padding: 1.1rem 1.35rem 1.45rem;
+        border-top: 1px solid rgb(74 108 226 / 28%);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .subsection-label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        color: rgb(191 219 254 / 86%);
+    }
+
+    .subsections-track {
+        display: flex;
+        gap: 0.85rem;
+        overflow-x: auto;
+        width: 100%;
+        justify-content: center;
+        padding: 0.2rem 0.3rem 0.45rem;
+        scroll-snap-type: x mandatory;
+    }
+
+    .subsection-card {
+        min-width: min(20rem, 88vw);
+        max-width: 22rem;
+        scroll-snap-align: start;
+        border: 1px solid rgb(74 108 226 / 30%);
+        border-radius: 0.7rem;
+        background: rgb(2 6 23 / 70%);
+        padding: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: border-color 220ms ease, background-color 220ms ease;
+    }
+
+    .subsection-card:hover {
+        border-color: rgb(96 165 250 / 80%);
+        background: rgb(2 6 23 / 88%);
+    }
+
+    .subsection-head {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+    }
+
+    .subsection-icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        display: grid;
+        place-items: center;
+    }
+
+    .subsection-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .subsection-content {
+        margin: 0;
+        font-size: 0.9rem;
+        color: rgb(209 213 219);
+        line-height: 1.5;
+    }
+
+    @media (min-width: 768px) {
+        .skills-stack {
+            max-width: 68rem;
+            margin-inline: auto;
+        }
+        .skill-summary {
+            padding: 1.15rem 1.6rem;
+        }
+        .section-body {
+            padding: 1.2rem 1.6rem 1.7rem;
+        }
+        .subsections-track {
+            gap: 1rem;
+        }
+    }
 </style>
 
 <article id="services" class="relative text-white">
-    <div class="mx-auto max-w-6xl px-6 md:px-10">
-        <HeaderText align="left" className="mb-8 md:mb-12">
+    <div class="mx-auto max-w-6xl px-6 py-8 md:px-10 md:py-12">
+        <HeaderText align="center" className="mb-10 md:mb-20">
             <h1 slot="title" class="">{services.CTA.p}</h1>
             <h4 slot="description">{services.CTA.r}</h4>
         </HeaderText>
 
-        <div
-            class="grid w-full grid-cols-1 gap-4 pb-10 sm:grid-cols-3 md:gap-6"
-        >
+        <div class="skills-stack pb-12 md:pb-16" data-skills-accordion>
             {
-                services.items.map((v) => (
-                    <a href="#contact" class="no-underline">
-                        <div
-                            class="rounded-md border border-blue bg-black-dark bg-opacity-20 text-white shadow-blue transition-all duration-500 hover:shadow-[0px_0px_30px_0px] hover:shadow-blue 
-                        p-4
-                        md:p-6"
-                        >
-                            <h4 class="mb-4">{v.title}</h4>
-
-                            {v.content}
+                services.sections.map((section, idx) => (
+                    <section class="skill-section my-2 " data-accordion-item data-index={idx}>
+                        <div class="skill-summary p-8">
+                            <div class="skill-summary-meta flex w-full justify-between">
+                                <h3 class="text-xl font-semibold md:text-xl">
+                                    {section.title}
+                                </h3>
+                                <span class="skill-tag ml-auto">{section.tag}</span>
+                            </div>
                         </div>
-                    </a>
+
+                        <div class="section-panel">
+                            <div class="section-body">
+                                <p class="text-sm text-gray-300 m-0">
+                                    {section.description}
+                                </p>
+            
+
+                                <div class="subsections-track">
+                                    {section.items.map((item) => (
+                                        <article class="subsection-card">
+                                            <div class="subsection-head">
+                                                <span class="subsection-icon">
+                                                    <Icon
+                                                        icon={item.icon as IconType}
+                                                        className="text-white"
+                                                    />
+                                                </span>
+                                                <h5 class="subsection-title">
+                                                    {item.title}
+                                                </h5>
+                                            </div>
+                                            <p class="subsection-content">
+                                                {item.content}
+                                            </p>
+                                        </article>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 ))
             }
         </div>
     </div>
 </article>
+
+<script>
+    const root = document.querySelector("[data-skills-accordion]");
+    if (root) {
+        const items = Array.from(
+            root.querySelectorAll("[data-accordion-item]"),
+        ) as HTMLElement[];
+
+        const closeAll = () => {
+            for (const item of items) item.classList.remove("is-open");
+        };
+
+        for (const item of items) {
+            item.addEventListener("mouseenter", () => {
+                closeAll();
+                item.classList.add("is-open");
+            });
+        }
+
+        root.addEventListener("mouseleave", () => {
+            closeAll();
+        });
+    }
+</script>
