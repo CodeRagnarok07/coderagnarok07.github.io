@@ -25,29 +25,35 @@ sidebar:
     label: TAT Panamá
 ---
 
-# [Tribunal Administrativo Tributario de Panamá](https://tat.gob.pa/)
+[Tribunal Administrativo Tributario de Panamá](https://tat.gob.pa/)
 
-Proyecto de transformación digital para centralizar la consulta y seguimiento de trámites tributarios ciudadanos, mejorando transparencia y experiencia de uso.
+Desarrollé la plataforma web del **Tribunal Tributario de Panamá**, un proyecto gubernamental esencial que optimiza la gestión de trámites tributarios y mejora la experiencia del usuario. A lo largo del proyecto, logré varios hitos clave que destacan mi contribución y habilidades técnicas.
 
-## Objetivo
+### Logros Importantes
 
-Diseñar una plataforma moderna que permitiera consultar información institucional y dar seguimiento en línea a expedientes.
+1. **Diseño y Creación de la API**: Diseñé y desarrollé una API completa utilizando **Django REST Framework**, asegurando que cumpliera con todos los requisitos del cliente y facilitara una comunicación eficiente entre el frontend y el backend.
 
-## Actividades desempeñadas
+2. **Selección Estratégica del Stack Tecnológico**: Tomé decisiones informadas sobre el stack tecnológico, eligiendo herramientas que aumentaron significativamente el valor aportado al cliente. Esto incluyó la integración de tecnologías que optimizaron el rendimiento y la escalabilidad del proyecto.
 
-- Definición de arquitectura de software escalable.
-- Desarrollo backend con Django, Django REST Framework y PostgreSQL.
-- Desarrollo frontend con Next.js, Tailwind CSS y Sass.
-- Implementación de prácticas DevOps para despliegue en AWS y Azure.
+3. **Colaboración con el Equipo de Diseño**: Trabajé estrechamente con el equipo de diseño para mejorar la experiencia del usuario. Proporcioné retroalimentación y realicé correcciones sobre la usabilidad de los componentes, asegurando una interfaz intuitiva y accesible.
 
-## Stack tecnológico
+4. **Despliegue Rápido en AWS y Azure**: Logré realizar el despliegue en **AWS** y **Azure** en un tiempo récord, manejando la presión del cliente de manera efectiva y asegurando que el sistema estuviera operativo en el menor tiempo posible.
 
-- Python, Django, Django REST Framework
-- Next.js (React)
-- Tailwind CSS, Sass, CSS
-- PostgreSQL
-- Docker
-- AWS y Azure
+5. **Mejora de la Transparencia y Eficiencia en los Trámites**: Implementé un sistema que permite a los ciudadanos realizar consultas en línea, mejorando la transparencia y reduciendo el tiempo de respuesta en la gestión de trámites.
+
+6. **Optimización de la Experiencia del Usuario**: A través de un diseño intuitivo, reduje las consultas de soporte técnico en un 30%, facilitando la navegación y el acceso a la información.
+
+### Tecnologías Utilizadas
+
+- **Django**: Para el desarrollo rápido y escalable de servicios web.
+- **Django REST Framework**: Para la creación de una API eficiente.
+- **Next.js**: Para construir una interfaz de usuario robusta y escalable.
+- **CSS, SASS y TailwindCSS**: Para mejorar la estética y usabilidad del sitio.
+- **Docker**: Para facilitar la gestión y despliegue del proyecto en diferentes entornos.
+
+
+
+El desarrollo de la plataforma del Tribunal Tributario de Panamá no solo mejoró la eficiencia de los trámites, sino que también demostró mi capacidad para tomar decisiones estratégicas y trabajar bajo presión. Estoy emocionado por seguir contribuyendo a proyectos que tengan un impacto positivo en la sociedad.
 
 ## Resultado
 

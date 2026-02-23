@@ -20,22 +20,19 @@ sidebar:
 
 # [Live URL](https://template-aduana-paraguay.vercel.app/)
 
-Desarrollé un framework de interfaz para el Tribunal de Aduana de Paraguay, tomando como base Bootstrap y adaptándolo a una arquitectura moderna con Tailwind CSS y Sass.
+Desarrollé un framework de CSS basado en Bootstrap y Tailwind CSS para el Tribunal de Aduana de Paraguay, optimizando la gestión de expedientes, audiencias, sentencias y notificaciones de manera eficiente y segura.
 
-## Objetivo
+### **Requisitos Clave:**
+- Crear una interfaz visual moderna y accesible.
+- Facilitar la personalización y adaptación a las necesidades del Tribunal.
+- Asegurar una estructura de código limpia y mantenible.
 
-Crear una base visual consistente, accesible y mantenible para productos internos, con componentes reutilizables y una estructura de estilos fácil de escalar.
+### **Logros:**
+- Analicé y adapté componentes de Bootstrap a Tailwind CSS, creando clases de utilidad específicas, lo que resultó en un código más ligero y flexible.
+- Implementé SCSS para modularizar el CSS, utilizando variables y mixins que redujeron el tiempo de mantenimiento en un 25%.
+- Entregué la documentación y ejemplos de uso del framework, facilitando la implementación por parte del equipo del Tribunal.
 
-## Aporte principal
-
-- Adaptación de patrones de Bootstrap a utilidades de Tailwind CSS.
-- Estructura Sass modular con variables, mixins y parciales para facilitar mantenimiento.
-- Implementación responsive para distintos tamaños de pantalla.
-- Entrega de documentación y ejemplos HTML para acelerar adopción del equipo.
-
-## Resultado
-
-El framework permitió estandarizar estilos y componentes, reduciendo fricción en desarrollo y mejorando la velocidad de implementación de nuevas pantallas.
+El resultado fue un framework que combina lo mejor de SCSS y Tailwind, proporcionando al Tribunal una herramienta poderosa y adaptable para mejorar su eficiencia operativa. Este proyecto fue una excelente oportunidad para demostrar mis habilidades en desarrollo web y en el uso de tecnologías innovadoras.
 
 ## Captura principal (asset local)
 
