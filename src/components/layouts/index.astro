@@ -80,6 +80,16 @@ const copy = siteCopy[locale];
                 }
                 /* Do not override transition-duration globally: it can break scroll in some browsers */
             }
+            :root {
+                --content-max-width: 76rem;
+                --content-inline: clamp(1rem, 2.5vw, 2.5rem);
+            }
+            .content-shell {
+                width: 100%;
+                max-width: var(--content-max-width);
+                margin-inline: auto;
+                padding-inline: var(--content-inline);
+            }
             .container {
                 margin: 0 auto;
                 min-width: 100%;
