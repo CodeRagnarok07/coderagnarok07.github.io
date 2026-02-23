@@ -2,6 +2,18 @@
 title: OKConstructora
 description: Rediseño frontend de sitio corporativo en WordPress, con plantilla custom basada en Tailwind CSS y Sass para mejorar rendimiento y experiencia móvil.
 template: splash
+date: 2022-10-13
+contratador: ARSIS S.A.
+fecha_inicio: "Octubre 13, 2022"
+fecha_fin: "Febrero 7, 2024"
+repo: https://github.com/CodeRagnarok07/OKConstructora/commits/main/
+live: https://okconstructora.com/
+tech_stack:
+    - WordPress
+    - Tailwind CSS
+    - Sass
+    - JavaScript
+type_proyect: frontend
 sidebar:
     label: OKConstructora
 ---

@@ -30,6 +30,9 @@ interface SiteCopy {
         title: string;
         description: string;
         viewAll: string;
+        viewDetails: string;
+        fullContentTitle: string;
+        fullContentDescription: string;
     };
     contact: {
         title: string;
@@ -69,6 +72,10 @@ export const siteCopy: Record<Locale, SiteCopy> = {
             description:
                 "Proyectos desarrollados para entornos corporativos y gubernamentales",
             viewAll: "Ver todo",
+            viewDetails: "Ver detalle",
+            fullContentTitle: "Contenido completo",
+            fullContentDescription:
+                "Documentación completa de cada proyecto usando el contenido centralizado de Starlight",
         },
         contact: {
             title: "¿Deseas contactarme?",
@@ -106,6 +113,10 @@ export const siteCopy: Record<Locale, SiteCopy> = {
             description:
                 "Projetos desenvolvidos para ambientes corporativos e governamentais",
             viewAll: "Ver tudo",
+            viewDetails: "Ver detalhe",
+            fullContentTitle: "Conteúdo completo",
+            fullContentDescription:
+                "Documentação completa de cada projeto usando o conteúdo centralizado do Starlight",
         },
         contact: {
             title: "Quer entrar em contato comigo?",
@@ -143,6 +154,10 @@ export const siteCopy: Record<Locale, SiteCopy> = {
             description:
                 "Projects delivered for corporate and government environments",
             viewAll: "View all",
+            viewDetails: "View details",
+            fullContentTitle: "Full content",
+            fullContentDescription:
+                "Complete documentation for each project using centralized Starlight content",
         },
         contact: {
             title: "Want to get in touch?",

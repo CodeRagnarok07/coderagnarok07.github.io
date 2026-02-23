@@ -1,7 +1,21 @@
 ---
 title: Arrullos - Panel administrativo e-commerce
-description: Primer proyecto profesional: desarrollo frontend en Next.js de un panel administrativo, consumiendo API GraphQL, subida de imágenes a AWS y optimizaciones con Redux y React Query.
+description: "Primer proyecto profesional: desarrollo frontend en Next.js de un panel administrativo, consumiendo API GraphQL, subida de imágenes a AWS y optimizaciones con Redux y React Query."
 template: splash
+date: 2022-08-01
+contratador: Freelance
+fecha_inicio: "Agosto 2022"
+duracion: "2 semanas"
+repo: null
+live: null
+tech_stack:
+    - Next.js
+    - React
+    - GraphQL
+    - Redux
+    - React Query
+    - AWS S3
+type_proyect: frontend
 sidebar:
     label: Arrullos
 ---

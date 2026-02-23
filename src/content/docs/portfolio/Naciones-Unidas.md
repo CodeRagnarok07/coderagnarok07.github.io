@@ -2,6 +2,18 @@
 title: Plataforma de informes CIADDIS (Naciones Unidas)
 description: Desarrollo de la interfaz web para la presentación y gestión de informes CIADDIS por parte de los Estados Parte, con foco en accesibilidad y usabilidad.
 template: splash
+date: 2023-01-12
+contratador: ARSIS S.A.
+fecha_inicio: "Enero 12, 2023"
+fecha_fin: "Febrero 7, 2024"
+repo: https://github.com/CodeRagnarok07/Naciones-Unidas
+live: https://coderagnarok07.github.io/OEA-Proyect/
+tech_stack:
+    - HTML
+    - CSS
+    - Sass
+    - Tailwind CSS
+type_proyect: frontend
 sidebar:
     label: Naciones Unidas - CIADDIS
 ---

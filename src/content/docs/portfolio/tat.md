@@ -2,6 +2,25 @@
 title: Tribunal Administrativo Tributario de Panamá
 description: Plataforma web gubernamental para gestión de trámites tributarios, con arquitectura Django + Next.js y despliegue en nube.
 template: splash
+date: 2022-08-01
+contratador: ARSIS S.A.
+fecha_inicio: "Agosto 2022"
+fecha_fin: "Junio 2023"
+repo: null
+live: https://tat.gob.pa/
+tech_stack:
+    - Python
+    - Django
+    - Django REST Framework
+    - Next.js
+    - React
+    - Tailwind CSS
+    - Sass
+    - PostgreSQL
+    - Docker
+    - AWS
+    - Azure
+type_proyect: fullstack
 sidebar:
     label: TAT Panamá
 ---

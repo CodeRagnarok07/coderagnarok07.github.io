@@ -2,6 +2,18 @@
 title: Framework CSS para el Tribunal de Aduana de Paraguay
 description: Desarrollo de un framework UI basado en Bootstrap, Tailwind CSS y Sass para estandarizar componentes y acelerar el desarrollo del Tribunal de Aduana de Paraguay.
 template: splash
+date: 2023-01-31
+contratador: ARSIS S.A.
+fecha_inicio: "Enero 31, 2023"
+fecha_fin: "Marzo 8, 2023"
+repo: https://github.com/CodeRagnarok07/Framework-CSS-Aduana-Paraguay
+live: https://template-aduana-paraguay.vercel.app/
+tech_stack:
+    - Tailwind CSS
+    - Sass
+    - Bootstrap
+    - HTML
+type_proyect: frontend
 sidebar:
     label: Framework Aduana Paraguay
 ---

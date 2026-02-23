@@ -2,6 +2,24 @@
 title: NTX Connect - Intranet Corporativa
 description: Plataforma interna de gestión documental y procesos corporativos para Noritex, con arquitectura Django + Next.js e integración con Microsoft Graph.
 template: splash
+date: 2025-02-01
+contratador: Noritex
+fecha_inicio: "Febrero 2025"
+fecha_fin: "Noviembre 2025"
+repo: null
+live: null
+tech_stack:
+    - Python
+    - Django
+    - Django REST Framework
+    - TypeScript
+    - Next.js
+    - React
+    - PostgreSQL
+    - Docker
+    - AWS S3
+    - Microsoft Graph API
+type_proyect: fullstack
 sidebar:
     label: Intranet NTX
 ---

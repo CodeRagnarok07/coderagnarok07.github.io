@@ -2,6 +2,20 @@
 title: UPISA - Rediseño e internacionalización web
 description: Rediseño del sitio de UPISA con internacionalización multilenguaje, CMS a medida en Django y módulos interactivos para catálogo y recetas.
 template: splash
+date: 2022-09-01
+contratador: ARSIS S.A.
+fecha_inicio: "Septiembre 2022"
+fecha_fin: "Julio 2023"
+repo: https://github.com/CodeRagnarok07/UPISA
+live: https://upisa.com.py/
+tech_stack:
+    - Python
+    - Django
+    - React
+    - Tailwind CSS
+    - Sass
+    - JavaScript
+type_proyect: fullstack
 sidebar:
     label: UPISA
 ---
