@@ -38,7 +38,7 @@ const getDocUrl = (id: string): string => `/portfolio/${id.toLowerCase()}/`;
         .filter((entry) => getImgsFromKey(entry.id).length > 0)
         .map((entry) => (
             <article id={entry.id}>
-                <div class="content-shell flex h-min">
+                <div class="content-shell flex h-min mt-[15%] md:mt-[5%]">
                     <Card
                         theme="secondary"
                         className={

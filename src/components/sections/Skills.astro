@@ -133,9 +133,16 @@ const services =
         gap: 0.85rem;
         overflow-x: auto;
         width: 100%;
-        justify-content: center;
-        padding: 0.2rem 0.3rem 0.45rem;
+        justify-content: start;
+        padding: 0.2rem .5rem;
         scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    /* Hide horizontal scrollbar for the subsections track, cross-browser */
+        scrollbar-width: none;      /* Firefox */
+        -ms-overflow-style: none;   /* IE and Edge */
+    }
+    .subsections-track::-webkit-scrollbar {
+        display: none;              /* Chrome, Safari and Opera */
     }
 
     .subsection-card {
@@ -213,18 +220,20 @@ const services =
                     <section class="skill-section my-2 " data-accordion-item data-index={idx}>
                         <div class="skill-summary p-8">
                             <div class="skill-summary-meta flex w-full justify-between">
-                                <h3 class="text-xl font-semibold md:text-xl">
-                                    {section.title}
-                                </h3>
+                                <div class="flex flex-col">
+                                    <h3 class="text-xl font-semibold md:text-xl mb-2">
+                                        {section.title}
+                                    </h3>
+                                    <p class="text-sm text-gray-300 m-0">
+                                        {section.description}
+                                    </p>
+                                </div>
                                 <span class="skill-tag ml-auto">{section.tag}</span>
                             </div>
                         </div>
 
                         <div class="section-panel">
                             <div class="section-body">
-                                <p class="text-sm text-gray-300 m-0">
-                                    {section.description}
-                                </p>
             
 
                                 <div class="subsections-track">
