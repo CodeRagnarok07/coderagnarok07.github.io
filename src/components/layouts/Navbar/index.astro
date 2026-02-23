@@ -2,6 +2,7 @@
 // const bord = require('/src/assets/svg/nav/Interface.svg')
 
 import { pages } from "@/content/consts";
+import { siteCopy, type Locale } from "@/content/i18n/site";
 
 import { Image } from "astro:assets";
 
@@ -9,6 +10,26 @@ import Logo from "@/assets/Logo.png";
 import SvgBgMovil from "./BgMovil.svg";
 
 import Icon from "@/assets/Icon.astro";
+
+interface Props {
+    locale?: Locale;
+    basePath?: string;
+}
+
+const { locale = "es", basePath = "/" } = Astro.props;
+const copy = siteCopy[locale];
+const toEs = "/";
+const toPt = "/pt";
+const toEn = "/en";
+
+const languages = [
+    { code: "es", label: "ES", href: toEs },
+    { code: "pt", label: "PT", href: toPt },
+    { code: "en", label: "EN", href: toEn },
+];
+
+const currentLanguage = languages.find((lang) => lang.code === locale) ?? languages[0];
+const otherLanguages = languages.filter((lang) => lang.code !== currentLanguage.code);
 ---
 
 <nav class="fixed inset-x-0 bottom-0 sm:bottom-auto sm:top-0 z-[1000]">
@@ -19,46 +40,103 @@ import Icon from "@/assets/Icon.astro";
     />
 
     <div class="flex justify-between items-center pt-[7%] pb-2 sm:py-4 mx-[4%]">
-        <a href="/#home" class="text-white">
+        <a href={`${basePath}#home`} class="text-white">
             <Image class="hidden md:flex -mb-3" src={Logo} alt={"logo"} />
         </a>
         <div class="flex flex-col w-full md:w-auto md:ml-auto">
-            <div class="flex w-full h-min items-center justify-around md:gap-2">
+            <div class="flex w-full h-min items-center justify-around md:gap-2 md:mr-4">
                 {
                     pages.map((v) => (
                         <a
-                            href={v.link}
-                            class=" text-white
+                            href={`${basePath}${v.link}`}
+                            class="
+                             text-white
                         flex flex-col  items-center cursor-pointer 
-                        p-1 rounded-lg gap-[2%]
-                        md:py-0
-                        md:pl-0
+                        rounded-lg 
                         
                         border-b-2 border-[#ffffff25]
-
+                        
                         bg-secondary bg-opacity-80  hover:bg-opacity-100
-
+                        
                         
                         hover:border-white
                         transition-colors duration-700
                         
+                        p-1
+                        pb-1
                         sm:px-2
                         sm:flex-row
                         sm:rounded-[4px]
                         sm:bg-transparent
+                        md:py-0
+                        md:pb-2
+                        md:px-1
                         "
                         >
-                            <div class="w-5 h-5 md:m-2">
+                            <div class="flex h-5 w-5 items-center justify-center md:h-6 md:w-6">
                                 <Icon icon={v.icon} />
                             </div>
-                            <small class="hidden xs:inline px-1 pt-1 ">
-                                {v.name}
+                            <small class=" px-1 pt-1 ">
+                                {copy.nav[v.name as keyof typeof copy.nav]}
                             </small>
                         </a>
                     ))
                 }
+            <div class="
+            relative hidden md:flex items-center gap-2 text-xs uppercase tracking-[0.12em] group
+            
+                      text-white
+                         cursor-pointer 
+                        rounded-lg 
+                        
+                        border-b-2 border-[#ffffff25]
+                        
+                        bg-secondary bg-opacity-80  hover:bg-opacity-100
+                        
+                        
+                        hover:border-white
+                        transition-colors duration-700
+                        
+                        p-1
+                        pb-1
+                        sm:px-2
+                        sm:flex-row
+                        sm:rounded-[4px]
+                        sm:bg-transparent
+                        md:py-0
+                        md:pb-2
+                        md:px-1
+            ">
+    
+                <button
+                    type="button"
+                    class="flex items-center gap-2 rounded-lg
+                    px-2 py-1 text-white/80 transition-colors"
+                >
+                    <span class="text-[0.7rem]  p-1 tracking-[0.16em]">
+                        {currentLanguage.code.toUpperCase()}
+                    </span>
+                </button>
+    
+                <div
+                    class="pointer-events-none absolute right-0 top-full z-[1000]  flex min-w-[7rem] flex-col gap-1 translate-y-1 rounded-[6px] border border-white/15 bg-secondary/95  opacity-0 shadow-lg shadow-black/30 ring-1 ring-white/10 backdrop-blur-sm transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto"
+                >
+                    {
+                        otherLanguages.map((lang) => (
+                            <a
+                                href={lang.href}
+                                class="flex items-center justify-between rounded-[4px] px-2 py-1 text-[0.7rem] tracking-[0.14em] uppercase text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                            >
+                              
+                                <span>{lang.code.toUpperCase()}</span>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
             </div>
         </div>
+        
     </div>
 </nav>
 

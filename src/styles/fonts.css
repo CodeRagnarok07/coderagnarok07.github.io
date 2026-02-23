@@ -1,4 +1,3 @@
-
 /* /////// FONTS /////// */
 
 @font-face {
@@ -30,6 +29,8 @@ small,
 	font-family: 'Atkinson', sans-serif;
 	font-weight: 400;
 	line-height: 1;
+	color: var(--color-text);
+	color: #cccccc;
 }
 
 h1,

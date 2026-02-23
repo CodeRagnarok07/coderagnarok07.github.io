@@ -1,7 +1,9 @@
 ---
-import Layout from "@layouts/Mobile.astro";
+import Layout from "@layouts/index.astro";
 
 import PortfolioPage from "@sections/Portfolio/Page.astro";
 ---
 
-<Layout> <PortfolioPage /></Layout>
+<Layout locale="es" basePath="/">
+    <PortfolioPage locale="es" basePath="/" />
+</Layout>

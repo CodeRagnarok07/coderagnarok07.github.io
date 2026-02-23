@@ -1,0 +1,14 @@
+---
+import Layout from "@layouts/index.astro";
+import Skills from "@sections/Skills.astro";
+import HomeHero from "@sections/HomeHero.astro";
+import Portfolio from "@sections/Portfolio/Home.astro";
+import Socials from "@sections/Socials.astro";
+---
+
+<Layout locale="en" basePath="/en/">
+    <section><HomeHero locale="en" basePath="/en/" /></section>
+    <section><Portfolio locale="en" basePath="/en/" /></section>
+    <section><Skills locale="en" /></section>
+    <section><Socials locale="en" /></section>
+</Layout>

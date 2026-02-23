@@ -198,11 +198,11 @@
             height: min-content;
 
             &:before {
-                transition: all 1500ms ease-in-out;
-                -webkit-transition: all 1500ms;
-                -moz-transition: all 1500ms;
-                -ms-transition: all 1500ms;
-                -o-transition: all 1500ms;
+                transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out;
+                -webkit-transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out;
+                -moz-transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out;
+                -ms-transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out;
+                -o-transition: opacity 1500ms ease-in-out, transform 1500ms ease-in-out;
                 // background
                 content: '';
                 position: absolute;

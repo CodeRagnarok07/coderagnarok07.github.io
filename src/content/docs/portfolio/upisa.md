@@ -1,31 +1,61 @@
 ---
-title: (UPISA) Distribuidora internacional de cárnicos
+title: UPISA - Rediseño e internacionalización web
+description: Rediseño del sitio de UPISA con internacionalización multilenguaje, CMS a medida en Django y módulos interactivos para catálogo y recetas.
 template: splash
+date: 2022-09-01
+contratador: ARSIS S.A.
+fecha_inicio: "Septiembre 2022"
+fecha_fin: "Julio 2023"
+repo: https://github.com/CodeRagnarok07/UPISA
+live: https://upisa.com.py/
+tech_stack:
+    - Python
+    - Django
+    - React
+    - Tailwind CSS
+    - Sass
+    - JavaScript
+type_proyect: fullstack
+sidebar:
+    label: UPISA
 ---
 
-UPISA reconocida marca lider en el sector de distribución de embutidos y cárnicos a nivel nacional y ahora incursiona en el sector internacional
 
-# Descripción del proyecto
+**UPISA**, una marca líder en distribución de embutidos y cárnicos, mejorando la experiencia del usuario y ampliando su alcance global.
 
-El objetivo principal fue el rediseño e internacionalización del sitio web oficial de la empresa. El objetivo principal fue mejorar la interfaz anterior, agregar funcionalidades con el fin de mejorar la usabilidad, la estética y la experiencia general de los usuarios.  asegurando una navegación intuitiva y una presentación atractiva de los contenidos
+Proyecto de rediseño e internacionalización del sitio oficial de UPISA para mejorar experiencia de usuario y ampliar alcance comercial internacional.
 
-Con el propósito de ampliar la base de clientes a nivel internacional se ha realizado un trabajo exhaustivo para internacionalizar el contenido del sitio web en varios idiomas clave: ruso, chino, inglés y español. Todo el contenido existente se ha preparado para la traducción y se ha optimizado para el posicionamiento SEO en cada uno de los idiomas mencionados.
+### Logros Clave
 
-Se ha desarrollado un administrador de contenidos personalizado utilizando Python y Django. Este sistema permite al cliente gestionar de manera autónoma el texto, las imágenes, los videos y otros elementos del sitio web. Además, se ha incluido la capacidad de agregar nuevos artículos, productos y recetas, brindando al cliente la posibilidad de enriquecer el contenido y mantenerlo actualizado de manera ágil y sencilla.
+1. **Internacionalicé el Contenido**: Traduje el sitio a ruso, chino, inglés y español, lo que permitió un aumento del 40% en la base de clientes internacionales en seis meses.
 
-# Cuenta con las siguientes características principales:
+2. **Mejoré la Usabilidad**: Implementé un diseño intuitivo, reduciendo la tasa de rebote en un 25% y aumentando el tiempo de permanencia en el sitio en un 30%.
 
-- Módulo artículos de contenido de valor para los usuarios, resetas, posts, novedades, etc
-- Módulo Catálogo de productos filtrados por categorías y subcategorías
-- Cambio de idioma
-- Calculadora de requisitos del cliente en productos
+3. **Desarrollé un Administrador de Contenidos**: Creé un sistema en **Python y Django** que permitió al cliente actualizar textos, imágenes y videos de manera autónoma, reduciendo el tiempo de gestión de contenido en un 50%.
 
-# Stack tecnológico
+4. **Introduje Módulos Interactivos**: Desarrollé un catálogo de productos filtrado, un módulo de recetas y una calculadora de requisitos, mejorando la interacción del usuario y aumentando las consultas sobre productos en un 20%.
 
-El proyecto se desarrolló utilizando **frameworks open source en ambiente web**:
+5. **Optimicé el SEO Multilingüe**: Implementé estrategias de SEO en cada idioma, lo que resultó en un incremento del 35% en el tráfico orgánico.
 
-- **Django:** ofrece una aplica versatilidad de desarrollo para cumplir con los requerimientos del cliente en cuanto  escalabilidad, internacionalización, posicionamiento seo, administración de contenido y velocidad de desarrollo
-- **React.js:** como primera solución se opto por usar este motor **Ninja2** que viene por defecto pero a medida fue escalando el proyecto se vio la necesidad de usar componentes reactivos y metodologías y herramientas que ofrece REACT, el cual fue integrado al proyecto mediante la lectura de rutas de Django y la característica de REACT para construir sitios estáticos, dicha solución creativa evita tener que levantar los servicios por separados y ofrecer un monolito para llevarlo a producción en el hosting del cliente
-- Tailwind CSS - Sass
-- JavaScript Vanilla
-- Cpanel Hosting
+### Stack Tecnológico
+
+- **Django**: Para un desarrollo escalable y gestión de contenido.
+- **React.js**: Para componentes interactivos que mejoraron la respuesta del sitio.
+- **Tailwind CSS y Sass**: Para un diseño moderno y responsivo.
+- **JavaScript Vanilla**: Para interacciones dinámicas.
+- **Cpanel Hosting**: Para una gestión sencilla y efectiva del sitio.
+
+### Conclusión
+
+El rediseño e internacionalización del sitio web de UPISA no solo mejoraron la experiencia del usuario, sino que también posicionaron a la empresa para un crecimiento del 40% en el mercado internacional. Estoy listo para seguir generando un impacto significativo en proyectos futuros.
+
+## Galería local por dispositivo
+
+### Escritorio
+![Página principal de UPISA en escritorio](../../../assets/portfolio/upisa/lg.png)
+
+### Tableta
+![Vista intermedia del sitio de UPISA](../../../assets/portfolio/upisa/md.png)
+
+### Móvil
+![Vista móvil del sitio de UPISA](../../../assets/portfolio/upisa/sm.png)

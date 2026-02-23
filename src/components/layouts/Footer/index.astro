@@ -23,16 +23,16 @@ import { socialLinks } from "@/content/consts";
     class="relative w-full bg-gradient-to-b to-primary-dark from-[#4c468318] pb-28 md:pb-0"
 >
     <div
-        class="container2 flex gap-4 flex-col items-center justify-center md:flex-row md:justify-between h-full py-4"
+        class="content-shell flex h-full flex-col items-center justify-center gap-4 py-4 md:flex-row md:justify-between"
     >
         <div>
-            <HeaderText aling="center">
+            <HeaderText align="center">
                 <h3 slot="title">CodeRagnarok</h3>
             </HeaderText>
         </div>
         <Contact />
         <div class="flex flex-col w-max">
-            <HeaderText aling="center">
+            <HeaderText align="center">
                 <h3 slot="title" class="text-nowrap">Redes sociales</h3>
                 <p slot="description" class="text-nowrap">
                     sigueme en mis redes
@@ -41,8 +41,8 @@ import { socialLinks } from "@/content/consts";
             <div class="flex justify-center items-center flex-wrap">
                 {
                     socialLinks.map((v) => (
-                        <a href={v.link}>
-                            <img src={`/assets/svg/social/${v.icon}`} alt="" />
+                        <a href={v.link} rel="noopener noreferrer" target="_blank" aria-label={v.name}>
+                            <img src={`/assets/svg/social/${v.icon}`} alt={v.name} width="24" height="24" />
                         </a>
                     ))
                 }

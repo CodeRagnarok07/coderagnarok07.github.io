@@ -1,0 +1,81 @@
+{
+    "CTA": {
+        "p": "Competências técnicas",
+        "r": "Experiência aplicada em desenvolvimento seguro, infraestrutura e estratégia de engenharia"
+    },
+    "sections": [
+        {
+            "title": "Security & Infrastructure",
+            "tag": "Learning",
+            "description": "Atualmente aprofundando em AppSec e segurança de infraestrutura.",
+            "items": [
+                {
+                    "icon": "nav.services",
+                    "title": "AppSec",
+                    "content": "Hardening de APIs, mitigação do OWASP Top 10, segurança com JWT e gestão segura de segredos (Environ/Vault)."
+                },
+                {
+                    "icon": "nav.home",
+                    "title": "Infraestrutura como código",
+                    "content": "Orquestração com Docker e Docker Compose, com configuração de Nginx como reverse proxy."
+                },
+                {
+                    "icon": "nav.portfolio",
+                    "title": "DevSecOps",
+                    "content": "Automação de CI/CD com GitHub Actions, varredura de vulnerabilidades e deploys seguros em AWS, Azure e Heroku."
+                },
+                {
+                    "icon": "nav.contact",
+                    "title": "Networking",
+                    "content": "Gestão de redes privadas, protocolos de comunicação e segurança perimetral."
+                }
+            ]
+        },
+        {
+            "title": "Core Software Engineering",
+            "tag": "Solid Base",
+            "description": "Base técnica consolidada para construir produtos robustos de ponta a ponta.",
+            "items": [
+                {
+                    "icon": "nav.services",
+                    "title": "Backend",
+                    "content": "Python com Django e FastAPI, desenho de APIs REST robustas e otimização em PostgreSQL e MySQL."
+                },
+                {
+                    "icon": "nav.home",
+                    "title": "Frontend",
+                    "content": "React.js e Next.js (14+), estado assíncrono com TanStack Query e estilização com Tailwind CSS e SASS."
+                },
+                {
+                    "icon": "nav.portfolio",
+                    "title": "Integrações",
+                    "content": "Abstração de serviços complexos como Microsoft Graph API e autenticação corporativa SSO com Azure AD/MSAL."
+                }
+            ]
+        },
+        {
+            "title": "Engineering Strategy",
+            "tag": "Senior",
+            "description": "Abordagem estratégica para alinhar arquitetura, execução e negócio.",
+            "items": [
+                {
+                    "icon": "nav.about",
+                    "title": "Arquitetura de software",
+                    "content": "Desenho de monólitos desacoplados, modelagem orientada a compliance e aplicação de princípios de Clean Code."
+                },
+                {
+                    "icon": "nav.contact",
+                    "title": "Gestão de stakeholders",
+                    "content": "Engenharia de requisitos e comunicação efetiva com níveis gerenciais em ambientes corporativos e governamentais."
+                },
+                {
+                    "icon": "nav.blog",
+                    "title": "Metodologias ágeis",
+                    "content": "Gestão de projetos com Scrum e entrega contínua de valor."
+                }
+            ]
+        }
+    ],
+    "caption": "Colaboro em projetos onde robustez técnica e segurança são prioridades desde o design.",
+    "cta": "Entrar em contato"
+}

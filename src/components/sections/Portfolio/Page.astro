@@ -2,19 +2,20 @@
 import bg from "@/assets/media/bg/PortfolioBg.png";
 import HeaderText from "@/components/ui/HeaderText.astro";
 import ListElements from "./CardElements.astro";
+import { siteCopy, type Locale } from "@/content/i18n/site";
+
+interface Props {
+    locale?: Locale;
+    basePath?: string;
+}
+
+const { locale = "es", basePath = "/" } = Astro.props;
+const copy = siteCopy[locale];
 ---
 
 <style define:vars={{ image: `url("${bg.src}")` }}>
     section {
         position: relative;
-
-        /* background: var(--image);
-        background-position: 50% 50%;
-        background-origin: content-box;
-        background-repeat: no-repeat;
-        box-shadow: inset 0px -2rem 15rem 2rem rgb(0 0 0);
-        background-size: 150%;
-        background-attachment: fixed; */
     }
 
     section::before {
@@ -33,39 +34,47 @@ import ListElements from "./CardElements.astro";
         background-image: var(--image);
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        /* background-attachment: fixed; */
+    }
+    article {
+        position: relative;
+        padding-bottom: 0 !important;
+
     }
 </style>
 
-<section id="portfolio" class="text-white text-center">
-    <article
-        class="container flex flex-col items-center justify-center mx-auto h-auto mb-auto"
-    >
+<section id="portfolio" class="text-white text-center ">
+    <article class="content-shell flex flex-col items-center justify-center">
         <div
-            class="flex items-center flex-col w-full h-max overflow-visible  uppercase gap-20"
+            class="flex h-max w-full flex-col items-center gap-16 overflow-visible uppercase md:gap-20"
         >
-            <HeaderText aling="center">
-                <h1 slot="title" class="uppercase">Portafolio</h1>
+            <HeaderText align="center">
+                <h1 slot="title" class="uppercase">{copy.portfolio.title}</h1>
                 <h3 slot="description">
-                    Descubre mi trabajo y proyectos en mi portafolio digital
+                    {copy.portfolio.description}
                 </h3>
             </HeaderText>
 
             <div class="flex justify-center">
-                <a href="/portafolio#tat">
-
-                <div
-                    class="animate-bounce  shadow-secondary shadow-2xl p-2 w-10 h-10 ring-1 ring-secondary rounded-full flex items-center justify-center"
-                >
-                <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                  </svg>
-                </div>
-            </a>
-
+                <a href={`${basePath}portafolio#tat`}>
+                    <div
+                        class="animate-bounce shadow-secondary shadow-2xl p-2 w-10 h-10 ring-1 ring-secondary rounded-full flex items-center justify-center"
+                    >
+                        <svg
+                            class="w-6 h-6 text-violet-500"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </div>
+                </a>
             </div>
         </div>
     </article>
 
-    <ListElements />
+    <ListElements locale={locale} />
 </section>
