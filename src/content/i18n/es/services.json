@@ -9,11 +9,15 @@
             "tag": "Learning",
             "description": "Actualmente profundizando en AppSec y seguridad de infraestructura.",
             "items": [
-               
                 {
                     "icon": "nav.services",
                     "title": "AppSec",
                     "content": "Hardening de APIs, mitigación de OWASP Top 10, seguridad de JWT y gestión segura de secretos (Environ/Vault)."
+                },
+                {
+                    "icon": "nav.home",
+                    "title": "Infraestructura como código",
+                    "content": "Orquestación de servicios con Docker y Docker Compose, incluida la configuración de Nginx como reverse proxy."
                 },
                 {
                     "icon": "nav.portfolio",
