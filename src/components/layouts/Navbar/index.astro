@@ -21,6 +21,15 @@ const copy = siteCopy[locale];
 const toEs = "/";
 const toPt = "/pt";
 const toEn = "/en";
+
+const languages = [
+    { code: "es", label: "ES", href: toEs },
+    { code: "pt", label: "PT", href: toPt },
+    { code: "en", label: "EN", href: toEn },
+];
+
+const currentLanguage = languages.find((lang) => lang.code === locale) ?? languages[0];
+const otherLanguages = languages.filter((lang) => lang.code !== currentLanguage.code);
 ---
 
 <nav class="fixed inset-x-0 bottom-0 sm:bottom-auto sm:top-0 z-[1000]">
@@ -40,7 +49,8 @@ const toEn = "/en";
                     pages.map((v) => (
                         <a
                             href={`${basePath}${v.link}`}
-                            class=" text-white
+                            class="
+                             text-white
                         flex flex-col  items-center cursor-pointer 
                         rounded-lg 
                         
@@ -72,39 +82,61 @@ const toEn = "/en";
                         </a>
                     ))
                 }
+            <div class="
+            relative hidden md:flex items-center gap-2 text-xs uppercase tracking-[0.12em] group
+            
+                      text-white
+                         cursor-pointer 
+                        rounded-lg 
+                        
+                        border-b-2 border-[#ffffff25]
+                        
+                        bg-secondary bg-opacity-80  hover:bg-opacity-100
+                        
+                        
+                        hover:border-white
+                        transition-colors duration-700
+                        
+                        p-1
+                        pb-1
+                        sm:px-2
+                        sm:flex-row
+                        sm:rounded-[4px]
+                        sm:bg-transparent
+                        md:py-0
+                        md:pb-2
+                        md:px-1
+            ">
+    
+                <button
+                    type="button"
+                    class="flex items-center gap-2 rounded-lg
+                    px-2 py-1 text-white/80 transition-colors"
+                >
+                    <span class="text-[0.7rem]  p-1 tracking-[0.16em]">
+                        {currentLanguage.code.toUpperCase()}
+                    </span>
+                </button>
+    
+                <div
+                    class="pointer-events-none absolute right-0 top-full z-[1000]  flex min-w-[7rem] flex-col gap-1 translate-y-1 rounded-[6px] border border-white/15 bg-secondary/95  opacity-0 shadow-lg shadow-black/30 ring-1 ring-white/10 backdrop-blur-sm transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 group-hover:pointer-events-auto"
+                >
+                    {
+                        otherLanguages.map((lang) => (
+                            <a
+                                href={lang.href}
+                                class="flex items-center justify-between rounded-[4px] px-2 py-1 text-[0.7rem] tracking-[0.14em] uppercase text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+                            >
+                              
+                                <span>{lang.code.toUpperCase()}</span>
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
             </div>
         </div>
-
-        <div class="hidden md:flex items-center gap-2 text-xs uppercase tracking-[0.12em]">
-            <span class="text-white/70">{copy.nav.languageLabel}</span>
-            <a
-                href={toEs}
-                class:list={[
-                    "rounded border px-2 py-1 transition-colors",
-                    locale === "es"
-                        ? "border-white text-white"
-                        : "border-white/30 text-white/70 hover:border-white hover:text-white",
-                ]}>ES</a
-            >
-            <a
-                href={toPt}
-                class:list={[
-                    "rounded border px-2 py-1 transition-colors",
-                    locale === "pt"
-                        ? "border-white text-white"
-                        : "border-white/30 text-white/70 hover:border-white hover:text-white",
-                ]}>PT</a
-            >
-            <a
-                href={toEn}
-                class:list={[
-                    "rounded border px-2 py-1 transition-colors",
-                    locale === "en"
-                        ? "border-white text-white"
-                        : "border-white/30 text-white/70 hover:border-white hover:text-white",
-                ]}>EN</a
-            >
-        </div>
+        
     </div>
 </nav>
 
